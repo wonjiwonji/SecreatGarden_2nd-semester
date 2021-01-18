@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:text="에코센터"
+            android:textColor="@android:color/white"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#00ff0000"
+            android:fontFamily="sans-serif-black"
+            android:text="닫기"
+            android:textColor="@android:color/white"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ech"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/echE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소개 : 나뭇잎에 맺혀있는 이슬방울 모양을 본뜬 둥근 외관의 아름다운 온실. 난대식물을 가까이에서 만날 수 있는 곳. 사계절 내내 푸른 식물원을 느낄 수 있는 곳.\n\n관람포인트 : 에코센터 안 연못 수생식물, 난대식물, 야외 테라스 공간\n\n포토존 : 에코센터 다리위, 야외 테라스 공간, 숲길\n\n다음 관람 안내 : 멸종위기식물원" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

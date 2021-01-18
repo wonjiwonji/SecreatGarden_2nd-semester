@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="곤충생태관"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textColor="@android:color/white"
+            android:id="@+id/cancel"
+            android:layout_gravity="right"
+            android:background="#00ff0000"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="닫기" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ins"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/insE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소개 : 곤충과 양서류를 동시에 만날 수 있는 신비한 공간.\n\n관람포인트 : 커다란 모형의 곤충과 실제 곤충을 비교하며 관찰. 곤충 옆에 전시되어 있는 곤충잡는 식물 (네펜데스, 파리지옥 등)\n\n포토존 : 곤충모형과 함께 \n\n다음 관람 안내 : 오감정원, 수목관찰원" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+        //text 변경
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="작약원"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textColor="@android:color/white"
+            android:id="@+id/cancel"
+            android:layout_gravity="right"
+            android:background="#00ff0000"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="닫기" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/per"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/perE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소개 : 약재로 이용되는 작약과 화려한 꽃을 가진 다양한 품종의 작약을 관람할 수 있는 공간입니다.\n\n관람포인트 : 모란과 작약의 특징을 비교해보며 관찰\n\n다음 관람 안내 : 두꺼비분수, 어린이정원, 에코센터" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

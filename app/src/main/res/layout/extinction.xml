@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+        //text 변경
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="멸종위기식물원"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textColor="@android:color/white"
+            android:id="@+id/cancel"
+            android:layout_gravity="right"
+            android:background="#00ff0000"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="닫기" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ext"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/extE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소개 : 전국적으로 개체수가 적거나 멸종위기에 처한 식물들을 집중적으로 수집하여 관리하고 있습니다.\n\n관람포인트 : 구역별 나뉘어 심겨져있는 멸종위기식물들\n\n홍보물 소개 : 엄마와 함께 떠난 멸종위기식물 여행\n\n다음 관람 안내 : 교재원, 습지생태원" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

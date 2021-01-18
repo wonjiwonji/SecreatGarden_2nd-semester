@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+        //text 변경
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="옥상정원"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textColor="@android:color/white"
+            android:id="@+id/cancel"
+            android:layout_gravity="right"
+            android:background="#00ff0000"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="닫기" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/roo"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/rooE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소개 : 숲전시관 하늘정원은 중앙광장을 한눈에 내려다 볼 수 있습니다. 또한 하늘과 맞닿은 인능산의 계절별 풍경과 대왕저수지의 아름다운 경치를 즐길 수 있습니다.\n\n관람포인트 : 하늘정원에서 내려다보는 중앙광장, 푸른 하늘과 어울리는 식물의 모습,쭉 이어진 옥상 공간을 따라 걸으며 관람\n\n포토존 : 중앙광장쪽을 등지고 촬영, 장독대" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+        //text 변경
+        <TextView
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="전통정원"
+            android:textColor="@android:color/white"
+            android:textSize="30dp"
+            />
+
+        <Button
+            android:fontFamily="sans-serif-black"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textColor="@android:color/white"
+            android:id="@+id/cancel"
+            android:layout_gravity="right"
+            android:background="#00ff0000"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="닫기" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/trad"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
+
+        <TextView
+            android:id="@+id/tradE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="소개 :　우리 주변에서 사라져가는 옛 정원의 정취를 느낄 수 있는 공간으로 담장, 장독대, 펌프우물을 중심으로 다양한 식물이 계절별로 자라납니다.\n\n관람포인트 : 우물가 주변의 식물들\n\n포토존 : 우물가 주변, 전통정원 산책길\n\n다음 관람 안내 : 곤충생태관, 두꺼비분수, 오감정원" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
