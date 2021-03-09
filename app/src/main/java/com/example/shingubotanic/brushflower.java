@@ -26,11 +26,6 @@ public class brushflower extends DialogFragment implements View.OnClickListener{
 
     public static final String TAG_EVENT_DIALOG ="brushflower"; //수정  ""
 
-    //안녕하세요 안중환입니다
-
-    //지원수정2
-
-    //아아아
     public brushflower(){} //붓꽃원 (17)
 
     public static brushflower getInstance() {
