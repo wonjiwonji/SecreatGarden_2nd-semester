@@ -28,7 +28,7 @@ public class brushflower extends DialogFragment implements View.OnClickListener{
 
     //안녕하세요
 
-    //지원수정
+    //지원수정2
     public brushflower(){} //붓꽃원 (17)
 
     public static brushflower getInstance() {
