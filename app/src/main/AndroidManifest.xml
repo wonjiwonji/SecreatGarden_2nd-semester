@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="8273eedb8b718df300993baa8e28630d"/>
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="37702ccc0db91c80404b8d74cb657ee2"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
