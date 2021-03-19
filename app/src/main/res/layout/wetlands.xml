@@ -53,7 +53,7 @@
             android:id="@+id/wetE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 수생식물과 습지식물들, 그리고 올챙이, 개구리 등의 양서류를 관찰할 수 있습니다.\n\n관람포인트 : 나무데크를 따라 쭉 걸으며 습지 곳곳을 관찰\n\n양서류 보호 안내 : 개구리알, 올챙이 채집 불가 안내" />
+            android:text="" />
 
 
     </LinearLayout>

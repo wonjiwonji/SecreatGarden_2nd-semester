@@ -53,7 +53,7 @@
             android:id="@+id/perE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 약재로 이용되는 작약과 화려한 꽃을 가진 다양한 품종의 작약을 관람할 수 있는 공간입니다.\n\n관람포인트 : 모란과 작약의 특징을 비교해보며 관찰\n\n다음 관람 안내 : 두꺼비분수, 어린이정원, 에코센터" />
+            android:text="" />
 
 
 

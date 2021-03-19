@@ -51,7 +51,7 @@
             android:id="@+id/chiE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 아이들의 꿈과 상상력을 키우기 위하여 나비화단, 잠자리데크, 미로원으로 구성된 정원" />
+            android:text="" />
 
 
     </LinearLayout>

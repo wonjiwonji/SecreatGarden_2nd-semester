@@ -53,7 +53,7 @@
             android:id="@+id/insE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 곤충과 양서류를 동시에 만날 수 있는 신비한 공간.\n\n관람포인트 : 커다란 모형의 곤충과 실제 곤충을 비교하며 관찰. 곤충 옆에 전시되어 있는 곤충잡는 식물 (네펜데스, 파리지옥 등)\n\n포토존 : 곤충모형과 함께 \n\n다음 관람 안내 : 오감정원, 수목관찰원" />
+            android:text="" />
 
 
     </LinearLayout>

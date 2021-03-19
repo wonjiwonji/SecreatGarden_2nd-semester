@@ -53,7 +53,7 @@
             android:id="@+id/echE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 나뭇잎에 맺혀있는 이슬방울 모양을 본뜬 둥근 외관의 아름다운 온실. 난대식물을 가까이에서 만날 수 있는 곳. 사계절 내내 푸른 식물원을 느낄 수 있는 곳.\n\n관람포인트 : 에코센터 안 연못 수생식물, 난대식물, 야외 테라스 공간\n\n포토존 : 에코센터 다리위, 야외 테라스 공간, 숲길\n\n다음 관람 안내 : 멸종위기식물원" />
+            android:text="" />
 
 
     </LinearLayout>

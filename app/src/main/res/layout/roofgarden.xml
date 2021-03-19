@@ -53,7 +53,7 @@
             android:id="@+id/rooE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 숲전시관 하늘정원은 중앙광장을 한눈에 내려다 볼 수 있습니다. 또한 하늘과 맞닿은 인능산의 계절별 풍경과 대왕저수지의 아름다운 경치를 즐길 수 있습니다.\n\n관람포인트 : 하늘정원에서 내려다보는 중앙광장, 푸른 하늘과 어울리는 식물의 모습,쭉 이어진 옥상 공간을 따라 걸으며 관람\n\n포토존 : 중앙광장쪽을 등지고 촬영, 장독대" />
+            android:text="" />
 
 
     </LinearLayout>

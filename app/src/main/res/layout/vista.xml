@@ -53,6 +53,6 @@
             android:id="@+id/visE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 줄지어 심겨진 느티나무숲을 따라 아름다운 화단과 아이들이 뛰어놀 수 있는 잔디밭,악기, 곤충데크가 조성되어 있습니다.\n\n관람포인트 : 아름다운 곡선의 형태로 양쪽에 심겨진 식물 (봄 : 튤립, 여름 : 해바라기 등)\n\n포토존 : 악기,곤충데크위, 비스타정원 가운데 공간\n\n다음 관람 안내 : 하늘정원, 전통정원, 곤충생태관" />
+            android:text="" />
     </LinearLayout>
 </LinearLayout>

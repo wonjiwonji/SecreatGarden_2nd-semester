@@ -53,7 +53,7 @@
             android:id="@+id/tradE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 :　우리 주변에서 사라져가는 옛 정원의 정취를 느낄 수 있는 공간으로 담장, 장독대, 펌프우물을 중심으로 다양한 식물이 계절별로 자라납니다.\n\n관람포인트 : 우물가 주변의 식물들\n\n포토존 : 우물가 주변, 전통정원 산책길\n\n다음 관람 안내 : 곤충생태관, 두꺼비분수, 오감정원" />
+            android:text="" />
 
 
 

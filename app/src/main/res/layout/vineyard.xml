@@ -53,7 +53,7 @@
             android:id="@+id/vinE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="소개 : 신구실습농장 시절인 1970년대부터 조성되었다. 대표적 포도 종류로 청수, 켐벨얼리, 세리단 등을 재배합니다.\n\n판매안내 : 재배한 포도 판매 가든센터에서 판매 (열매 맺는 시기와 판매 시기 기재)" />
+            android:text="" />
 
 
 
