@@ -47,7 +47,7 @@ public class insect extends DialogFragment implements View.OnClickListener{
         TextView insE = (TextView) v.findViewById(R.id.insE);
 
         final ImageView ins =(ImageView) v.findViewById(R.id.ins);
-        FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com\n");
+        FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference();
         String inse = "insect.JPG";
 
@@ -59,12 +59,10 @@ public class insect extends DialogFragment implements View.OnClickListener{
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
-                //이미지 로드 성공시
-
+                //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
                         .into(ins);
-
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
