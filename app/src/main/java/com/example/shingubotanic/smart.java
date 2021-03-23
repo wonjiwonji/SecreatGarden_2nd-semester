@@ -4,6 +4,7 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.BitmapDrawable;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -262,6 +263,72 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         marker31.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker31.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
+        //지원 마커 테스트 0312
+        MapPoint mapPoint32= MapPoint.mapPointWithGeoCoord(37.43388922486748, 127.08145621370461);
+        MapPOIItem marker32 = new MapPOIItem();
+        marker32.setItemName("화장실");
+        marker32.setTag(25);
+        marker32.setMapPoint(mapPoint32);
+        marker32.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker32.setCustomImageResourceId(R.drawable.toilet_icon);
+        marker32.setCustomImageAutoscale(false);
+        //marker32.setCustomImageAnchor(0.5f, 1.0f);
+
+        //BitmapDrawable bitmapDrawable = (BitmapDrawable)getResources().getDrawable(R.drawable.markertest1);
+        //marker32.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        //marker32.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+
+        //지원 0321
+        MapPoint mapPoint33= MapPoint.mapPointWithGeoCoord(37.43363231505473, 127.0815122406204);
+        MapPOIItem marker33 = new MapPOIItem();
+        marker33.setItemName("가든센터");
+        marker33.setTag(26);
+        marker33.setMapPoint(mapPoint33);
+        marker33.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker33.setCustomImageResourceId(R.drawable.info_icon);
+        marker33.setCustomImageAutoscale(false);
+
+        MapPoint mapPoint34= MapPoint.mapPointWithGeoCoord(37.43346025768689, 127.08067100793033);
+        MapPOIItem marker34 = new MapPOIItem();
+        marker34.setItemName("관리사무소");
+        marker34.setTag(27);
+        marker34.setMapPoint(mapPoint34);
+        marker34.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker34.setCustomImageResourceId(R.drawable.office_icon);
+        marker34.setCustomImageAutoscale(false);
+
+        MapPoint mapPoint35= MapPoint.mapPointWithGeoCoord(37.433832155925806, 127.08157364924348);
+        MapPOIItem marker35 = new MapPOIItem();
+        marker35.setItemName("가든카페");
+        marker35.setTag(28);
+        marker35.setMapPoint(mapPoint35);
+        marker35.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker35.setCustomImageResourceId(R.drawable.cafe_icon);
+        marker35.setCustomImageAutoscale(false);
+
+        MapPoint mapPoint36= MapPoint.mapPointWithGeoCoord(37.4341714160026, 127.08090441048031);
+        MapPOIItem marker36 = new MapPOIItem();
+        marker36.setItemName("전망대");
+        marker36.setTag(29);
+        marker36.setMapPoint(mapPoint36);
+        marker36.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker36.setCustomImageResourceId(R.drawable.observatory_icon);
+        marker36.setCustomImageAutoscale(false);
+
+        MapPoint mapPoint37= MapPoint.mapPointWithGeoCoord(37.43380166655613, 127.08203120670491);
+        MapPOIItem marker37 = new MapPOIItem();
+        marker37.setItemName("주차장");
+        marker37.setTag(30);
+        marker37.setMapPoint(mapPoint37);
+        marker37.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker37.setCustomImageResourceId(R.drawable.parking_icon);
+        marker37.setCustomImageAutoscale(false);
+
+
+
+
+
+
         mapView.addPOIItem(marker1);
         mapView.addPOIItem(marker2);
         mapView.addPOIItem(marker3);
@@ -286,6 +353,12 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker22);
         mapView.addPOIItem(marker30);
         mapView.addPOIItem(marker31);
+        mapView.addPOIItem(marker32);
+        mapView.addPOIItem(marker33);
+        mapView.addPOIItem(marker34);
+        mapView.addPOIItem(marker35);
+        mapView.addPOIItem(marker36);
+        mapView.addPOIItem(marker37);
 
 
 
@@ -439,6 +512,36 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                 }break;
             case (24):
                 if (mapPOIItem.getTag() ==24){
+                    echo ech = echo.getInstance();
+                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                }break;
+            case (25):
+                if (mapPOIItem.getTag() ==25){
+                    echo ech = echo.getInstance();
+                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                }break;
+            case (26):
+                if (mapPOIItem.getTag() ==26){
+                    echo ech = echo.getInstance();
+                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                }break;
+            case (27):
+                if (mapPOIItem.getTag() ==27){
+                    echo ech = echo.getInstance();
+                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                }break;
+            case (28):
+                if (mapPOIItem.getTag() ==28){
+                    echo ech = echo.getInstance();
+                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                }break;
+            case (29):
+                if (mapPOIItem.getTag() ==29){
+                    echo ech = echo.getInstance();
+                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                }break;
+            case (30):
+                if (mapPOIItem.getTag() ==30){
                     echo ech = echo.getInstance();
                     ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;

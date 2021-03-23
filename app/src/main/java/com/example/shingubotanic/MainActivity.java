@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Intent i;
     View.OnClickListener cl;
 
-    //안녕
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
