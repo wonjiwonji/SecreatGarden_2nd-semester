@@ -34,7 +34,7 @@ public class insect extends DialogFragment implements View.OnClickListener{
 
     public static final String TAG_EVENT_DIALOG ="Insect ecology hall";
 
-    public insect(){}   //곤충생태관
+    public insect(){}   //곤충생태관 재수정
 
     public static insect getInstance() {
         insect ins = new insect();
