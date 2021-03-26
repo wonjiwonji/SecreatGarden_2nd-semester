@@ -30,39 +30,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class insect extends DialogFragment implements View.OnClickListener{
+public class gardencenter extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="Insect ecology hall";
+    public static final String TAG_EVENT_DIALOG ="gardencenter";
 
-    public insect(){}   //곤충생태관
+    public gardencenter(){}   //가든센터
 
-    public static insect getInstance() {
-        insect ins = new insect();
-        return ins;
+    public static gardencenter getInstance() {
+        gardencenter cen = new gardencenter();
+        return cen;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.insect,container);
+        View v = inflater.inflate(R.layout.gardencenter,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView insE = (TextView) v.findViewById(R.id.insE);
+        TextView cenE = (TextView) v.findViewById(R.id.cenE);
 
-        final ImageView ins =(ImageView) v.findViewById(R.id.ins);
+        final ImageView cen =(ImageView) v.findViewById(R.id.cen);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference();
-        String inse = "insect.JPG";
+        String cent = "center.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("insect");
+        DatabaseReference dbRef = database.getReference("center");
 
         //Storage
-        storageRef.child(inse).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(cent).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(ins);
+                        .into(cen);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -79,7 +79,7 @@ public class insect extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                insE.setText(value);
+                cenE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 
@@ -91,7 +91,7 @@ public class insect extends DialogFragment implements View.OnClickListener{
         });
 
         cancel.setOnClickListener(this);
-        setCancelable(false); //흑백 처리된 공간 클릭시 창이 꺼지지 않게 하는 코드
+        setCancelable(false);
         return v;
 
     }

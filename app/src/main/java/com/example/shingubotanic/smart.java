@@ -516,34 +516,34 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                     ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
             case (25):
-                if (mapPOIItem.getTag() ==25){
-                    echo ech = echo.getInstance();
-                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==25){  //화장실
+                    toilet toi = toilet.getInstance();
+                    toi.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
             case (26):
-                if (mapPOIItem.getTag() ==26){
-                    echo ech = echo.getInstance();
-                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==26){  //가든센터
+                    gardencenter cen = gardencenter.getInstance();
+                    cen.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
             case (27):
-                if (mapPOIItem.getTag() ==27){
-                    echo ech = echo.getInstance();
-                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==27){  //관리사무소
+                    management man = management.getInstance();
+                    man.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
             case (28):
-                if (mapPOIItem.getTag() ==28){
-                    echo ech = echo.getInstance();
-                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==28){  //가든카페
+                    gardencafe caf = gardencafe.getInstance();
+                    caf.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
             case (29):
-                if (mapPOIItem.getTag() ==29){
-                    echo ech = echo.getInstance();
-                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==29){  //전망대
+                    observatory obs = observatory.getInstance();
+                    obs.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
             case (30):
-                if (mapPOIItem.getTag() ==30){
-                    echo ech = echo.getInstance();
-                    ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==30){  //주차장
+                    parking par = parking.getInstance();
+                    par.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
         }
 //        Log.d("MainActivity", "click :" + mapPOIItem); 말풍선 클릭이 되는지 확인하는코드
