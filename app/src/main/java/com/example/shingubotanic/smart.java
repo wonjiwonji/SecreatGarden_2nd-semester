@@ -323,10 +323,56 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         marker37.setMarkerType(MapPOIItem.MarkerType.CustomImage);
         marker37.setCustomImageResourceId(R.drawable.parking_icon);
         marker37.setCustomImageAutoscale(false);
+        
+        // 지원 3월 29일 - 나머지 마커 추가
 
+        MapPoint mapPoint38= MapPoint.mapPointWithGeoCoord(37.434565, 127.080645);
+        MapPOIItem marker38 = new MapPOIItem();
+        marker38.setItemName("두꺼비 분수");
+        marker38.setTag(31);
+        marker38.setMapPoint(mapPoint38);
+        marker38.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker38.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
+        MapPoint mapPoint39= MapPoint.mapPointWithGeoCoord(37.435358, 127.080213);
+        MapPOIItem marker39 = new MapPOIItem();
+        marker39.setItemName("그라스품 종원");
+        marker39.setTag(32);
+        marker39.setMapPoint(mapPoint39);
+        marker39.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker39.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
+        MapPoint mapPoint40= MapPoint.mapPointWithGeoCoord(37.433468, 127.081319);
+        MapPOIItem marker40 = new MapPOIItem();
+        marker40.setItemName("숲 전시관");
+        marker40.setTag(33);
+        marker40.setMapPoint(mapPoint40);
+        marker40.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker40.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
+        MapPoint mapPoint41= MapPoint.mapPointWithGeoCoord(37.434113, 127.080500);
+        MapPOIItem marker41 = new MapPOIItem();
+        marker41.setItemName("양서류 생태관");
+        marker41.setTag(34);
+        marker41.setMapPoint(mapPoint41);
+        marker41.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker41.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+
+        MapPoint mapPoint42= MapPoint.mapPointWithGeoCoord(37.434242849204175, 127.08029959608635);
+        MapPOIItem marker42 = new MapPOIItem();
+        marker42.setItemName("오감 정원");
+        marker42.setTag(35);
+        marker42.setMapPoint(mapPoint42);
+        marker42.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker42.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+
+        MapPoint mapPoint43= MapPoint.mapPointWithGeoCoord(37.436149688095924, 127.07852763611855);
+        MapPOIItem marker43 = new MapPOIItem();
+        marker43.setItemName("라일락원");
+        marker43.setTag(36);
+        marker43.setMapPoint(mapPoint43);
+        marker43.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+        marker43.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
 
         mapView.addPOIItem(marker1);
@@ -359,6 +405,12 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker35);
         mapView.addPOIItem(marker36);
         mapView.addPOIItem(marker37);
+        mapView.addPOIItem(marker38);
+        mapView.addPOIItem(marker39);
+        mapView.addPOIItem(marker40);
+        mapView.addPOIItem(marker41);
+        mapView.addPOIItem(marker42);
+        mapView.addPOIItem(marker43);
 
 
 
@@ -545,6 +597,38 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                     parking par = parking.getInstance();
                     par.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
+
+            case (31):
+                if (mapPOIItem.getTag() ==31){
+                    roofgarden roof = roofgarden.getInstance();
+                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+            case (32):
+                if (mapPOIItem.getTag() ==32){
+                    roofgarden roof = roofgarden.getInstance();
+                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+            case (33):
+                if (mapPOIItem.getTag() ==33){
+                    roofgarden roof = roofgarden.getInstance();
+                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+            case (34):
+                if (mapPOIItem.getTag() ==34){
+                    roofgarden roof = roofgarden.getInstance();
+                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+            case (35):
+                if (mapPOIItem.getTag() ==35){
+                    roofgarden roof = roofgarden.getInstance();
+                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+            case (36):
+                if (mapPOIItem.getTag() ==36){
+                    roofgarden roof = roofgarden.getInstance();
+                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+
         }
 //        Log.d("MainActivity", "click :" + mapPOIItem); 말풍선 클릭이 되는지 확인하는코드
 //        다이얼로그 프래그먼트 불러오는 코드
