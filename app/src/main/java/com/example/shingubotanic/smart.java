@@ -570,32 +570,32 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
             case (25):
                 if (mapPOIItem.getTag() ==25){  //화장실
                     toilet toi = toilet.getInstance();
-                    toi.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                    toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
                 }break;
             case (26):
                 if (mapPOIItem.getTag() ==26){  //가든센터
                     gardencenter cen = gardencenter.getInstance();
-                    cen.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                    cen.show(getSupportFragmentManager(), gardencenter.TAG_EVENT_DIALOG);
                 }break;
             case (27):
                 if (mapPOIItem.getTag() ==27){  //관리사무소
                     management man = management.getInstance();
-                    man.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                    man.show(getSupportFragmentManager(), management.TAG_EVENT_DIALOG);
                 }break;
             case (28):
                 if (mapPOIItem.getTag() ==28){  //가든카페
                     gardencafe caf = gardencafe.getInstance();
-                    caf.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                    caf.show(getSupportFragmentManager(), gardencafe.TAG_EVENT_DIALOG);
                 }break;
             case (29):
                 if (mapPOIItem.getTag() ==29){  //전망대
                     observatory obs = observatory.getInstance();
-                    obs.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                    obs.show(getSupportFragmentManager(), observatory.TAG_EVENT_DIALOG);
                 }break;
             case (30):
                 if (mapPOIItem.getTag() ==30){  //주차장
                     parking par = parking.getInstance();
-                    par.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                    par.show(getSupportFragmentManager(), parking.TAG_EVENT_DIALOG);
                 }break;
 
             case (31):
