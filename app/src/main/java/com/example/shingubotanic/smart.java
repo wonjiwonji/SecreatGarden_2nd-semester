@@ -599,34 +599,34 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                 }break;
 
             case (31):
-                if (mapPOIItem.getTag() ==31){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==31){  //두꺼비 분수
+                    toadfountain toa = toadfountain.getInstance();
+                    toa.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (32):
-                if (mapPOIItem.getTag() ==32){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==32){  //그라스품종원
+                    grass gra = grass.getInstance();
+                    gra.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (33):
-                if (mapPOIItem.getTag() ==33){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==33){  //숲 전시관
+                    forest forr = forest.getInstance();
+                    forr.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (34):
-                if (mapPOIItem.getTag() ==34){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==34){  //양서류 생태관
+                    amphibian amp = amphibian.getInstance();
+                    amp.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (35):
-                if (mapPOIItem.getTag() ==35){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==35){  //오감정원
+                    fivesenses fiv = fivesenses.getInstance();
+                    fiv.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (36):
-                if (mapPOIItem.getTag() ==36){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==36){  //라일락원
+                    lilacgarden lil = lilacgarden.getInstance();
+                    lil.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
 
         }
