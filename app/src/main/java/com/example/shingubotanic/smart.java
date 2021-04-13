@@ -69,56 +69,55 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         // 줌 아웃
         mapView.zoomOut(true);
 
-        MapPoint mapPoint1= MapPoint.mapPointWithGeoCoord(37.43406843548958, 127.08090837897127);//좌표에 마커를 찍는거
+        MapPoint mapPoint1= MapPoint.mapPointWithGeoCoord(37.43374990000003, 127.08111759999997);//좌표에 마커를 찍는거
         MapPOIItem marker1 = new MapPOIItem();
-        marker1.setItemName("비스타정원");//말풍선
+        marker1.setItemName("중앙광장");//말풍선
         marker1.setTag(1);
         marker1.setMapPoint(mapPoint1);
         marker1.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint2= MapPoint.mapPointWithGeoCoord(37.434282693201176, 127.0809222257851);
+        MapPoint mapPoint2= MapPoint.mapPointWithGeoCoord(37.43378160000002, 127.08068609999998);
         MapPOIItem marker2 = new MapPOIItem();
-        marker2.setItemName("전통정원");
+        marker2.setItemName("하늘정원");
         marker2.setTag(2);
         marker2.setMapPoint(mapPoint2);
         marker2.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker2.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint3= MapPoint.mapPointWithGeoCoord(37.434571931125646, 127.08064142102448);
+        MapPoint mapPoint3= MapPoint.mapPointWithGeoCoord(37.43405849102472, 127.08087070726651);
         MapPOIItem marker3 = new MapPOIItem();
-        marker3.setItemName("계절초화원");
+        marker3.setItemName("비스타정원");
         marker3.setTag(3);
         marker3.setMapPoint(mapPoint3);
         marker3.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker3.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint4= MapPoint.mapPointWithGeoCoord(37.43419135468029, 127.08031776252568);
+        MapPoint mapPoint4= MapPoint.mapPointWithGeoCoord(37.43428850000004, 127.08082939999997);
         MapPOIItem marker4 = new MapPOIItem();
-        marker4.setItemName("허브원");
+        marker4.setItemName("정통정원");
         marker4.setTag(4);
         marker4.setMapPoint(mapPoint4);
         marker4.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker4.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint5= MapPoint.mapPointWithGeoCoord(37.433850428182524, 127.08013819838744);
+        MapPoint mapPoint5= MapPoint.mapPointWithGeoCoord(37.43441749999999, 127.0810457);
         MapPOIItem marker5 = new MapPOIItem();
-        marker5.setItemName("나무관찰원");
+        marker5.setItemName("작약원");
         marker5.setTag(5);
         marker5.setMapPoint(mapPoint5);
         marker5.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker5.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); //
 
-        MapPoint mapPoint6= MapPoint.mapPointWithGeoCoord(37.43435816381426, 127.0796013989216);
+        MapPoint mapPoint6= MapPoint.mapPointWithGeoCoord(37.434603651775085, 127.08064936148412);
         MapPOIItem marker6 = new MapPOIItem();
-        marker6.setItemName("과수원");
+        marker6.setItemName("두꺼비분수");
         marker6.setTag(6);
         marker6.setMapPoint(mapPoint6);
-        marker6.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-
+        marker6.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양
         marker6.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint7= MapPoint.mapPointWithGeoCoord(37.434486483563205, 127.080208907736);
+        MapPoint mapPoint7= MapPoint.mapPointWithGeoCoord(37.43453092199691, 127.08023793052985);
         MapPOIItem marker7 = new MapPOIItem();
         marker7.setItemName("어린이정원");
         marker7.setTag(7);
@@ -126,23 +125,23 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         marker7.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker7.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint8= MapPoint.mapPointWithGeoCoord(37.43520530787439, 127.08007102464198);
+        MapPoint mapPoint8= MapPoint.mapPointWithGeoCoord(37.43440920000004, 127.08032980000007);
         MapPOIItem marker8 = new MapPOIItem();
-        marker8.setItemName("멸종위기식물원");
+        marker8.setItemName("오감정원");
         marker8.setTag(8);
         marker8.setMapPoint(mapPoint8);
         marker8.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker8.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint9= MapPoint.mapPointWithGeoCoord(37.43521926809207, 127.07986762448489);
+        MapPoint mapPoint9= MapPoint.mapPointWithGeoCoord(37.43431240322188, 127.08000265298142);
         MapPOIItem marker9 = new MapPOIItem();
-        marker9.setItemName("교재식물원");
+        marker9.setItemName("수목관찰원");
         marker9.setTag(9);
         marker9.setMapPoint(mapPoint9);
         marker9.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker9.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint10= MapPoint.mapPointWithGeoCoord(37.43511836703489, 127.079205708244);
+        MapPoint mapPoint10= MapPoint.mapPointWithGeoCoord(37.43516570835482, 127.07920936229561);
         MapPOIItem marker10 = new MapPOIItem();
         marker10.setItemName("약초원");
         marker10.setTag(10);
@@ -150,229 +149,149 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         marker10.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker10.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint11= MapPoint.mapPointWithGeoCoord(37.43550389869101, 127.07941623173194);
+        MapPoint mapPoint11= MapPoint.mapPointWithGeoCoord(37.43537991201445, 127.0788627385964);
         MapPOIItem marker11 = new MapPOIItem();
-        marker11.setItemName("습지생태원");
+        marker11.setItemName("메타세쿼이아길");
         marker11.setTag(11);
         marker11.setMapPoint(mapPoint11);
         marker11.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker11.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint12= MapPoint.mapPointWithGeoCoord(37.43590750001707, 127.07825171431514);
+        MapPoint mapPoint12= MapPoint.mapPointWithGeoCoord(37.43497920000003, 127.07983260000003);
         MapPOIItem marker12 = new MapPOIItem();
-        marker12.setItemName("고층습지원");
+        marker12.setItemName("멸종위기 식물원");
         marker12.setTag(12);
         marker12.setMapPoint(mapPoint12);
         marker12.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker12.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint13= MapPoint.mapPointWithGeoCoord(37.43606538907537, 127.07916877704947);
+        MapPoint mapPoint13= MapPoint.mapPointWithGeoCoord(37.43545487038663, 127.079948650858);
         MapPOIItem marker13 = new MapPOIItem();
-        marker13.setItemName("돌탑정원");
+        marker13.setItemName("그라스품종원");
         marker13.setTag(13);
         marker13.setMapPoint(mapPoint13);
         marker13.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker13.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint14= MapPoint.mapPointWithGeoCoord(37.43610038907537, 127.07956877704947);
+        MapPoint mapPoint14= MapPoint.mapPointWithGeoCoord(37.4353757, 127.07966280000005);
         MapPOIItem marker14 = new MapPOIItem();
-        marker14.setItemName("포도원");
+        marker14.setItemName("꽃무릇군락지");
         marker14.setTag(14);
         marker14.setMapPoint(mapPoint14);
         marker14.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker14.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint15= MapPoint.mapPointWithGeoCoord(37.43542384250206, 127.080090763757377);
+        MapPoint mapPoint15= MapPoint.mapPointWithGeoCoord(37.43529936421379, 127.07952713349141);
         MapPOIItem marker15 = new MapPOIItem();
-        marker15.setItemName("수국원");
+        marker15.setItemName("습지생태원");
         marker15.setTag(15);
         marker15.setMapPoint(mapPoint15);
         marker15.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker15.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint16= MapPoint.mapPointWithGeoCoord(37.43543384250206, 127.08050763757377);
+        MapPoint mapPoint16= MapPoint.mapPointWithGeoCoord(37.43619319999999, 127.07871640000008);
         MapPOIItem marker16 = new MapPOIItem();
-        marker16.setItemName("둥글래원");
+        marker16.setItemName("고층습지원");
         marker16.setTag(16);
         marker16.setMapPoint(mapPoint16);
         marker16.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker16.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint17= MapPoint.mapPointWithGeoCoord(37.43519818429987, 127.08143146681111);
+        MapPoint mapPoint17= MapPoint.mapPointWithGeoCoord(37.436818099999975, 127.07884680000006);
         MapPOIItem marker17 = new MapPOIItem();
-        marker17.setItemName("붓꽃원");
+        marker17.setItemName("포도원");
         marker17.setTag(17);
         marker17.setMapPoint(mapPoint17);
         marker17.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker17.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint18= MapPoint.mapPointWithGeoCoord(37.435015959858774, 127.08172630048755);
+        MapPoint mapPoint18= MapPoint.mapPointWithGeoCoord(37.437062299999994, 127.07769869999993);
         MapPOIItem marker18 = new MapPOIItem();
-        marker18.setItemName("국화원");
+        marker18.setItemName("가을단풍길");
         marker18.setTag(18);
         marker18.setMapPoint(mapPoint18);
         marker18.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker18.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint19= MapPoint.mapPointWithGeoCoord(37.434447479596436, 127.08139853628394);
+        MapPoint mapPoint19= MapPoint.mapPointWithGeoCoord(37.43732969999999 , 127.07770260000007 );
         MapPOIItem marker19 = new MapPOIItem();
-        marker19.setItemName("철쭉원");
+        marker19.setItemName("억새원");
         marker19.setTag(19);
         marker19.setMapPoint(mapPoint19);
         marker19.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker19.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint20= MapPoint.mapPointWithGeoCoord(37.434297479596436, 127.08185853628394);
+        MapPoint mapPoint20= MapPoint.mapPointWithGeoCoord(37.43831869999999 , 127.07702510000001 );
         MapPOIItem marker20 = new MapPOIItem();
-        marker20.setItemName("작약원");
+        marker20.setItemName("라일락원");
         marker20.setTag(20);
         marker20.setMapPoint(mapPoint20);
         marker20.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker20.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint21= MapPoint.mapPointWithGeoCoord(37.433447479596436, 127.08230853628394);
+        MapPoint mapPoint21= MapPoint.mapPointWithGeoCoord(37.43484208519403 , 127.08035347746568 );
         MapPOIItem marker21 = new MapPOIItem();
-        marker21.setItemName("수련원");
+        marker21.setItemName("A에코센터");
         marker21.setTag(21);
         marker21.setMapPoint(mapPoint21);
         marker21.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
         marker21.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
-        MapPoint mapPoint22= MapPoint.mapPointWithGeoCoord(37.433735858281224, 127.08135266869336);
+        MapPoint mapPoint22= MapPoint.mapPointWithGeoCoord(37.4349547471053, 127.080159117062);
         MapPOIItem marker22 = new MapPOIItem();
-        marker22.setItemName("옥상정원");
+        marker22.setItemName("전망대");
         marker22.setTag(22);
         marker22.setMapPoint(mapPoint22);
-        marker22.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker22.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        marker22.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker22.setCustomImageResourceId(R.drawable.observatory_icon);
+        marker22.setCustomImageAutoscale(false);
 
+        MapPoint mapPoint23= MapPoint.mapPointWithGeoCoord(37.433800524222114, 127.08150811566452);
+        MapPOIItem marker23 = new MapPOIItem();
+        marker23.setItemName("가든센터");
+        marker23.setTag(23);
+        marker23.setMapPoint(mapPoint23);
+        marker23.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker23.setCustomImageResourceId(R.drawable.info_icon);
+        marker23.setCustomImageAutoscale(false);
 
-        MapPoint mapPoint30 = MapPoint.mapPointWithGeoCoord(37.43419776612524, 127.08051065343979);
-        MapPOIItem marker30 = new MapPOIItem();
-        marker30.setItemName("곤충생태관");
-        marker30.setTag(23);
-        marker30.setMapPoint(mapPoint30);
-        marker30.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker30.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        MapPoint mapPoint24= MapPoint.mapPointWithGeoCoord(37.43387937864328, 127.08148560316515);
+        MapPOIItem marker24 = new MapPOIItem();
+        marker24.setItemName("화장실2");
+        marker24.setTag(24);
+        marker24.setMapPoint(mapPoint24);
+        marker24.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker24.setCustomImageResourceId(R.drawable.toilet_icon);
+        marker24.setCustomImageAutoscale(false);
 
-        MapPoint mapPoint31= MapPoint.mapPointWithGeoCoord(37.434921215200994, 127.08022310897256);
-        MapPOIItem marker31 = new MapPOIItem();
-        marker31.setItemName("에코센터");
-        marker31.setTag(24);
-        marker31.setMapPoint(mapPoint31);
-        marker31.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker31.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
-
-        //지원 마커 테스트 0312
-        MapPoint mapPoint32= MapPoint.mapPointWithGeoCoord(37.43388922486748, 127.08145621370461);
-        MapPOIItem marker32 = new MapPOIItem();
-        marker32.setItemName("화장실");
-        marker32.setTag(25);
-        marker32.setMapPoint(mapPoint32);
-        marker32.setMarkerType(MapPOIItem.MarkerType.CustomImage);
-        marker32.setCustomImageResourceId(R.drawable.toilet_icon);
-        marker32.setCustomImageAutoscale(false);
+        MapPoint mapPoint25= MapPoint.mapPointWithGeoCoord(37.433996, 127.081272);
+        MapPOIItem marker25 = new MapPOIItem();
+        marker25.setItemName("화장실");
+        marker25.setTag(25);
+        marker25.setMapPoint(mapPoint25);
+        marker25.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker25.setCustomImageResourceId(R.drawable.toilet_icon);
+        marker25.setCustomImageAutoscale(false);
         //marker32.setCustomImageAnchor(0.5f, 1.0f);
 
-        //BitmapDrawable bitmapDrawable = (BitmapDrawable)getResources().getDrawable(R.drawable.markertest1);
-        //marker32.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        //marker32.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+        MapPoint mapPoint26= MapPoint.mapPointWithGeoCoord(37.4337449824962, 127.08189373068059);
+        MapPOIItem marker26 = new MapPOIItem();
+        marker26.setItemName("주차장");
+        marker26.setTag(26);
+        marker26.setMapPoint(mapPoint26);
+        marker26.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker26.setCustomImageResourceId(R.drawable.parking_icon);
+        marker26.setCustomImageAutoscale(false);
 
-        //지원 0321
-        MapPoint mapPoint33= MapPoint.mapPointWithGeoCoord(37.43363231505473, 127.0815122406204);
-        MapPOIItem marker33 = new MapPOIItem();
-        marker33.setItemName("가든센터");
-        marker33.setTag(26);
-        marker33.setMapPoint(mapPoint33);
-        marker33.setMarkerType(MapPOIItem.MarkerType.CustomImage);
-        marker33.setCustomImageResourceId(R.drawable.info_icon);
-        marker33.setCustomImageAutoscale(false);
+        MapPoint mapPoint27= MapPoint.mapPointWithGeoCoord(37.433831, 127.081404);
+        MapPOIItem marker27 = new MapPOIItem();
+        marker27.setItemName("가든카페");
+        marker27.setTag(27);
+        marker27.setMapPoint(mapPoint27);
+        marker27.setMarkerType(MapPOIItem.MarkerType.CustomImage);
+        marker27.setCustomImageResourceId(R.drawable.cafe_icon);
+        marker27.setCustomImageAutoscale(false);
 
-        MapPoint mapPoint34= MapPoint.mapPointWithGeoCoord(37.43346025768689, 127.08067100793033);
-        MapPOIItem marker34 = new MapPOIItem();
-        marker34.setItemName("관리사무소");
-        marker34.setTag(27);
-        marker34.setMapPoint(mapPoint34);
-        marker34.setMarkerType(MapPOIItem.MarkerType.CustomImage);
-        marker34.setCustomImageResourceId(R.drawable.office_icon);
-        marker34.setCustomImageAutoscale(false);
-
-        MapPoint mapPoint35= MapPoint.mapPointWithGeoCoord(37.433832155925806, 127.08157364924348);
-        MapPOIItem marker35 = new MapPOIItem();
-        marker35.setItemName("가든카페");
-        marker35.setTag(28);
-        marker35.setMapPoint(mapPoint35);
-        marker35.setMarkerType(MapPOIItem.MarkerType.CustomImage);
-        marker35.setCustomImageResourceId(R.drawable.cafe_icon);
-        marker35.setCustomImageAutoscale(false);
-
-        MapPoint mapPoint36= MapPoint.mapPointWithGeoCoord(37.4341714160026, 127.08090441048031);
-        MapPOIItem marker36 = new MapPOIItem();
-        marker36.setItemName("전망대");
-        marker36.setTag(29);
-        marker36.setMapPoint(mapPoint36);
-        marker36.setMarkerType(MapPOIItem.MarkerType.CustomImage);
-        marker36.setCustomImageResourceId(R.drawable.observatory_icon);
-        marker36.setCustomImageAutoscale(false);
-
-        MapPoint mapPoint37= MapPoint.mapPointWithGeoCoord(37.43380166655613, 127.08203120670491);
-        MapPOIItem marker37 = new MapPOIItem();
-        marker37.setItemName("주차장");
-        marker37.setTag(30);
-        marker37.setMapPoint(mapPoint37);
-        marker37.setMarkerType(MapPOIItem.MarkerType.CustomImage);
-        marker37.setCustomImageResourceId(R.drawable.parking_icon);
-        marker37.setCustomImageAutoscale(false);
-        
-        // 지원 3월 29일 - 나머지 마커 추가
-
-        MapPoint mapPoint38= MapPoint.mapPointWithGeoCoord(37.434565, 127.080645);
-        MapPOIItem marker38 = new MapPOIItem();
-        marker38.setItemName("두꺼비 분수");
-        marker38.setTag(31);
-        marker38.setMapPoint(mapPoint38);
-        marker38.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker38.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
-
-        MapPoint mapPoint39= MapPoint.mapPointWithGeoCoord(37.435358, 127.080213);
-        MapPOIItem marker39 = new MapPOIItem();
-        marker39.setItemName("그라스품 종원");
-        marker39.setTag(32);
-        marker39.setMapPoint(mapPoint39);
-        marker39.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker39.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
-
-        MapPoint mapPoint40= MapPoint.mapPointWithGeoCoord(37.433468, 127.081319);
-        MapPOIItem marker40 = new MapPOIItem();
-        marker40.setItemName("숲 전시관");
-        marker40.setTag(33);
-        marker40.setMapPoint(mapPoint40);
-        marker40.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker40.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
-
-        MapPoint mapPoint41= MapPoint.mapPointWithGeoCoord(37.434113, 127.080500);
-        MapPOIItem marker41 = new MapPOIItem();
-        marker41.setItemName("양서류 생태관");
-        marker41.setTag(34);
-        marker41.setMapPoint(mapPoint41);
-        marker41.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker41.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
-
-        MapPoint mapPoint42= MapPoint.mapPointWithGeoCoord(37.434242849204175, 127.08029959608635);
-        MapPOIItem marker42 = new MapPOIItem();
-        marker42.setItemName("오감 정원");
-        marker42.setTag(35);
-        marker42.setMapPoint(mapPoint42);
-        marker42.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker42.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
-
-        MapPoint mapPoint43= MapPoint.mapPointWithGeoCoord(37.436149688095924, 127.07852763611855);
-        MapPOIItem marker43 = new MapPOIItem();
-        marker43.setItemName("라일락원");
-        marker43.setTag(36);
-        marker43.setMapPoint(mapPoint43);
-        marker43.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
-        marker43.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 
 
         mapView.addPOIItem(marker1);
@@ -397,22 +316,11 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker20);
         mapView.addPOIItem(marker21);
         mapView.addPOIItem(marker22);
-        mapView.addPOIItem(marker30);
-        mapView.addPOIItem(marker31);
-        mapView.addPOIItem(marker32);
-        mapView.addPOIItem(marker33);
-        mapView.addPOIItem(marker34);
-        mapView.addPOIItem(marker35);
-        mapView.addPOIItem(marker36);
-        mapView.addPOIItem(marker37);
-        mapView.addPOIItem(marker38);
-        mapView.addPOIItem(marker39);
-        mapView.addPOIItem(marker40);
-        mapView.addPOIItem(marker41);
-        mapView.addPOIItem(marker42);
-        mapView.addPOIItem(marker43);
-
-
+        mapView.addPOIItem(marker23);
+        mapView.addPOIItem(marker24);
+        mapView.addPOIItem(marker25);
+        mapView.addPOIItem(marker26);
+        mapView.addPOIItem(marker27);
 
 
 
@@ -445,191 +353,144 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem, MapPOIItem.CalloutBalloonButtonType calloutBalloonButtonType) {
 
-        switch (mapPOIItem.getTag()){
+        switch (mapPOIItem.getTag()) {
             case (1):
-                if (mapPOIItem.getTag() ==1){
+                if (mapPOIItem.getTag() == 1) { //중앙광장
                     vista vis = vista.getInstance();
                     vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
-                }break;
+                } break;
             case (2):
-                if (mapPOIItem.getTag() ==2){
+                if (mapPOIItem.getTag() == 2) { //하늘정원
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                } break;
+            case (3):
+                if (mapPOIItem.getTag() == 3) { //비스타정원
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                } break;
+            case (4):
+                if (mapPOIItem.getTag() == 4){ //전통정원
                     tradition tra = tradition.getInstance();
                     tra.show(getSupportFragmentManager(), tradition.TAG_EVENT_DIALOG);
                 }break;
-            case (3):
-                if (mapPOIItem.getTag() ==3){
-                    seasonalherbgarden sea = seasonalherbgarden.getInstance();
-                    sea.show(getSupportFragmentManager(), seasonalherbgarden.TAG_EVENT_DIALOG);
-                }break;
-            case (4):
-                if (mapPOIItem.getTag() ==4){
-                    herb her = herb.getInstance();
-                    her.show(getSupportFragmentManager(), herb.TAG_EVENT_DIALOG);
-                }break;
             case (5):
-                if (mapPOIItem.getTag() ==5){
-                    treeinspector tre = treeinspector.getInstance();
-                    tre.show(getSupportFragmentManager(), treeinspector.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 5){ //작약원
+                    peremptoryagent per = peremptoryagent.getInstance();
+                    per.show(getSupportFragmentManager(), peremptoryagent.TAG_EVENT_DIALOG);
                 }break;
             case (6):
-                if (mapPOIItem.getTag() ==6){
-                    fruitfirm fru = fruitfirm.getInstance();
-                    fru.show(getSupportFragmentManager(), fruitfirm.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 6){  //두꺼비 분수
+                    toadfountain toa = toadfountain.getInstance();
+                    toa.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (7):
-                if (mapPOIItem.getTag() ==7){
+                if (mapPOIItem.getTag() ==7){ //어린이정원
                     children chi = children.getInstance();
                     chi.show(getSupportFragmentManager(), children.TAG_EVENT_DIALOG);
                 }break;
             case (8):
-                if (mapPOIItem.getTag() ==8){
-                    extinction ext = extinction.getInstance();
-                    ext.show(getSupportFragmentManager(), extinction.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 8){  //오감정원
+                    fivesenses fiv = fivesenses.getInstance();
+                    fiv.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (9):
-                if (mapPOIItem.getTag() ==9){
-                    textbook tex = textbook.getInstance();
-                    tex.show(getSupportFragmentManager(), textbook.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 9){ //수목관찰원
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (10):
-                if (mapPOIItem.getTag() ==10){
+                if (mapPOIItem.getTag() ==10){ //약초원
                     herbgarden herbg = herbgarden.getInstance();
                     herbg.show(getSupportFragmentManager(), herbgarden.TAG_EVENT_DIALOG);
                 }break;
             case (11):
-                if (mapPOIItem.getTag() ==11){
+                if (mapPOIItem.getTag() == 11){ //메타세쿼이아길
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                }break;
+            case (12):
+                if (mapPOIItem.getTag() == 12){ //멸종위기 식물원
+                    extinction ext = extinction.getInstance();
+                    ext.show(getSupportFragmentManager(), extinction.TAG_EVENT_DIALOG);
+                }break;
+            case (13):
+                if (mapPOIItem.getTag() == 13){  //그라스품종원
+                    grass gra = grass.getInstance();
+                    gra.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                }break;
+            case (14):
+                if (mapPOIItem.getTag() == 14){ //꽃무릇 군락지
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                }break;
+            case (15):
+                if (mapPOIItem.getTag() == 15){ //습지생태원
                     wetlands wet = wetlands.getInstance();
                     wet.show(getSupportFragmentManager(), wetlands.TAG_EVENT_DIALOG);
                 }break;
-            case (12):
-                if (mapPOIItem.getTag() ==12){
+            case (16):
+                if (mapPOIItem.getTag() == 16){ //고층습지원
                     high hig = high.getInstance();
                     hig.show(getSupportFragmentManager(), high.TAG_EVENT_DIALOG);
                 }break;
-            case (13):
-                if (mapPOIItem.getTag() ==13){
-                    stonegarden sto = stonegarden.getInstance();
-                    sto.show(getSupportFragmentManager(), stonegarden.TAG_EVENT_DIALOG);
-                }break;
-            case (14):
-                if (mapPOIItem.getTag() ==14){
+            case (17):
+                if (mapPOIItem.getTag() == 17){ //포도원
                     vineyard vin = vineyard.getInstance();
                     vin.show(getSupportFragmentManager(), vineyard.TAG_EVENT_DIALOG);
                 }break;
-            case (15):
-                if (mapPOIItem.getTag() ==15){
-                    hydroponics hyd = hydroponics.getInstance();
-                    hyd.show(getSupportFragmentManager(), hydroponics.TAG_EVENT_DIALOG);
-                }break;
-            case (16):
-                if (mapPOIItem.getTag() ==16){
-                    donglewon don = donglewon.getInstance();
-                    don.show(getSupportFragmentManager(), donglewon.TAG_EVENT_DIALOG);
-                }break;
-            case (17):
-                if (mapPOIItem.getTag() ==17){
-                    brushflower brush = brushflower.getInstance();
-                    brush.show(getSupportFragmentManager(), brushflower.TAG_EVENT_DIALOG);
-                }break;
             case (18):
-                if (mapPOIItem.getTag() ==18){
-                    chrysanthemum chr = chrysanthemum.getInstance();
-                    chr.show(getSupportFragmentManager(), chrysanthemum.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 18){ //가을단풍길
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (19):
-                if (mapPOIItem.getTag() ==19){
-                    azalea aza = azalea.getInstance();
-                    aza.show(getSupportFragmentManager(), azalea.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==19){  //억새원
+                    vista vis = vista.getInstance();
+                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (20):
-                if (mapPOIItem.getTag() ==20){
-                    peremptoryagent per = peremptoryagent.getInstance();
-                    per.show(getSupportFragmentManager(), peremptoryagent.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() ==20){  //라일락원
+                    lilacgarden lil = lilacgarden.getInstance();
+                    lil.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (21):
-                if (mapPOIItem.getTag() ==21){
-                    training trai = training.getInstance();
-                    trai.show(getSupportFragmentManager(), training.TAG_EVENT_DIALOG);
-                }break;
-            case (22):
-                if (mapPOIItem.getTag() ==22){
-                    roofgarden roof = roofgarden.getInstance();
-                    roof.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
-                }break;
-
-            case (23):
-                if (mapPOIItem.getTag() ==23){
-                    insect ins = insect.getInstance();
-                    ins.show(getSupportFragmentManager(), insect.TAG_EVENT_DIALOG);
-                }break;
-            case (24):
-                if (mapPOIItem.getTag() ==24){
+                if (mapPOIItem.getTag() ==21){ //A 에코센터
                     echo ech = echo.getInstance();
                     ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
                 }break;
+            case (22):
+                if (mapPOIItem.getTag() ==22){  //전망대, 에코센터 2층
+                    observatory obs = observatory.getInstance();
+                    obs.show(getSupportFragmentManager(), observatory.TAG_EVENT_DIALOG);
+                }break;
+            case (23):
+                if (mapPOIItem.getTag() ==23){  //가든센터
+                    gardencenter cen = gardencenter.getInstance();
+                    cen.show(getSupportFragmentManager(), gardencenter.TAG_EVENT_DIALOG);
+                }break;
+            case (24):
+                if (mapPOIItem.getTag() ==24){ //화장실2
+                toilet toi = toilet.getInstance();
+                toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
+            }break;
             case (25):
-                if (mapPOIItem.getTag() ==25){  //화장실
+                if (mapPOIItem.getTag() ==25){ //화장실
                     toilet toi = toilet.getInstance();
                     toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
                 }break;
             case (26):
-                if (mapPOIItem.getTag() ==26){  //가든센터
-                    gardencenter cen = gardencenter.getInstance();
-                    cen.show(getSupportFragmentManager(), gardencenter.TAG_EVENT_DIALOG);
-                }break;
-            case (27):
-                if (mapPOIItem.getTag() ==27){  //관리사무소
-                    management man = management.getInstance();
-                    man.show(getSupportFragmentManager(), management.TAG_EVENT_DIALOG);
-                }break;
-            case (28):
-                if (mapPOIItem.getTag() ==28){  //가든카페
-                    gardencafe caf = gardencafe.getInstance();
-                    caf.show(getSupportFragmentManager(), gardencafe.TAG_EVENT_DIALOG);
-                }break;
-            case (29):
-                if (mapPOIItem.getTag() ==29){  //전망대
-                    observatory obs = observatory.getInstance();
-                    obs.show(getSupportFragmentManager(), observatory.TAG_EVENT_DIALOG);
-                }break;
-            case (30):
-                if (mapPOIItem.getTag() ==30){  //주차장
+                if (mapPOIItem.getTag() ==26){ //주차장
                     parking par = parking.getInstance();
                     par.show(getSupportFragmentManager(), parking.TAG_EVENT_DIALOG);
                 }break;
-
-            case (31):
-                if (mapPOIItem.getTag() ==31){  //두꺼비 분수
-                    toadfountain toa = toadfountain.getInstance();
-                    toa.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+            case (27):
+                if (mapPOIItem.getTag() ==27){ //가든카페
+                    gardencafe caf = gardencafe.getInstance();
+                    caf.show(getSupportFragmentManager(), gardencafe.TAG_EVENT_DIALOG);
                 }break;
-            case (32):
-                if (mapPOIItem.getTag() ==32){  //그라스품종원
-                    grass gra = grass.getInstance();
-                    gra.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
-                }break;
-            case (33):
-                if (mapPOIItem.getTag() ==33){  //숲 전시관
-                    forest forr = forest.getInstance();
-                    forr.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
-                }break;
-            case (34):
-                if (mapPOIItem.getTag() ==34){  //양서류 생태관
-                    amphibian amp = amphibian.getInstance();
-                    amp.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
-                }break;
-            case (35):
-                if (mapPOIItem.getTag() ==35){  //오감정원
-                    fivesenses fiv = fivesenses.getInstance();
-                    fiv.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
-                }break;
-            case (36):
-                if (mapPOIItem.getTag() ==36){  //라일락원
-                    lilacgarden lil = lilacgarden.getInstance();
-                    lil.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
-                }break;
-
         }
+
 //        Log.d("MainActivity", "click :" + mapPOIItem); 말풍선 클릭이 되는지 확인하는코드
 //        다이얼로그 프래그먼트 불러오는 코드
 //        fragment f =fragment.getInstance();
