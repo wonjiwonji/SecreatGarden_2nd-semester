@@ -207,7 +207,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
         MapPoint mapPoint18= MapPoint.mapPointWithGeoCoord(37.437062299999994, 127.07769869999993);
         MapPOIItem marker18 = new MapPOIItem();
-        marker18.setItemName("가을단풍길");
+        marker18.setItemName("단풍나무길");
         marker18.setTag(18);
         marker18.setMapPoint(mapPoint18);
         marker18.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
@@ -356,13 +356,13 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         switch (mapPOIItem.getTag()) {
             case (1):
                 if (mapPOIItem.getTag() == 1) { //중앙광장
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                    central cen = central.getInstance();
+                    cen.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 } break;
             case (2):
                 if (mapPOIItem.getTag() == 2) { //하늘정원
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                    roofgarden roo = roofgarden.getInstance();
+                    roo.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 } break;
             case (3):
                 if (mapPOIItem.getTag() == 3) { //비스타정원
@@ -396,8 +396,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                 }break;
             case (9):
                 if (mapPOIItem.getTag() == 9){ //수목관찰원
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                    treeinspector tre = treeinspector.getInstance();
+                    tre.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (10):
                 if (mapPOIItem.getTag() ==10){ //약초원
@@ -406,8 +406,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                 }break;
             case (11):
                 if (mapPOIItem.getTag() == 11){ //메타세쿼이아길
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                    metasequoia met = metasequoia.getInstance();
+                    met.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (12):
                 if (mapPOIItem.getTag() == 12){ //멸종위기 식물원
@@ -420,9 +420,9 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                     gra.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
                 }break;
             case (14):
-                if (mapPOIItem.getTag() == 14){ //꽃무릇 군락지
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 14){ //꽃무릇군락지
+                    lycoris lyc = lycoris.getInstance();
+                    lyc.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (15):
                 if (mapPOIItem.getTag() == 15){ //습지생태원
@@ -440,14 +440,14 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                     vin.show(getSupportFragmentManager(), vineyard.TAG_EVENT_DIALOG);
                 }break;
             case (18):
-                if (mapPOIItem.getTag() == 18){ //가을단풍길
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                if (mapPOIItem.getTag() == 18){ //단풍나무길
+                    maple map = maple.getInstance();
+                    map.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (19):
                 if (mapPOIItem.getTag() ==19){  //억새원
-                    vista vis = vista.getInstance();
-                    vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                    silvergrass sil = silvergrass.getInstance();
+                    sil.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
                 }break;
             case (20):
                 if (mapPOIItem.getTag() ==20){  //라일락원

@@ -30,41 +30,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class herbgarden extends DialogFragment implements View.OnClickListener{
+public class metasequoia extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="herbgarden"; //수정  ""
+    public static final String TAG_EVENT_DIALOG ="metasequoia";
 
-    public herbgarden(){} //약초원(10)
+    public metasequoia(){}   //메타세쿼이아길
 
-    public static herbgarden getInstance() {
-        herbgarden her = new herbgarden(); //수정 변수명 스펠링 앞세개
-        return her; //수정
+    public static metasequoia getInstance() {
+        metasequoia met = new metasequoia();
+        return met;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.herbgarden,container);// xml명 변경
+        View v = inflater.inflate(R.layout.metasequoia,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView herbgE = (TextView) v.findViewById(R.id.herbgE);
+        TextView metE = (TextView) v.findViewById(R.id.metE);
 
-        final ImageView herbga =(ImageView) v.findViewById(R.id.herbg);
+        final ImageView met =(ImageView) v.findViewById(R.id.met);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference();
-        String herbg = "herb.jpg";
+        String meta = "meta.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("herb");
+        DatabaseReference dbRef = database.getReference("meta");
 
         //Storage
-        storageRef.child(herbg).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(meta).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
-                //이미지 로드 성공시
-
+                //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(herbga);
-
+                        .into(met);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -81,7 +79,7 @@ public class herbgarden extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                herbgE.setText(value);
+                metE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 

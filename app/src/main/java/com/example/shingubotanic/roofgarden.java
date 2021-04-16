@@ -34,7 +34,7 @@ public class roofgarden extends DialogFragment implements View.OnClickListener{
 
     public static final String TAG_EVENT_DIALOG ="roofgarden"; //수정  ""
 
-    public roofgarden(){} //옥상정원(22)
+    public roofgarden(){} //하늘정원(22)
 
     public static roofgarden getInstance() {
         roofgarden roo = new roofgarden(); //수정 변수명 스펠링 앞세개

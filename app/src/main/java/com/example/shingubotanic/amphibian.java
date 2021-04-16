@@ -41,18 +41,19 @@ public class amphibian extends DialogFragment implements View.OnClickListener{
         return amp;
     }
 
+
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
         View v = inflater.inflate(R.layout.amphibian,container);
-        Button cancel =(Button) v.findViewById(R.id.cancel);
+        Button cancel = (Button) v.findViewById(R.id.cancel);
         TextView ampE = (TextView) v.findViewById(R.id.ampE);
 
-        final ImageView amp =(ImageView) v.findViewById(R.id.amp);
+        final ImageView amp = (ImageView) v.findViewById(R.id.amp);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference();
-        String amph = "amphibian.jpg";
+        String amph = "amp.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("amphibian");
+        DatabaseReference dbRef = database.getReference("amp");
 
         //Storage
         storageRef.child(amph).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
