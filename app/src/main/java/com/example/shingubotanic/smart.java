@@ -32,11 +32,11 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
     ImageButton home;
     View.OnClickListener cl;
     Intent i;
+    Button spring, summer, fall, winter;
 
     private static final String LOG_TAG = "MainActivity";
 
     private MapView mapView;
-
 
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
     private static final int PERMISSIONS_REQUEST_CODE = 1000;
@@ -51,6 +51,11 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         home = (ImageButton) findViewById(R.id.home);
         mapView = (MapView) findViewById(R.id.map_view);
+        spring = (Button) findViewById(R.id.spring);
+        summer = (Button) findViewById(R.id.summer);
+        fall = (Button) findViewById(R.id.fall);
+        winter = (Button) findViewById(R.id.winter);
+
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
 
@@ -323,7 +328,6 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker27);
 
 
-
         cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -332,12 +336,30 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         i = new Intent(getApplicationContext(), home.class);
                         startActivity(i);
                         break;
-
+                    case R.id.spring:
+                        i = new Intent(getApplicationContext(), spring.class);
+                        startActivity(i);
+                        break;
+                    case R.id.summer:
+                        i = new Intent(getApplicationContext(), summer.class);
+                        startActivity(i);
+                        break;
+                    case R.id.fall:
+                        i = new Intent(getApplicationContext(), fall.class);
+                        startActivity(i);
+                        break;
+                    case R.id.winter:
+                        i = new Intent(getApplicationContext(), winter.class);
+                        startActivity(i);
+                        break;
                 }
             }
         };
         home.setOnClickListener(cl);
-
+        spring.setOnClickListener(cl);
+        summer.setOnClickListener(cl);
+        fall.setOnClickListener(cl);
+        winter.setOnClickListener(cl);
     }
 
     @Override
