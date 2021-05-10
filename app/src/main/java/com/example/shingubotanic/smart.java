@@ -32,7 +32,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
     ImageButton home;
     View.OnClickListener cl;
     Intent i;
-    Button spring, summer, fall, winter;
+    Button spring, summer, fall, winter, allmap, plantinfo;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -55,6 +55,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         summer = (Button) findViewById(R.id.summer);
         fall = (Button) findViewById(R.id.fall);
         winter = (Button) findViewById(R.id.winter);
+        allmap = (Button) findViewById(R.id.allmap);
+        plantinfo = (Button) findViewById(R.id.plantinfo);
 
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
@@ -352,6 +354,14 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         i = new Intent(getApplicationContext(), winter.class);
                         startActivity(i);
                         break;
+                    case R.id.allmap:
+                        i = new Intent(getApplicationContext(), winter.class);
+                        startActivity(i);
+                        break;
+                    case R.id.plantinfo:
+                        i = new Intent(getApplicationContext(), winter.class);
+                        startActivity(i);
+                        break;
                 }
             }
         };
@@ -360,6 +370,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         summer.setOnClickListener(cl);
         fall.setOnClickListener(cl);
         winter.setOnClickListener(cl);
+        allmap.setOnClickListener(cl);
+        plantinfo.setOnClickListener(cl);
     }
 
     @Override

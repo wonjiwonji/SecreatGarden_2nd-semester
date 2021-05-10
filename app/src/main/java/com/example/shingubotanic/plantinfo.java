@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import net.daum.mf.map.api.MapView;
 
-public class spring extends AppCompatActivity {
+public class plantinfo extends AppCompatActivity {
 
     ImageButton back;
     View.OnClickListener cl;
@@ -19,7 +19,7 @@ public class spring extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.spring);
+        setContentView(R.layout.plantinfo);
 
         back = (ImageButton) findViewById(R.id.back);
 
