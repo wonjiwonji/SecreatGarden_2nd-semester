@@ -355,11 +355,11 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         startActivity(i);
                         break;
                     case R.id.allmap:
-                        i = new Intent(getApplicationContext(), winter.class);
+                        i = new Intent(getApplicationContext(), allmap.class);
                         startActivity(i);
                         break;
                     case R.id.plantinfo:
-                        i = new Intent(getApplicationContext(), winter.class);
+                        i = new Intent(getApplicationContext(), plantinfo.class);
                         startActivity(i);
                         break;
                 }
