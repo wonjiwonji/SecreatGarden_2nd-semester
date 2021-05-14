@@ -4,7 +4,6 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.BitmapDrawable;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,12 +11,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -59,6 +60,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         allmap = (Button) findViewById(R.id.allmap);
         plantinfo = (Button) findViewById(R.id.plantinfo);
 
+
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
 
@@ -70,6 +72,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
             checkRunTimePermission();
         }
+
 // 밑 구현부는 줌고정값을 신구대 식물원 좌표로 지정하고 확대 축소 비율 고정값을 줌레벨 2로 지정한것이다
         mapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(37.4340312970034, 127.08084512504904), 2, true);
         // 줌 인
@@ -330,7 +333,6 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker26);
         mapView.addPOIItem(marker27);
 
-
         cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -384,6 +386,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem) {
 
     }
+
 
     @Override
     public void onCalloutBalloonOfPOIItemTouched(MapView mapView, MapPOIItem mapPOIItem, MapPOIItem.CalloutBalloonButtonType calloutBalloonButtonType) {
@@ -531,6 +534,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 //        fragment f =fragment.getInstance();
 //        f.show(getSupportFragmentManager(),fragment.TAG_EVENT_DIALOG);
     }
+
 
     @Override
     protected void onDestroy() {

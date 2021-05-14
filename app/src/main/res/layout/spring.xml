@@ -1,38 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.Toolbar
-
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/thingreen">
+        android:layout_height="wrap_content">
 
-        <TextView
-            android:fontFamily="sans-serif-black"
-            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="봄 코스"
-            android:textColor="@android:color/white"
-            android:textSize="30dp" />
+            android:background="@color/thingreen">
 
-        <ImageButton
-            android:id="@+id/back"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:layout_marginRight="15dp"
-            app:srcCompat="@drawable/abc_vector_test"
-            android:background="@color/thingreen"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif-black"
+                android:text="봄 코스"
+                android:textColor="@android:color/white"
+                android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+                android:textSize="30dp" />
 
-    </androidx.appcompat.widget.Toolbar>
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="left"
+                android:layout_marginRight="15dp"
+                android:background="@color/thingreen"
+                app:srcCompat="@drawable/abc_vector_test" />
+
+            <ImageButton
+                android:id="@+id/flower_menu"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/flower_me_icon"
+                android:background="@color/thingreen"
+                />
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+    <include layout="@layout/flower_menu"/>
 
 
-</LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
