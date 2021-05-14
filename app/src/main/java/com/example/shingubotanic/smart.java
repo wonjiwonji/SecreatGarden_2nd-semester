@@ -51,6 +51,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         home = (ImageButton) findViewById(R.id.home);
         mapView = (MapView) findViewById(R.id.map_view);
+
         spring = (Button) findViewById(R.id.spring);
         summer = (Button) findViewById(R.id.summer);
         fall = (Button) findViewById(R.id.fall);
