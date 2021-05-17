@@ -39,12 +39,12 @@
                 app:srcCompat="@drawable/abc_vector_test" />
 
             <ImageButton
-                android:id="@+id/flower_menu"
+                android:id="@+id/tulip"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="right"
-                android:layout_marginLeft="15dp"
-                android:src="@drawable/flower_me_icon"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/tulip"
                 android:background="@color/thingreen"
                 />
 
