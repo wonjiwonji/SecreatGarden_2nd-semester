@@ -2,24 +2,40 @@ package com.example.shingubotanic;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
-import android.widget.Filter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class plantinfo extends AppCompatActivity {
 
@@ -27,12 +43,12 @@ public class plantinfo extends AppCompatActivity {
     EditText stext;
     View.OnClickListener cl;
     Intent i;
-    ListView list;  //검색 필터링 기능O(textFilterEnable = true)
+    ListView list;
     ArrayList<PlantList> plant;
     PlantList plist;
-    ArrayAdapter adap; //검색 필터링 지원
-//    ArrayAdapter adapter;
-    List<String> slist;  //검색 기능 데이터 리스트
+    MyAdapter adap;
+//    List<PlantList> slist;  //검색 결과를 담은 리스트
+    ImageView img;
 
     class PlantList{
         int pic;
@@ -43,16 +59,15 @@ public class plantinfo extends AppCompatActivity {
         }
     }
 
-    class ArrayAdapter extends BaseAdapter {    //ListView와 plantlist.xml 연결시켜주는 다릐~
-        Filter filter;
+    class MyAdapter extends BaseAdapter{    //ListView - Adapter - plantlist
         Context con;
-        ArrayAdapter(Context c){
+        MyAdapter(Context c){
             con = c;
         }
 
         @Override
         public int getCount() {
-            return plant.size();
+            return (plant != null ? plant.size():0);    //null(X)->list / null(o)->0
         }
 
         @Override
@@ -77,6 +92,19 @@ public class plantinfo extends AppCompatActivity {
             return convertView;
         }
 
+//        public void filter(String searchText) {   //필터링 기능 메소드
+//            slist.clear();  //사용 전 초기화
+//            if(searchText.length() == 0){   //검색 전
+//                slist.addAll(plant);
+//            } else {    //검색했을 때
+//                for(PlantList item:plant){    //plant의 데이터 가져오긔~
+//                    if(item.name.contains(searchText)) {
+//                        slist.add(item);
+//                    }
+//                }
+//            }
+//            notifyDataSetChanged();
+//        }
     }
 
     @Override
@@ -88,9 +116,13 @@ public class plantinfo extends AppCompatActivity {
         stext = (EditText) findViewById(R.id.searchtext);
         search = (ImageButton) findViewById(R.id.search);
         list = (ListView) findViewById(R.id.plantlist);
+        img = (ImageView) findViewById(R.id.picture);
 
+        //임시
         plant = new ArrayList<PlantList>();
-        plist = new PlantList(R.drawable.flower, "plant1");
+        plist = new PlantList(R.drawable.flower0, "plant0");
+        plant.add(plist);
+        plist = new PlantList(R.drawable.flower1, "plant1");
         plant.add(plist);
         plist = new PlantList(R.drawable.flower2, "plant2");
         plant.add(plist);
@@ -104,9 +136,14 @@ public class plantinfo extends AppCompatActivity {
         plant.add(plist);
         plist = new PlantList(R.drawable.flower7, "plant7");
         plant.add(plist);
+        plist = new PlantList(R.drawable.flower8, "plant8");
+        plant.add(plist);
+        plist = new PlantList(R.drawable.flower9, "plant9");
+        plant.add(plist);
 
-        adap = new ArrayAdapter(this);
-        list.setAdapter(adap);  //ListView - Adapter - plantlist
+
+        adap = new MyAdapter(this);
+        list.setAdapter(adap);  //ListView - Adapter
 
         cl = new View.OnClickListener(){
             @Override
@@ -119,44 +156,60 @@ public class plantinfo extends AppCompatActivity {
         };
         back.setOnClickListener(cl);
 
-        stext.addTextChangedListener(new TextWatcher() {    //검색 기능
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {    //텍스트 바뀌기 전
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {   //텍스트 바뀌는 순간
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {  //텍스트 바뀌고 난 후
-                String text = stext.getText().toString();
-                if(text.length() > 0){
-                    list.setFilterText(text);   //필터링 될 문자열 전달
-                }else{
-                    list.clearTextFilter(); //초기상태로 복귀
-                }
-            }
-        });
-
-    }
-
-
-    //        FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
+//        FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
+//        StorageReference storageRef = storage.getReference("plant/");
+//        String pic = "flower0.jpg";
+//        FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
 //        DatabaseReference dbRef = database.getReference("plantlist");
+
+//        //Storage
+//        storageRef.child("flower.JPG").getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 //
+//            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+//            public void onSuccess(Uri uri) {
+//                //이미지 로드 성공시
+//                Glide.with(getApplicationContext())
+//                        .load(uri)
+//                        .into(img);
+//            }
+//        }).addOnFailureListener(new OnFailureListener() {
+//            @Override
+//            public void onFailure(@NonNull Exception exception) {
+//                //이미지 로드 실패시
+//                Log.d("TEST", "error" + exception.getLocalizedMessage());
+//            }
+//        });
+
 //        //Database
-//        dbRef.child("plant").addValueEventListener(new ValueEventListener() {
+//        dbRef.addValueEventListener(new ValueEventListener() {
 //            @Override
 //            public void onDataChange(DataSnapshot dataSnapshot) {
+////                plant.clear();  //사용 전 초기화;
 //                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
-//                    String value = snapshot.child("plantname").getValue(String.class);
+//                    String val = snapshot.child("plantname").getValue(String.class);    //"plant0/plantname" ? child().child() ?
 //                    plant = new ArrayList<PlantList>();
-//                    plist = new PlantList(R.drawable.tv, value);
+//                    plist = new PlantList(R.drawable.flower0, val);
 //                    plant.add(plist);
-////              Log.d(TAG, "Value is: " + value);
+//                    plist = new PlantList(R.drawable.flower1, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower2, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower3, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower4, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower5, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower6, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower7, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower8, val);
+//                    plant.add(plist);
+//                    plist = new PlantList(R.drawable.flower9, val);
+//                    plant.add(plist);
+////                    Log.d(TAG, "Value is: " + value);
+////                    }
 //                }
 //                adap.notifyDataSetChanged();    //listView에 데이터가 추가/변경 되었을 때 list 업뎃
 //            }
@@ -164,10 +217,31 @@ public class plantinfo extends AppCompatActivity {
 //            @Override
 //            public void onCancelled(DatabaseError error) {
 //                // Failed to read value
-//                Log.w(TAG, "Failed to read value.", error.toException());
+////                Log.w(TAG, "Failed to read value.", error.toException());
 //            }
 //        });
+
 //        adap = new MyAdapter(this);
 //        list.setAdapter(adap);  //ListView - Adapter - plantlist
+
+//        stext.addTextChangedListener(new TextWatcher() {    //검색 기능
+//            @Override
+//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {    //텍스트 바뀌기 전에 실행
+//
+//            }
+//
+//            @Override
+//            public void onTextChanged(CharSequence s, int start, int before, int count) {   //텍스트 바뀌는 순간
+//
+//            }
+//
+//            @Override
+//            public void afterTextChanged(Editable s) {  //텍스트 바뀌고 난 후
+//                String searchText = stext.getText().toString();
+//                adap.filter(searchText);
+//            }
+//        });
+
+    }
 
 }

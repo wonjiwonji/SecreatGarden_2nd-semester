@@ -40,7 +40,7 @@
 
     <EditText
         android:id="@+id/searchtext"
-        android:layout_width="360dp"
+        android:layout_width="429dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
@@ -50,7 +50,8 @@
             android:id="@+id/search"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            app:srcCompat="@android:drawable/ic_menu_search"/>
+            app:srcCompat="@drawable/search"
+            android:background="#00000000"/>
 
     </LinearLayout>
 
@@ -58,7 +59,6 @@
         android:id="@+id/plantlist"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textFilterEnabled="true"
         android:fastScrollEnabled="true"/>
 
 
