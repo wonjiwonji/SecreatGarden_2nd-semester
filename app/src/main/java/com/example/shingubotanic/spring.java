@@ -20,13 +20,13 @@ import java.util.List;
 
 public class spring extends AppCompatActivity {
 
-    ImageButton back, flower_menu;
+    ImageButton back, flower_icon;
     Button btn_close;
     View.OnClickListener cl;
     Intent i;
     private DrawerLayout drawerLayout;
     private View drawerView;
-    private ListView list;
+    private ListView list1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,23 +37,23 @@ public class spring extends AppCompatActivity {
         drawerView = (View) findViewById(R.id.drawer);
 
         back = (ImageButton) findViewById(R.id.back);
-        flower_menu = (ImageButton) findViewById(R.id.flower_menu);
+        flower_icon = (ImageButton) findViewById(R.id.tulip);
         btn_close = (Button) findViewById(R.id.btn_close);
 
-        list = (ListView) findViewById(R.id.list);
+        list1 = (ListView) findViewById(R.id.list1);
 
         List<String> data = new ArrayList<>();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
-        list.setAdapter(adapter);
-
+        list1.setAdapter(adapter);
         //데이터 추가
         data.add("식물1");
         data.add("식물2");
         data.add("식물3");
         adapter.notifyDataSetInvalidated(); //저장완료
 
-        flower_menu.setOnClickListener(new View.OnClickListener() {
+
+        flower_icon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 drawerLayout.openDrawer(drawerView);
