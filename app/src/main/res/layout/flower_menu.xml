@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="240dp"
     android:layout_height="match_parent"
     android:layout_gravity="right"
     android:background="#FFFFFF"
     android:id="@+id/drawer"
     android:orientation="vertical">
-
 
     <Button
         android:id="@+id/btn_close"
@@ -16,26 +16,36 @@
         android:layout_margin="10dp"
         android:text="메뉴 닫기"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="홍드로이드메뉴"/>
-
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_margin="10dp"
-        android:background="#C9FD8C"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/left_btn"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/left" />
+
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:text="테스트메뉴"/>
+            />
+
+        <ImageButton
+            android:id="@+id/right_icon"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/right" />
+
 
     </LinearLayout>
 
