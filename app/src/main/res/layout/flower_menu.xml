@@ -2,45 +2,69 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="240dp"
+    android:layout_width="340dp"
     android:layout_height="match_parent"
     android:layout_gravity="right"
     android:background="#FFFFFF"
     android:id="@+id/drawer"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/btn_close"
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:text="메뉴 닫기"/>
+        android:background="@color/thingreen">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-black"
+            android:text="봄 식물 정보"
+            android:textColor="@android:color/white"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textSize="30dp" />
+
+        <ImageButton
+            android:id="@+id/back_menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:background="@color/thingreen"
+            app:srcCompat="@drawable/abc_vector_test" />
+
+
+    </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="260dp"
         android:layout_margin="10dp"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/left_btn"
-            android:layout_width="50dp"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             app:srcCompat="@drawable/left" />
 
-        <WebView
-            android:id="@+id/webView"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+        <ImageButton
+            android:id="@+id/eventView"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:gravity="center"
+            app:srcCompat="@drawable/lilac_ev"
             />
+
 
         <ImageButton
             android:id="@+id/right_icon"
-            android:layout_width="50dp"
+            android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"

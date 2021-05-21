@@ -24,15 +24,12 @@ import java.util.List;
 
 public class spring extends AppCompatActivity {
 
-    ImageButton back, flower_icon;
-    Button btn_close;
+    ImageButton back, flower_icon, back_menu, eventView;
     View.OnClickListener cl;
     Intent i;
     private DrawerLayout drawerLayout;
     private View drawerView;
     private ListView list1;
-    private WebView webView;
-    private String url = "https://www.sbg.or.kr/event/event.html?bun=4";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +41,10 @@ public class spring extends AppCompatActivity {
 
         back = (ImageButton) findViewById(R.id.back);
         flower_icon = (ImageButton) findViewById(R.id.tulip);
-        btn_close = (Button) findViewById(R.id.btn_close);
+        back_menu = (ImageButton) findViewById(R.id.back_menu);
+        eventView = (ImageButton) findViewById(R.id.eventView);
 
         list1 = (ListView) findViewById(R.id.list1);
-
-        webView = (WebView) findViewById(R.id.webView);
-        webView.getSettings().setJavaScriptEnabled(true);
-        webView.loadUrl(url);
-        webView.setWebChromeClient(new WebChromeClient());
-        webView.setWebViewClient(new WebViewClientClass());
-
 
         List<String> data = new ArrayList<>();
 
@@ -73,13 +64,6 @@ public class spring extends AppCompatActivity {
             }
         });
 
-        btn_close.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.closeDrawers();
-            }
-        });
-
         drawerLayout.setDrawerListener(listener);
         drawerView.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -92,23 +76,25 @@ public class spring extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()){
-                    case R.id.back:
+                    case R.id.back :
                         finish();
+                        break;
+                    case R.id.back_menu :
+                        drawerLayout.closeDrawers();
+                        break;
+                    case R.id.eventView :
+                        i = new Intent(getApplicationContext(), webv.class);
+                        startActivity(i);
+                        break;
+
                 }
             }
         };
         back.setOnClickListener(cl);
+        back_menu.setOnClickListener(cl);
+        eventView.setOnClickListener(cl);
     }
 
-    //웹뷰 뒤로가기 누르면 꺼짐
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
-            webView.goBack();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
 
     //드로워레이아웃 했을때 상태값 받아옴
     DrawerLayout.DrawerListener listener = new DrawerLayout.DrawerListener() {
@@ -138,12 +124,4 @@ public class spring extends AppCompatActivity {
         }
     };
 
-    //url을 읽어올 수 있도록함
-    private class WebViewClientClass extends WebViewClient {
-        @Override
-        public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            view.loadUrl(url);
-            return true;
-        }
-    }
 }
