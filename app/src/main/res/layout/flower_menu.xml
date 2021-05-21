@@ -40,35 +40,14 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp"
-        android:layout_margin="10dp"
+        android:layout_height="340dp"
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/left_btn"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            app:srcCompat="@drawable/left" />
-
-        <ImageButton
             android:id="@+id/eventView"
-            android:layout_width="240dp"
-            android:layout_height="240dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:gravity="center"
-            app:srcCompat="@drawable/lilac_ev"
-            />
-
-
-        <ImageButton
-            android:id="@+id/right_icon"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            app:srcCompat="@drawable/right" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/capri_ev" />
 
 
     </LinearLayout>
@@ -80,7 +59,8 @@
         <ListView
             android:id="@+id/list1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
 
         </ListView>
 

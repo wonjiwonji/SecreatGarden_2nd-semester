@@ -77,7 +77,9 @@ public class spring extends AppCompatActivity {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.back :
-                        finish();
+                        i = new Intent(getApplicationContext(), smart.class);
+                        startActivity(i);
+                        //finish();
                         break;
                     case R.id.back_menu :
                         drawerLayout.closeDrawers();
