@@ -37,7 +37,7 @@ public class daisy extends DialogFragment implements View.OnClickListener{
 
     public daisy(){}   //가든카페
 
-    public static daisy getInstance() {    //인스턴스 전달
+    public static daisy getInstance() {    //인스턴스 전달//
         daisy dai = new daisy();
         return dai;
     }

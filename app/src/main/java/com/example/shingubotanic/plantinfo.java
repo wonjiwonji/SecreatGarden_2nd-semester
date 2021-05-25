@@ -30,7 +30,7 @@ public class plantinfo extends AppCompatActivity {
     View.OnClickListener cl;
     Intent i;
     ListView list;
-    ArrayList<String> plant; //식물 정보를 담은 리스트
+    ArrayList<String> plant; //식물 정보를 담은 리스트//
     ArrayAdapter<String> adapter;
 
 
