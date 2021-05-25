@@ -30,10 +30,9 @@ import net.daum.mf.map.api.MapView;
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home;
+    ImageButton home,spring,summer,fall,winter,allmap, plantinfo;
     View.OnClickListener cl;
     Intent i;
-    Button spring, summer, fall, winter, allmap, plantinfo;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -53,12 +52,12 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         home = (ImageButton) findViewById(R.id.home);
         mapView = (MapView) findViewById(R.id.map_view);
 
-        spring = (Button) findViewById(R.id.spring);
-        summer = (Button) findViewById(R.id.summer);
-        fall = (Button) findViewById(R.id.fall);
-        winter = (Button) findViewById(R.id.winter);
-        allmap = (Button) findViewById(R.id.allmap);
-        plantinfo = (Button) findViewById(R.id.plantinfo);
+        spring = (ImageButton) findViewById(R.id.spring);
+        summer = (ImageButton) findViewById(R.id.summer);
+        fall = (ImageButton) findViewById(R.id.fall);
+        winter = (ImageButton) findViewById(R.id.winter);
+        allmap = (ImageButton) findViewById(R.id.allmap);
+        plantinfo = (ImageButton) findViewById(R.id.plantinfo);
 
 
         mapView.setPOIItemEventListener(this);

@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         mVideoview = (VideoView) findViewById(R.id.videoview);
         button = (Button) findViewById(R.id.button);
         //play video
-        mVideoview.setVideoURI( Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.video));
+        mVideoview.setVideoURI( Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.start));
         mVideoview.start();
         //loop
         mVideoview.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
