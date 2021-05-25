@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="검색" />
+        android:text="" />
 
         <ImageButton
             android:id="@+id/search"
@@ -55,11 +55,11 @@
 
     </LinearLayout>
 
-    <ListView
-        android:id="@+id/plantlist"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fastScrollEnabled="true"/>
-
+        <ListView
+            android:id="@+id/plantlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textFilterEnabled="true"
+            android:scrollbarThumbVertical="@color/thingreen"/>
 
 </LinearLayout>
