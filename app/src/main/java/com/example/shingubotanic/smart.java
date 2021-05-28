@@ -1,6 +1,7 @@
 package com.example.shingubotanic;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -8,6 +9,7 @@ import android.graphics.Color;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -44,13 +46,14 @@ import java.util.ArrayList;
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView;
+    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView, pro;
     View.OnClickListener cl;
     Intent i;
     int a=1;
     private DrawerLayout smartLayout;
     private View springNev, summerNev;
     private ListView list1;
+    LinearLayout con;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -87,6 +90,11 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         eventView = (ImageButton) findViewById(R.id.eventView);
 
         list1 = (ListView) findViewById(R.id.list1);
+
+        con = (LinearLayout) findViewById(R.id.container);
+        pro = (ImageButton) findViewById(R.id.pro);
+
+
 
         ArrayList<String> data = new ArrayList<String>();
 
@@ -134,6 +142,21 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                             stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
                         } break;
                 }
+            }
+        });
+
+        pro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spring.setVisibility(View.GONE);
+                summer.setVisibility(View.GONE);
+                fall.setVisibility(View.GONE);
+                winter.setVisibility(View.GONE);
+                allmap.setVisibility(View.GONE);
+                plantinfo.setVisibility(View.GONE);
+                pro.setVisibility(View.GONE);
+                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                inflater.inflate(R.layout.probono, con, true);
             }
         });
 
