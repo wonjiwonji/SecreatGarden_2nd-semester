@@ -53,7 +53,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
     private DrawerLayout smartLayout;
     private View springNev, summerNev;
     private ListView list1;
-    LinearLayout con;
+    LinearLayout con, con2;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -93,6 +93,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
         con = (LinearLayout) findViewById(R.id.container);
         pro = (ImageButton) findViewById(R.id.pro);
+
+        con2 = (LinearLayout) findViewById(R.id.con2);
 
 
 
@@ -148,13 +150,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         pro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                spring.setVisibility(View.GONE);
-                summer.setVisibility(View.GONE);
-                fall.setVisibility(View.GONE);
-                winter.setVisibility(View.GONE);
-                allmap.setVisibility(View.GONE);
-                plantinfo.setVisibility(View.GONE);
-                pro.setVisibility(View.GONE);
+                con2.setVisibility(View.GONE);
                 LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
                 inflater.inflate(R.layout.probono, con, true);
             }

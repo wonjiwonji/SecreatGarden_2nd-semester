@@ -57,102 +57,112 @@
             android:orientation="vertical"
             android:id="@+id/container">
 
-        <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:background="@android:color/transparent">
-
-                <ImageButton
-                    android:id="@+id/spring"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/spring"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"/>
-                <ImageButton
-                    android:id="@+id/summer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/summer"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"/>
-                <ImageButton
-                    android:id="@+id/fall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/fall"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"
-                    />
-                <ImageButton
-                    android:id="@+id/winter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/winter"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"/>
-
-            </LinearLayout>
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:id="@+id/con2">
 
-                <ImageButton
-                    android:id="@+id/allmap"
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:background="@android:color/transparent">
+
+                    <ImageButton
+                        android:id="@+id/spring"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/spring"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:id="@+id/summer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/summer"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:id="@+id/fall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/fall"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"
+                        />
+                    <ImageButton
+                        android:id="@+id/winter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/winter"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
+
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/allmap"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"/>
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/allmap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/allmap"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
 
 
-                <ImageButton
-                    android:id="@+id/plantinfo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/plantinfo"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:id="@+id/plantinfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/plantinfo"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
 
-                <ImageButton
-                    android:id="@+id/pro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/plantinfo"
-                    android:maxHeight="35dp"
-                    android:maxWidth="35dp"
-                    android:adjustViewBounds="true"
-                    android:scaleType="fitCenter"/>
+                    <ImageButton
+                        android:id="@+id/pro"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/plantinfo"
+                        android:maxHeight="35dp"
+                        android:maxWidth="35dp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitCenter"/>
 
+
+
+                </LinearLayout>
 
 
         </LinearLayout>
