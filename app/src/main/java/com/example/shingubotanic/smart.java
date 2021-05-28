@@ -4,35 +4,40 @@ import android.Manifest;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.Toolbar;
-import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
+import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapReverseGeoCoder;
 import net.daum.mf.map.api.MapView;
 
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home,spring,summer,fall,winter,allmap, plantinfo;
+    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo;
     View.OnClickListener cl;
     Intent i;
+    int a=1;
+    private DrawerLayout smartLayout;
+    private View springNev, summerNev;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -55,13 +60,46 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         spring = (ImageButton) findViewById(R.id.spring);
         summer = (ImageButton) findViewById(R.id.summer);
         fall = (ImageButton) findViewById(R.id.fall);
-        winter = (ImageButton) findViewById(R.id.winter);
+        winter = (ImageButton)findViewById(R.id.winter);
         allmap = (ImageButton) findViewById(R.id.allmap);
         plantinfo = (ImageButton) findViewById(R.id.plantinfo);
 
+        flower_icon = (ImageButton) findViewById(R.id.tulip);
+
+        smartLayout = (DrawerLayout) findViewById(R.id.smartLayout);
+        springNev = (View) findViewById(R.id.springNev);
+        summerNev = (View) findViewById(R.id.summerNev);
 
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
+
+        flower_icon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (a==1) {
+                    smartLayout.openDrawer(springNev);
+                }
+                else if (a==2) {
+                    smartLayout.openDrawer(summerNev);
+                }
+                //smartLayout.openDrawer(springNev);
+            }
+        });
+
+        smartLayout.setDrawerListener(listener);
+        springNev.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+        summerNev.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return true;
+            }
+        });
+
 
 
         if (!checkLocationServicesStatus()) {
@@ -78,6 +116,32 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.zoomIn(true);
         // 줌 아웃
         mapView.zoomOut(true);
+
+
+        MapPolyline polyline = new MapPolyline();
+        polyline.setTag(1000);
+        polyline.setLineColor(Color.argb(128, 255, 51, 0)); // Polyline 컬러 지정.
+
+// Polyline 좌표 지정.
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43380210000001, 127.08141320000004));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43374990000003,127.08111759999997));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43378160000002,127.08068609999998));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43422110000004,127.0805944));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43428850000004, 127.08082939999997));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43441749999999,127.0810457));
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43529936421379,127.07952713349141)); //15습지생태원
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43619319999999,127.07871640000008)); //16고층습지원
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.437062299999994, 127.07769869999993)); //18가을단풍길
+        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43831869999999,127.07702510000001)); //20라일락원
+
+// Polyline 지도에 올리기.
+        mapView.addPolyline(polyline);
+
+// 지도뷰의 중심좌표와 줌레벨을 Polyline이 모두 나오도록 조정.
+//        MapPointBounds mapPointBounds = new MapPointBounds(polyline.getMapPoints());
+//        int padding = 100; // px
+//        mapView.moveCamera(CameraUpdateFactory.newMapPointBounds(mapPointBounds, padding));
+
 
         MapPoint mapPoint1= MapPoint.mapPointWithGeoCoord(37.43374990000003, 127.08111759999997);//좌표에 마커를 찍는거
         MapPOIItem marker1 = new MapPOIItem();
@@ -332,6 +396,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker26);
         mapView.addPOIItem(marker27);
 
+
         cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -508,9 +573,9 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                 }break;
             case (24):
                 if (mapPOIItem.getTag() ==24){ //화장실2
-                toilet toi = toilet.getInstance();
-                toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
-            }break;
+                    toilet toi = toilet.getInstance();
+                    toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
+                }break;
             case (25):
                 if (mapPOIItem.getTag() ==25){ //화장실
                     toilet toi = toilet.getInstance();
@@ -718,4 +783,34 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
                 || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
+
+    //드로워레이아웃 했을때 상태값 받아옴
+    DrawerLayout.DrawerListener listener = new DrawerLayout.DrawerListener() {
+
+        //슬라이더
+        @Override
+        public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
+
+        }
+
+        //오픈
+        @Override
+        public void onDrawerOpened(@NonNull View drawerView) {
+
+        }
+
+        //슬라이더 닫혔을때
+        @Override
+        public void onDrawerClosed(@NonNull View drawerView) {
+
+        }
+
+        //상태가 바꼈을때
+        @Override
+        public void onDrawerStateChanged(int newState) {
+
+        }
+    };
+
+
 }
