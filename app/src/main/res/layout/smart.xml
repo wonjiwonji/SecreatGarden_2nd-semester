@@ -163,10 +163,8 @@
         >
 
     </View>
-
-    <include layout="@layout/summer_nev" />
-
     <include layout="@layout/spring_nev" />
+    <include layout="@layout/summer_nev"/>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

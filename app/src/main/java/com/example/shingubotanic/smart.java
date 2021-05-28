@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,15 +31,18 @@ import net.daum.mf.map.api.MapPolyline;
 import net.daum.mf.map.api.MapReverseGeoCoder;
 import net.daum.mf.map.api.MapView;
 
+import java.util.ArrayList;
+
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo;
+    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView;
     View.OnClickListener cl;
     Intent i;
     int a=1;
     private DrawerLayout smartLayout;
     private View springNev, summerNev;
+    private ListView list1;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -69,6 +74,22 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         smartLayout = (DrawerLayout) findViewById(R.id.smartLayout);
         springNev = (View) findViewById(R.id.springNev);
         summerNev = (View) findViewById(R.id.summerNev);
+
+        back_menu = (ImageButton) findViewById(R.id.back_menu);
+        eventView = (ImageButton) findViewById(R.id.eventView);
+
+        list1 = (ListView) findViewById(R.id.list1);
+
+        ArrayList<String> data = new ArrayList<String>();
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
+        list1.setAdapter(adapter);
+
+        //데이터추가
+        data.add("식물1");
+        data.add("식물2");
+        data.add("식물3");
+        adapter.notifyDataSetInvalidated(); //저장완료
 
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
@@ -429,6 +450,13 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         i = new Intent(getApplicationContext(), plantinfo.class);
                         startActivity(i);
                         break;
+                    case R.id.back_menu:
+                        smartLayout.closeDrawers();
+                        break;
+                    case R.id.eventView:
+                        i = new Intent(getApplicationContext(), webv.class);
+                        startActivity(i);
+                        break;
                 }
             }
         };
@@ -439,6 +467,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         winter.setOnClickListener(cl);
         allmap.setOnClickListener(cl);
         plantinfo.setOnClickListener(cl);
+        back_menu.setOnClickListener(cl);
+        eventView.setOnClickListener(cl);
     }
 
     @Override
