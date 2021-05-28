@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -24,6 +25,13 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.shingubotanic.plantFSpring.springTulip;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import net.daum.mf.map.api.MapPOIItem;
 import net.daum.mf.map.api.MapPoint;
@@ -85,14 +93,49 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
         list1.setAdapter(adapter);
 
-        //데이터추가
-        data.add("식물1");
-        data.add("식물2");
-        data.add("식물3");
-        adapter.notifyDataSetInvalidated(); //저장완료
+//        //데이터추가
+//        data.add("식물1");
+//        data.add("식물2");
+//        data.add("식물3");
+//        adapter.notifyDataSetInvalidated(); //저장완료
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
+        DatabaseReference dbRef = database.getReference("plantListSpring");
+
+        //Database
+        dbRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    String val = snapshot.child("plantname").getValue(String.class);
+                    data.add(val);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Failed to read value
+//                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
 
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
+
+        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String str = (String) parent.getItemAtPosition(position);
+                switch (position){
+                    case(0):
+                        if (position == 0) {    //튤립
+                            springTulip stul = springTulip.getInstance();
+                            stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
+                        } break;
+                }
+            }
+        });
 
         flower_icon.setOnClickListener(new View.OnClickListener() {
             @Override
