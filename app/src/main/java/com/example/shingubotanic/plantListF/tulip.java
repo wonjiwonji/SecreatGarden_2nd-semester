@@ -1,4 +1,4 @@
-package com.example.shingubotanic.ListViewItem;
+package com.example.shingubotanic.plantListF;
 
 import android.net.Uri;
 import android.os.Build;
@@ -31,39 +31,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class daisy extends DialogFragment implements View.OnClickListener{
+public class tulip extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="daisy";
+    public static final String TAG_EVENT_DIALOG ="tulip";
 
-    public daisy(){}   //가든카페
+    public tulip(){}   //position 1
 
-    public static daisy getInstance() {    //인스턴스 전달//
-        daisy dai = new daisy();
-        return dai;
+    public static tulip getInstance() {
+        tulip tul = new tulip();
+        return tul;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.daisy,container);   //xml 연결
+        View v = inflater.inflate(R.layout.tulip,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView daiE = (TextView) v.findViewById(R.id.daiE);
+        TextView tulE = (TextView) v.findViewById(R.id.tulE);
 
-        final ImageView dai =(ImageView) v.findViewById(R.id.dai);
+        final ImageView tul =(ImageView) v.findViewById(R.id.tul);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
-        StorageReference storageRef = storage.getReference();
-        String daisy = "daisy.jpg";
+        StorageReference storageRef = storage.getReference("plantlistF");
+        String tulip = "tulip.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("daisy");
+        DatabaseReference dbRef = database.getReference("plantlistF").child("tulip");
 
         //Storage
-        storageRef.child(daisy).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(tulip).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(dai);
+                        .into(tul);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -80,7 +80,7 @@ public class daisy extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                daiE.setText(value);
+                tulE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 

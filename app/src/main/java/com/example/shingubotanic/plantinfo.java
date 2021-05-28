@@ -14,7 +14,10 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.shingubotanic.ListViewItem.daisy;
+import com.example.shingubotanic.plantListF.camellia;
+import com.example.shingubotanic.plantListF.flower;
+import com.example.shingubotanic.plantListF.mountain;
+import com.example.shingubotanic.plantListF.tulip;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,7 +33,7 @@ public class plantinfo extends AppCompatActivity {
     View.OnClickListener cl;
     Intent i;
     ListView list;
-    ArrayList<String> plant; //식물 정보를 담은 리스트//
+    ArrayList<String> plant; //식물 정보를 담은 리스트
     ArrayAdapter<String> adapter;
 
 
@@ -52,7 +55,7 @@ public class plantinfo extends AppCompatActivity {
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {  //plantlist 내에 있는 모든 item 가져오기
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {  //plantlist 내에 있는 item만큼
                     String val = snapshot.child("plantname").getValue(String.class);
                     plant.add(val);
                 }
@@ -69,16 +72,31 @@ public class plantinfo extends AppCompatActivity {
         adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, plant);
         list.setAdapter(adapter);  //ListView - Adapter
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() { //listView 클릭 이벤트
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                String str = (String) parent.getItemAtPosition(position);
                 switch (position){
                     case(1):
-                    if (position == 1) {
-                        daisy dai = daisy.getInstance();
-                        dai.show(getSupportFragmentManager(), daisy.TAG_EVENT_DIALOG);
+                    if (position == 1) {    //(봄)튤립
+                        tulip tul = tulip.getInstance();
+                        tul.show(getSupportFragmentManager(), tulip.TAG_EVENT_DIALOG);
                     } break;
+                    case(5):
+                        if (position == 5) {    //(여름)산수국
+                            mountain mou = mountain.getInstance();
+                            mou.show(getSupportFragmentManager(), mountain.TAG_EVENT_DIALOG);
+                        } break;
+                    case(9):
+                        if (position == 9) {    //(가을)꽃무릇
+                            flower flo = flower.getInstance();
+                            flo.show(getSupportFragmentManager(), flower.TAG_EVENT_DIALOG);
+                        } break;
+                    case(14):
+                        if (position == 14) {    //(겨울)동백나무
+                            camellia cam = camellia.getInstance();
+                            cam.show(getSupportFragmentManager(), camellia.TAG_EVENT_DIALOG);
+                        } break;
                 }
             }
         });

@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="데이지"
+            android:text="산수국"
             android:textColor="@android:color/white"
             android:textSize="30dp"
             />
@@ -45,21 +45,17 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/dai"
+            android:id="@+id/mou"
             android:layout_width="match_parent"
             android:layout_height="300dp" />
 
         <TextView
-            android:id="@+id/daiE"
+            android:id="@+id/mouE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" />
 
 
     </LinearLayout>
-
-
-
-
 
 </LinearLayout>

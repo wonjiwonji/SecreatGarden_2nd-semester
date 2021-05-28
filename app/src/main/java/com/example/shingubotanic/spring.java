@@ -8,6 +8,7 @@ import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -17,6 +18,17 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.example.shingubotanic.plantFSpring.springTulip;
+import com.example.shingubotanic.plantListF.camellia;
+import com.example.shingubotanic.plantListF.flower;
+import com.example.shingubotanic.plantListF.mountain;
+import com.example.shingubotanic.plantListF.tulip;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,16 +58,37 @@ public class spring extends AppCompatActivity {
 
         list1 = (ListView) findViewById(R.id.list1);
 
-        List<String> data = new ArrayList<>();
+        ArrayList<String> data = new ArrayList<String>();
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, data);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
         list1.setAdapter(adapter);
-        //데이터 추가
-        data.add("식물1");
-        data.add("식물2");
-        data.add("식물3");
-        adapter.notifyDataSetInvalidated(); //저장완료
 
+//        //데이터 추가
+//        data.add("식물1");
+//        data.add("식물2");
+//        data.add("식물3");
+//        adapter.notifyDataSetInvalidated(); //저장완료
+
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
+        DatabaseReference dbRef = database.getReference("plantListSpring");
+
+        //Database
+        dbRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    String val = snapshot.child("plantname").getValue(String.class);
+                    data.add(val);
+                }
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // Failed to read value
+//                Log.w(TAG, "Failed to read value.", error.toException());
+            }
+        });
 
         flower_icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,6 +104,21 @@ public class spring extends AppCompatActivity {
                 return true;
             }
         });
+
+        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                String str = (String) parent.getItemAtPosition(position);
+                switch (position){
+                    case(0):
+                        if (position == 0) {    //튤립
+                            springTulip stul = springTulip.getInstance();
+                            stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
+                        } break;
+                }
+            }
+        });
+
 
         cl = new View.OnClickListener(){
             @Override
