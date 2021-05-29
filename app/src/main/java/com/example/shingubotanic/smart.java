@@ -200,7 +200,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         // 줌 아웃
         mapView.zoomOut(true);
 
-
+/*
         MapPolyline polyline = new MapPolyline();
         polyline.setTag(1000);
         polyline.setLineColor(Color.argb(128, 255, 51, 0)); // Polyline 컬러 지정.
@@ -219,6 +219,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
 // Polyline 지도에 올리기.
         mapView.addPolyline(polyline);
+
+ */
 
 // 지도뷰의 중심좌표와 줌레벨을 Polyline이 모두 나오도록 조정.
 //        MapPointBounds mapPointBounds = new MapPointBounds(polyline.getMapPoints());
@@ -451,6 +453,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
 
 
+        /*
         mapView.addPOIItem(marker1);
         mapView.addPOIItem(marker2);
         mapView.addPOIItem(marker3);
@@ -479,6 +482,10 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.addPOIItem(marker26);
         mapView.addPOIItem(marker27);
 
+         */
+
+        MapPolyline polyline = new MapPolyline();
+        MapPolyline polylines = new MapPolyline();
 
         cl = new View.OnClickListener() {
             @Override
@@ -489,12 +496,77 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         startActivity(i);
                         break;
                     case R.id.spring:
-                        i = new Intent(getApplicationContext(), spring.class);
-                        startActivity(i);
+                        mapView.removeAllPolylines();
+                        mapView.removePolyline(polylines);
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43380210000001, 127.08141320000004)); //입구
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43374990000003,127.08111759999997)); //1중앙광장
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.433893499999975, 127.0808012)); //1-3
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43378160000002,127.08068609999998)); //2하늘정원
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43422110000004,127.0805944)); //D곤충생태관
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43428850000004, 127.08082939999997)); //4전통정원
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.4343151,127.08108270000002)); //4-2
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43441749999999,127.0810457)); //5작약원
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.4344465,127.08083999999997)); //5-2
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43439109999999,127.08017229999996)); //5-4
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43466556958514,127.07969404356436)); //5-6
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43504329018735,127.07952524771031)); //5-8
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43529936421379,127.07952713349141)); //15습지생태원
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43546399999999, 127.07959540000002)); //15-2
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.4355383, 127.07924389999994)); //15-4
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43569849999999, 127.07892990000005)); //15-6
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.435923399999986, 127.07885570000008)); //15-8
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43619319999999,127.07871640000008)); //16고층습지원
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.4365068, 127.07823580000002)); //16-2
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43671449999999, 127.07783919999997)); //16-4
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.437062299999994, 127.07769869999993)); //18가을단풍길
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.4383086, 127.07716189999996)); //18-2
+                        polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43831869999999,127.07702510000001)); //20라일락원
+
+                        polyline.setLineColor(Color.argb(100, 255, 0, 0));
+                        mapView.removeAllPOIItems();
+
+                        mapView.addPOIItem(marker1); //중앙정원
+                        mapView.addPOIItem(marker2); //하늘정원
+                        mapView.addPOIItem(marker5); //작약원
+                        mapView.addPOIItem(marker21); //에코센터전망대
+                        mapView.addPOIItem(marker15); //습지생태원
+                        mapView.addPOIItem(marker16); //고층습지원
+                        mapView.addPOIItem(marker20); //라일락원
+                        mapView.addPolyline(polyline);
+                        //i = new Intent(getApplicationContext(), spring.class);
+                        //startActivity(i);
+
                         break;
                     case R.id.summer:
-                        i = new Intent(getApplicationContext(), summer.class);
-                        startActivity(i);
+                        //i = new Intent(getApplicationContext(), summer.class);
+                        //startActivity(i);
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433681, 127.080833));//중앙광장
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433871,127.080796));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433815,127.080666));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433963,127.080558));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433847,127.080684));//하늘정원
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434286,127.080644));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434218,127.08084));//전통정원
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434634,127.080587));//두꺼비분수
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434631,127.080024));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434946,127.080272));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435213,127.080114));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435332,127.080365));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435426,127.079775));//습지생태원
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435274,127.079558));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435119,127.079433));//메타세쿼이아길
+
+                        polylines.setLineColor(Color.argb(100, 0, 0, 255));
+                        mapView.removeAllPOIItems();
+
+                        mapView.addPOIItem(marker1); //중앙광장
+                        mapView.addPOIItem(marker2); //하늘정원
+                        mapView.addPOIItem(marker4); //전통정원
+                        mapView.addPOIItem(marker6); //두꺼비분수
+                        mapView.addPOIItem(marker15); //습지생태원
+                        mapView.addPOIItem(marker11); //메타세쿼이아길
+                        mapView.addPolyline(polylines);
+
                         break;
                     case R.id.fall:
                         i = new Intent(getApplicationContext(), fall.class);
