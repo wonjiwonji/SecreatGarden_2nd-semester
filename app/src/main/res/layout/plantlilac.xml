@@ -18,10 +18,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="튤립"
+            android:text="라일락"
             android:textColor="@android:color/white"
-            android:textSize="30dp"
-            />
+            android:textSize="30dp"/>
 
         <Button
             android:textStyle="normal"
@@ -45,12 +44,12 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/tul"
+            android:id="@+id/lil"
             android:layout_width="match_parent"
-            android:layout_height="300dp" />
+            android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/tulE"
+            android:id="@+id/lilE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="" />

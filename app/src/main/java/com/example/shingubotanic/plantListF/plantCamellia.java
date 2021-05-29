@@ -31,39 +31,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class tulip extends DialogFragment implements View.OnClickListener{
+public class plantCamellia extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="tulip";
+    public static final String TAG_EVENT_DIALOG ="camellia";
 
-    public tulip(){}   //position 1
+    public plantCamellia(){}   //position 14
 
-    public static tulip getInstance() {
-        tulip tul = new tulip();
-        return tul;
+    public static plantCamellia getInstance() {
+        plantCamellia cam = new plantCamellia();
+        return cam;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.tulip,container);
+        View v = inflater.inflate(R.layout.camellia,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView tulE = (TextView) v.findViewById(R.id.tulE);
+        TextView camE = (TextView) v.findViewById(R.id.camE);
 
-        final ImageView tul =(ImageView) v.findViewById(R.id.tul);
+        final ImageView cam =(ImageView) v.findViewById(R.id.cam);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference("plantlistF");
-        String tulip = "tulip.jpg";
+        String camellia = "camellia.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("plantlistF").child("tulip");
+        DatabaseReference dbRef = database.getReference("plantlistF").child("camellia");
 
         //Storage
-        storageRef.child(tulip).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(camellia).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(tul);
+                        .into(cam);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -80,7 +80,7 @@ public class tulip extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                tulE.setText(value);
+                camE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 

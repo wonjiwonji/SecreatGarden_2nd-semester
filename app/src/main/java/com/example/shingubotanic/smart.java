@@ -28,6 +28,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.shingubotanic.plantFSpring.springLilac;
 import com.example.shingubotanic.plantFSpring.springTulip;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -155,6 +156,11 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         if (position == 0) {    //튤립
                             springTulip stul = springTulip.getInstance();
                             stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
+                        } break;
+                    case(1):
+                        if (position == 1) {    //라일락
+                            springLilac slil = springLilac.getInstance();
+                            slil.show(getSupportFragmentManager(), springLilac.TAG_EVENT_DIALOG);
                         } break;
                 }
             }
@@ -489,7 +495,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
             }
         });
 
-        gosea.setOnClickListener(new View.OnClickListener() {   //smart.xml 레이아웃 다시 띄우기
+        gosea.setOnClickListener(new View.OnClickListener() {   //스마트 레이아웃 다시 띄우기
             @Override
             public void onClick(View v) {
 //                prov.setVisibility(View.GONE);

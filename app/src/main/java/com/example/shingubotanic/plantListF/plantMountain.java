@@ -31,14 +31,14 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class mountain extends DialogFragment implements View.OnClickListener{
+public class plantMountain extends DialogFragment implements View.OnClickListener{
 
     public static final String TAG_EVENT_DIALOG ="mountain";
 
-    public mountain(){}   //position 5
+    public plantMountain(){}   //position 5
 
-    public static mountain getInstance() {
-        mountain mou = new mountain();
+    public static plantMountain getInstance() {
+        plantMountain mou = new plantMountain();
         return mou;
     }
 

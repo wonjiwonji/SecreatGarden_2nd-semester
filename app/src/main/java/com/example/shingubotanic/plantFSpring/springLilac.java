@@ -31,39 +31,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class springTulip extends DialogFragment implements View.OnClickListener{
+public class springLilac extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="springTulip";
+    public static final String TAG_EVENT_DIALOG ="springLilac";
 
-    public springTulip(){}   //position 0
+    public springLilac(){}   //position 1
 
-    public static springTulip getInstance() {
-        springTulip stul = new springTulip();
-        return stul;
+    public static springLilac getInstance() {
+        springLilac slil = new springLilac();
+        return slil;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.springtulip,container);
+        View v = inflater.inflate(R.layout.springlilac,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView stulE = (TextView) v.findViewById(R.id.stulE);
+        TextView slilE = (TextView) v.findViewById(R.id.slilE);
 
-        final ImageView stul =(ImageView) v.findViewById(R.id.stul);
+        final ImageView slil =(ImageView) v.findViewById(R.id.slil);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference("plantSpring");
-        String sTulip = "tulip.jpg";
+        String slilac = "lilac.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("plantFSpring").child("tulip");
+        DatabaseReference dbRef = database.getReference("plantFSpring").child("lilac");
 
         //Storage
-        storageRef.child(sTulip).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(slilac).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(stul);
+                        .into(slil);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -80,7 +80,7 @@ public class springTulip extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                stulE.setText(value);
+                slilE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 

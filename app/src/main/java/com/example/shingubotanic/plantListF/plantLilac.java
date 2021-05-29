@@ -31,39 +31,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class flower extends DialogFragment implements View.OnClickListener{
+public class plantLilac extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="flower";
+    public static final String TAG_EVENT_DIALOG ="plantLilac";
 
-    public flower(){}   //position 9
+    public plantLilac(){}   //position 2
 
-    public static flower getInstance() {
-        flower flo = new flower();
-        return flo;
+    public static plantLilac getInstance() {
+        plantLilac lil = new plantLilac();
+        return lil;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.flower,container);
+        View v = inflater.inflate(R.layout.plantlilac,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView floE = (TextView) v.findViewById(R.id.floE);
+        TextView lilE = (TextView) v.findViewById(R.id.lilE);
 
-        final ImageView flo =(ImageView) v.findViewById(R.id.flo);
+        final ImageView lil =(ImageView) v.findViewById(R.id.lil);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference("plantlistF");
-        String flower = "flower.jpg";
+        String lilac = "lilac.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("plantlistF").child("flower");
+        DatabaseReference dbRef = database.getReference("plantlistF").child("lilac");
 
         //Storage
-        storageRef.child(flower).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(lilac).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(flo);
+                        .into(lil);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -80,7 +80,7 @@ public class flower extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                floE.setText(value);
+                lilE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 

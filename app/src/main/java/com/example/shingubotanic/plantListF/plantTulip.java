@@ -31,39 +31,39 @@ import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
 
-public class camellia extends DialogFragment implements View.OnClickListener{
+public class plantTulip extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="camellia";
+    public static final String TAG_EVENT_DIALOG ="plantTulip";
 
-    public camellia(){}   //position 14
+    public plantTulip(){}   //position 1
 
-    public static camellia getInstance() {
-        camellia cam = new camellia();
-        return cam;
+    public static plantTulip getInstance() {
+        plantTulip tul = new plantTulip();
+        return tul;
     }
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
-        View v = inflater.inflate(R.layout.camellia,container);
+        View v = inflater.inflate(R.layout.planttulip,container);
         Button cancel =(Button) v.findViewById(R.id.cancel);
-        TextView camE = (TextView) v.findViewById(R.id.camE);
+        TextView tulE = (TextView) v.findViewById(R.id.tulE);
 
-        final ImageView cam =(ImageView) v.findViewById(R.id.cam);
+        final ImageView tul =(ImageView) v.findViewById(R.id.tul);
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
         StorageReference storageRef = storage.getReference("plantlistF");
-        String camellia = "camellia.jpg";
+        String tulip = "tulip.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
-        DatabaseReference dbRef = database.getReference("plantlistF").child("camellia");
+        DatabaseReference dbRef = database.getReference("plantlistF").child("tulip");
 
         //Storage
-        storageRef.child(camellia).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+        storageRef.child(tulip).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
 
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
-                        .into(cam);
+                        .into(tul);
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -80,7 +80,7 @@ public class camellia extends DialogFragment implements View.OnClickListener{
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
-                camE.setText(value);
+                tulE.setText(value);
 //              Log.d(TAG, "Value is: " + value);
             }
 

@@ -14,10 +14,11 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.shingubotanic.plantListF.camellia;
-import com.example.shingubotanic.plantListF.flower;
-import com.example.shingubotanic.plantListF.mountain;
-import com.example.shingubotanic.plantListF.tulip;
+import com.example.shingubotanic.plantListF.plantCamellia;
+import com.example.shingubotanic.plantListF.plantFlower;
+import com.example.shingubotanic.plantListF.plantLilac;
+import com.example.shingubotanic.plantListF.plantMountain;
+import com.example.shingubotanic.plantListF.plantTulip;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -79,23 +80,28 @@ public class plantinfo extends AppCompatActivity {
                 switch (position){
                     case(1):
                     if (position == 1) {    //(봄)튤립
-                        tulip tul = tulip.getInstance();
-                        tul.show(getSupportFragmentManager(), tulip.TAG_EVENT_DIALOG);
+                        plantTulip tul = plantTulip.getInstance();
+                        tul.show(getSupportFragmentManager(), plantTulip.TAG_EVENT_DIALOG);
                     } break;
+                    case(2):
+                        if (position == 2) {    //(봄)라일락
+                            plantLilac lil = plantLilac.getInstance();
+                            lil.show(getSupportFragmentManager(), plantLilac.TAG_EVENT_DIALOG);
+                        } break;
                     case(5):
                         if (position == 5) {    //(여름)산수국
-                            mountain mou = mountain.getInstance();
-                            mou.show(getSupportFragmentManager(), mountain.TAG_EVENT_DIALOG);
+                            plantMountain mou = plantMountain.getInstance();
+                            mou.show(getSupportFragmentManager(), plantMountain.TAG_EVENT_DIALOG);
                         } break;
                     case(9):
                         if (position == 9) {    //(가을)꽃무릇
-                            flower flo = flower.getInstance();
-                            flo.show(getSupportFragmentManager(), flower.TAG_EVENT_DIALOG);
+                            plantFlower flo = plantFlower.getInstance();
+                            flo.show(getSupportFragmentManager(), plantFlower.TAG_EVENT_DIALOG);
                         } break;
                     case(14):
                         if (position == 14) {    //(겨울)동백나무
-                            camellia cam = camellia.getInstance();
-                            cam.show(getSupportFragmentManager(), camellia.TAG_EVENT_DIALOG);
+                            plantCamellia cam = plantCamellia.getInstance();
+                            cam.show(getSupportFragmentManager(), plantCamellia.TAG_EVENT_DIALOG);
                         } break;
                 }
             }

@@ -3,19 +3,12 @@ package com.example.shingubotanic;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Layout;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.webkit.WebChromeClient;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -23,11 +16,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import com.example.shingubotanic.plantFSpring.springLilac;
 import com.example.shingubotanic.plantFSpring.springTulip;
-import com.example.shingubotanic.plantListF.camellia;
-import com.example.shingubotanic.plantListF.flower;
-import com.example.shingubotanic.plantListF.mountain;
-import com.example.shingubotanic.plantListF.tulip;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -35,9 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import static android.view.View.inflate;
 
 
 public class spring extends AppCompatActivity {
@@ -127,6 +114,11 @@ public class spring extends AppCompatActivity {
                         if (position == 0) {    //튤립
                             springTulip stul = springTulip.getInstance();
                             stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
+                        } break;
+                    case(1):
+                        if (position == 1) {    //라일락
+                            springLilac slil = springLilac.getInstance();
+                            slil.show(getSupportFragmentManager(), springLilac.TAG_EVENT_DIALOG);
                         } break;
                 }
             }
