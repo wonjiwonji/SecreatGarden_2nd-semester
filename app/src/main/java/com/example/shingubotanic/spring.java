@@ -1,8 +1,11 @@
 package com.example.shingubotanic;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebChromeClient;
@@ -13,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import androidx.annotation.NonNull;
@@ -33,15 +37,19 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import static android.view.View.inflate;
+
 
 public class spring extends AppCompatActivity {
 
-    ImageButton back, flower_icon, back_menu, eventView;
+    ImageButton back, flower_icon, back_menu, eventView, left_btn, right_btn;
     View.OnClickListener cl;
     Intent i;
     private DrawerLayout drawerLayout;
     private View drawerView;
     private ListView list1;
+    LinearLayout webCon1, webCon2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +63,13 @@ public class spring extends AppCompatActivity {
         flower_icon = (ImageButton) findViewById(R.id.tulip);
         back_menu = (ImageButton) findViewById(R.id.back_menu);
         eventView = (ImageButton) findViewById(R.id.eventView);
+        left_btn = (ImageButton) findViewById(R.id.left_btn);
+        right_btn = (ImageButton) findViewById(R.id.right_btn);
 
         list1 = (ListView) findViewById(R.id.list1);
+
+        webCon1 = (LinearLayout) findViewById(R.id.webCon1);
+        webCon2 = (LinearLayout) findViewById(R.id.webCon2);
 
         ArrayList<String> data = new ArrayList<String>();
 
@@ -136,6 +149,17 @@ public class spring extends AppCompatActivity {
                         i = new Intent(getApplicationContext(), webv.class);
                         startActivity(i);
                         break;
+                    case R.id.right_btn :
+                        LayoutInflater inflater3 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        inflater3.inflate(R.layout.sub_menu, webCon1, true);
+                        webCon2.setVisibility(View.GONE);
+                        break;
+
+                    case R.id.left_btn :
+                        LayoutInflater inflater2 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        inflater2.inflate(R.layout.sub_menu2, webCon1, true);
+                        webCon2.setVisibility(View.GONE);
+                        break;
 
                 }
             }
@@ -143,6 +167,9 @@ public class spring extends AppCompatActivity {
         back.setOnClickListener(cl);
         back_menu.setOnClickListener(cl);
         eventView.setOnClickListener(cl);
+        left_btn.setOnClickListener(cl);
+        right_btn.setOnClickListener(cl);
+
     }
 
 

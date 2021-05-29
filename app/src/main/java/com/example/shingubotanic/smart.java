@@ -46,14 +46,15 @@ import java.util.ArrayList;
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView, gopro, gosea, pcouple;
+    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView, gopro, gosea, pcouple, left_btn, right_btn;
     View.OnClickListener cl;
     Intent i;
     int a=1;
     private DrawerLayout smartLayout;
     private View springNev, summerNev;
     private ListView list1;
-    LinearLayout scon, sc, pcon, pc;
+    LinearLayout scon, sc, pcon, pc, webCon1, webCon2;
+
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -102,6 +103,12 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         pc = (LinearLayout) prov.findViewById(R.id.pcon);
         gosea = (ImageButton) prov.findViewById(R.id.gosea);
         pcouple = (ImageButton) prov.findViewById(R.id.procouple);
+
+        left_btn = (ImageButton) findViewById(R.id.left_btn);
+        right_btn = (ImageButton) findViewById(R.id.right_btn);
+
+        webCon1 = (LinearLayout) findViewById(R.id.webCon1);
+        webCon2 = (LinearLayout) findViewById(R.id.webCon2);
 
 
         ArrayList<String> data = new ArrayList<String>();
@@ -577,9 +584,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         mapView.addPOIItem(marker16); //고층습지원
                         mapView.addPOIItem(marker20); //라일락원
                         mapView.addPolyline(polyline);
-                        //i = new Intent(getApplicationContext(), spring.class);
-                        //startActivity(i);
-
+//                        i = new Intent(getApplicationContext(), spring.class);
+//                        startActivity(i);
                         break;
                     case R.id.summer:
                         //i = new Intent(getApplicationContext(), summer.class);
@@ -641,6 +647,17 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         i = new Intent(getApplicationContext(), webv.class);
                         startActivity(i);
                         break;
+                    case R.id.right_btn :
+                        LayoutInflater inflater3 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        inflater3.inflate(R.layout.sub_menu, webCon1, true);
+                        webCon2.setVisibility(View.GONE);
+                        break;
+
+                    case R.id.left_btn :
+                        LayoutInflater inflater2 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                        inflater2.inflate(R.layout.sub_menu2, webCon1, true);
+                        webCon2.setVisibility(View.GONE);
+                        break;
                 }
             }
         };
@@ -653,6 +670,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         plantinfo.setOnClickListener(cl);
         back_menu.setOnClickListener(cl);
         eventView.setOnClickListener(cl);
+        left_btn.setOnClickListener(cl);
+        right_btn.setOnClickListener(cl);
     }
 
     @Override

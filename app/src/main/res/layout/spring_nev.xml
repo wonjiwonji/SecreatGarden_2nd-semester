@@ -39,17 +39,39 @@
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
+        android:id="@+id/webCon1"
         android:layout_width="match_parent"
         android:layout_height="340dp"
         android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/eventView"
+        <LinearLayout
+            android:id="@+id/webCon2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/capri_ev" />
+            android:orientation="horizontal">
 
+            <ImageButton
+                android:id="@+id/left_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/left"
+                android:layout_gravity="center"/>
 
+            <ImageButton
+                android:id="@+id/eventView"
+                android:layout_width="262dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/capri_ev" />
+
+            <ImageButton
+                android:id="@+id/right_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/right"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
