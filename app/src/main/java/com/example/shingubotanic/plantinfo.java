@@ -114,7 +114,6 @@ public class plantinfo extends AppCompatActivity {
 
 //        FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
 //        StorageReference listRef = storage.getReference("plant");
-//        String flo = "flower2.JPG";
 
 //        plant = new ArrayList<PlantList>();
         //Storage

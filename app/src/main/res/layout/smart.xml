@@ -59,7 +59,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:id="@+id/con2">
@@ -81,6 +81,7 @@
                         android:maxWidth="35dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"/>
+
                     <ImageButton
                         android:id="@+id/summer"
                         android:layout_width="wrap_content"
@@ -92,6 +93,7 @@
                         android:maxWidth="35dp"
                         android:adjustViewBounds="true"
                         android:scaleType="fitCenter"/>
+
                     <ImageButton
                         android:id="@+id/fall"
                         android:layout_width="wrap_content"
@@ -102,8 +104,8 @@
                         android:maxHeight="35dp"
                         android:maxWidth="35dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="fitCenter"
-                        />
+                        android:scaleType="fitCenter"/>
+
                     <ImageButton
                         android:id="@+id/winter"
                         android:layout_width="wrap_content"
@@ -120,7 +122,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:orientation="horizontal">
 
                     <ImageButton
@@ -154,7 +156,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/plantinfo"
+                        app:srcCompat="@drawable/probonobono"
                         android:maxHeight="35dp"
                         android:maxWidth="35dp"
                         android:adjustViewBounds="true"
@@ -164,9 +166,9 @@
 
                 </LinearLayout>
 
+        </LinearLayout>
 
-        </LinearLayout>
-        </LinearLayout>
+    </LinearLayout>
 
 
 
