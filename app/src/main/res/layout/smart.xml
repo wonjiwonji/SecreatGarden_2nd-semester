@@ -57,14 +57,14 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:orientation="vertical"
-            android:id="@+id/container">
+            android:id="@+id/scontainer">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:id="@+id/con2"
+                android:id="@+id/scon"
                 android:background="@color/backgroundgray">>
 
                 <LinearLayout
@@ -163,7 +163,7 @@
                         android:scaleType="fitCenter"/>
 
                     <ImageButton
-                        android:id="@+id/pro"
+                        android:id="@+id/gopro"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
                         android:layout_weight="1"

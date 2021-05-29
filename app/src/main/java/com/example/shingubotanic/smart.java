@@ -46,14 +46,14 @@ import java.util.ArrayList;
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView, pro;
+    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView, gopro, gosea, pcouple;
     View.OnClickListener cl;
     Intent i;
     int a=1;
     private DrawerLayout smartLayout;
     private View springNev, summerNev;
     private ListView list1;
-    LinearLayout con, con2;
+    LinearLayout scon, sc, pcon, pc;
 
     private static final String LOG_TAG = "MainActivity";
 
@@ -91,11 +91,17 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
         list1 = (ListView) findViewById(R.id.list1);
 
-        con = (LinearLayout) findViewById(R.id.container);
-        pro = (ImageButton) findViewById(R.id.pro);
+        scon = (LinearLayout) findViewById(R.id.scontainer);
+        gopro = (ImageButton) findViewById(R.id.gopro);
+        sc = (LinearLayout) findViewById(R.id.scon);
 
-        con2 = (LinearLayout) findViewById(R.id.con2);
-
+//        View smartv = View.inflate(this, R.layout.smart, null);
+        View prov = View.inflate(this, R.layout.probono, null);  //프로보노 레이아웃을 View 객체로 만들긔
+//        scon.addView(prov); //스마트 linear에 View 추가
+        pcon = (LinearLayout) prov.findViewById(R.id.pcontainer);
+        pc = (LinearLayout) prov.findViewById(R.id.pcon);
+        gosea = (ImageButton) prov.findViewById(R.id.gosea);
+        pcouple = (ImageButton) prov.findViewById(R.id.procouple);
 
 
         ArrayList<String> data = new ArrayList<String>();
@@ -147,14 +153,45 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
             }
         });
 
-        pro.setOnClickListener(new View.OnClickListener() {
+        scon.addView(prov);
+
+        gopro.setOnClickListener(new View.OnClickListener() {   //프로보노 레이아웃으로 교체
             @Override
             public void onClick(View v) {
-                con2.setVisibility(View.GONE);
-                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                inflater.inflate(R.layout.probono, con, true);
+                //sc.setVisibility(View.GONE); //작은 linearlayout
+                scon.addView(prov); //스마트 linear에 View 추가
+//                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//                inflater.inflate(R.layout.probono, pcon, true);
             }
         });
+
+        gosea.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                prov.setVisibility(View.GONE);
+                scon.removeView(prov);
+                setContentView(R.layout.smart);   //야매 성공
+
+
+//                pcon.removeView(sc);
+//                scon.removeView(sc);
+//                scon.addView(sc);
+//                pcon.removeView(scon);
+            }
+        });
+
+//        pcouple.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                MapPoint mapPoint1= MapPoint.mapPointWithGeoCoord(37.43374990000003, 127.08111759999997);//좌표에 마커를 찍는거
+//                MapPOIItem marker1 = new MapPOIItem();
+//                marker1.setItemName("중앙광장");//말풍선
+//                marker1.setTag(1);
+//                marker1.setMapPoint(mapPoint1);
+//                marker1.setMarkerType(MapPOIItem.MarkerType.BluePin); // 기본으로 제공하는 BluePin 마커 모양.
+//                marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
+//            }
+//        });
 
         flower_icon.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -540,18 +577,24 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                     case R.id.summer:
                         //i = new Intent(getApplicationContext(), summer.class);
                         //startActivity(i);
+                        mapView.removeAllPolylines();
+                        mapView.removePolyline(polyline);
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433681, 127.080833));//중앙광장
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433871,127.080796));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433815,127.080666));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433963,127.080558));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.43378160000002, 127.08068609999998));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.433847,127.080684));//하늘정원
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434286,127.080644));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.43428850000004, 127.08082939999997));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434218,127.08084));//전통정원
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434603651775085, 127.08064936148412));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434634,127.080587));//두꺼비분수
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434631,127.080024));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.434946,127.080272));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435213,127.080114));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435332,127.080365));
+                        polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.43529936421379, 127.07952713349141));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435426,127.079775));//습지생태원
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435274,127.079558));
                         polylines.addPoint(MapPoint.mapPointWithGeoCoord(37.435119,127.079433));//메타세쿼이아길
