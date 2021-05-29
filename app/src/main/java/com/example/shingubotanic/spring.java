@@ -105,24 +105,24 @@ public class spring extends AppCompatActivity {
             }
         });
 
-        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String str = (String) parent.getItemAtPosition(position);
-                switch (position){
-                    case(0):
-                        if (position == 0) {    //튤립
-                            springTulip stul = springTulip.getInstance();
-                            stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
-                        } break;
-                    case(1):
-                        if (position == 1) {    //라일락
-                            springLilac slil = springLilac.getInstance();
-                            slil.show(getSupportFragmentManager(), springLilac.TAG_EVENT_DIALOG);
-                        } break;
-                }
-            }
-        });
+//        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트 -> 스마트로 이동
+//            @Override
+//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+////                String str = (String) parent.getItemAtPosition(position);
+//                switch (position){
+//                    case(0):
+//                        if (position == 0) {    //튤립
+//                            springTulip stul = springTulip.getInstance();
+//                            stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
+//                        } break;
+//                    case(1):
+//                        if (position == 1) {    //라일락
+//                            springLilac slil = springLilac.getInstance();
+//                            slil.show(getSupportFragmentManager(), springLilac.TAG_EVENT_DIALOG);
+//                        } break;
+//                }
+//            }
+//        });
 
 
         cl = new View.OnClickListener(){

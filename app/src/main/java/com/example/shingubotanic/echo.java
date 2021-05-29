@@ -35,9 +35,8 @@ public class echo extends DialogFragment implements View.OnClickListener{
 
     public static final String TAG_EVENT_DIALOG ="echo center"; //수정  ""
     Intent i;
-    public echo(){
 
-    } //변경
+    public echo(){ } //변경
 
     public static echo getInstance() {
         echo ech = new echo(); //수정 변수명 스펠링 앞세개
