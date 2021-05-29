@@ -11,7 +11,7 @@
         android:background="@color/thingreen">
 
         <TextView
-            android:fontFamily="sans-serif-black"
+            android:textStyle="normal"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

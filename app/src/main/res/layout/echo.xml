@@ -17,7 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="sans-serif-black"
+            android:textStyle="normal"
             android:text="에코센터"
             android:textColor="@android:color/white"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:background="#00ff0000"
-            android:fontFamily="sans-serif-black"
+            android:textStyle="normal"
             android:text="닫기"
             android:textColor="@android:color/white"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum" />

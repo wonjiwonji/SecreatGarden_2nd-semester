@@ -16,7 +16,7 @@
         android:id="@+id/infotext"
         android:layout_toRightOf="@+id/picture"
         android:gravity="center"
-        android:textStyle="bold"
+        android:textStyle="normal"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:text="TextView" />

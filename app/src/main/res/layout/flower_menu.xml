@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:fontFamily="sans-serif-black"
+            android:textStyle="normal"
             android:text="봄 식물 정보"
             android:textColor="@android:color/white"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"

@@ -27,7 +27,7 @@
                     <ImageButton
                         android:id="@+id/spring"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         app:srcCompat="@drawable/procouple"
@@ -39,7 +39,7 @@
                     <ImageButton
                         android:id="@+id/summer"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         app:srcCompat="@drawable/prochildren"
@@ -51,7 +51,7 @@
                     <ImageButton
                         android:id="@+id/fall"
                         android:layout_width="wrap_content"
-                        android:layout_height="35dp"
+                        android:layout_height="50dp"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         app:srcCompat="@drawable/progroup"
