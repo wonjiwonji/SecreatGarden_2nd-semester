@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="7dc6ddcf9fcb039411b0c7d5177cd4be"/>
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="8273eedb8b718df300993baa8e28630d"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -31,7 +31,6 @@
         <activity android:name=".map"></activity>
         <activity android:name=".home"></activity>
         <activity android:name=".spring"></activity>
-        <activity android:name=".summer"></activity>
         <activity android:name=".fall"></activity>
         <activity android:name=".winter"></activity>
         <activity android:name=".plantinfo"></activity>

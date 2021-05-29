@@ -153,32 +153,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
             }
         });
 
-        scon.addView(prov);
 
-        gopro.setOnClickListener(new View.OnClickListener() {   //프로보노 레이아웃으로 교체
-            @Override
-            public void onClick(View v) {
-                //sc.setVisibility(View.GONE); //작은 linearlayout
-                scon.addView(prov); //스마트 linear에 View 추가
-//                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//                inflater.inflate(R.layout.probono, pcon, true);
-            }
-        });
-
-        gosea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                prov.setVisibility(View.GONE);
-                scon.removeView(prov);
-                setContentView(R.layout.smart);   //야매 성공
-
-
-//                pcon.removeView(sc);
-//                scon.removeView(sc);
-//                scon.addView(sc);
-//                pcon.removeView(scon);
-            }
-        });
 
 //        pcouple.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -489,6 +464,38 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         marker27.setCustomImageAutoscale(false);
 
 
+        pcouple.setOnClickListener(new View.OnClickListener() {   //프로보노 레이아웃에서 커플코스 클릭 시
+            @Override
+            public void onClick(View v) {
+                mapView.removeAllPOIItems();
+                mapView.addPOIItem(marker1); //중앙정원
+            }
+        });
+
+        gopro.setOnClickListener(new View.OnClickListener() {   //프로보노 레이아웃으로 교체
+            @Override
+            public void onClick(View v) {
+                //sc.setVisibility(View.GONE); //작은 linearlayout
+                scon.addView(prov); //스마트 linear에 View 추가
+//                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+//                inflater.inflate(R.layout.probono, pcon, true);
+            }
+        });
+
+        gosea.setOnClickListener(new View.OnClickListener() {   //smart.xml 레이아웃 다시 띄우기
+            @Override
+            public void onClick(View v) {
+//                prov.setVisibility(View.GONE);
+                scon.removeView(prov);
+                setContentView(R.layout.smart);   //야매 성공
+
+//                pcon.removeView(sc);
+//                scon.removeView(sc);
+//                scon.addView(sc);
+//                pcon.removeView(scon);
+            }
+        });
+
 
         /*
         mapView.addPOIItem(marker1);
@@ -559,7 +566,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.4383086, 127.07716189999996)); //18-2
                         polyline.addPoint(MapPoint.mapPointWithGeoCoord(37.43831869999999,127.07702510000001)); //20라일락원
 
-                        polyline.setLineColor(Color.argb(100, 255, 0, 0));
+                        polyline.setLineColor(Color.argb(100, 0, 0, 255));
                         mapView.removeAllPOIItems();
 
                         mapView.addPOIItem(marker1); //중앙정원
