@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:drawable="@drawable/spring_dark"
+    <item android:drawable="@drawable/prochildren_dark"
         android:state_focused="true" />
-    <item android:drawable="@drawable/spring" />
+    <item android:drawable="@drawable/prochildren" />
 </selector>
