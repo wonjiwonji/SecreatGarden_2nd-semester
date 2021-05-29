@@ -30,28 +30,34 @@
             android:layout_height="70dp"
             android:layout_above="@id/button2"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/smart" />
+            app:srcCompat="@drawable/smart"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
 
         <ImageButton
             android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_width="220dp"
+            android:layout_height="70dp"
             android:layout_above="@id/button3"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/tourguide" />
+            app:srcCompat="@drawable/tourguide"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
 
         <ImageButton
             android:id="@+id/button3"
             android:layout_width="220dp"
             android:layout_height="70dp"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/event" />
+            app:srcCompat="@drawable/event"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
 
         <ImageButton
             android:id="@+id/button4"
@@ -59,9 +65,11 @@
             android:layout_height="70dp"
             android:layout_below="@id/button3"
             android:layout_centerInParent="true"
-            android:layout_marginBottom="25dp"
+            android:layout_marginBottom="20dp"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/navigation" />
+            app:srcCompat="@drawable/navigation"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"/>
 
 
 

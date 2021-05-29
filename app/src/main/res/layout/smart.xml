@@ -27,7 +27,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif-black"
                 android:text="스마트투어"
-                android:textColor="@android:color/white"
+                android:textColor="@color/backgroundgray"
                 android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
                 android:textSize="30dp" />
 
@@ -38,7 +38,9 @@
                 android:layout_gravity="left"
                 android:layout_marginRight="15dp"
                 android:background="@color/thingreen"
-                app:srcCompat="@drawable/house" />
+                app:srcCompat="@drawable/house"
+                android:adjustViewBounds="true"
+                android:scaleType="fitCenter"/>
 
             <ImageButton
                 android:id="@+id/tulip"
@@ -62,13 +64,14 @@
                 android:layout_height="0dp"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:id="@+id/con2">
+                android:id="@+id/con2"
+                android:background="@color/backgroundgray">>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:orientation="horizontal"
-                    android:background="@android:color/transparent">
+                    android:background="@color/backgroundgray">
 
                     <ImageButton
                         android:id="@+id/spring"
@@ -123,7 +126,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:background="@color/backgroundgray">>
 
                     <ImageButton
                         android:id="@+id/allmap"

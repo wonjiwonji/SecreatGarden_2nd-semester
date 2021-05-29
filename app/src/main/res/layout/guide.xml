@@ -23,11 +23,13 @@
         <ImageButton
 
             android:id="@+id/home"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_gravity="left"
             android:layout_marginRight="15dp"
-            android:background="@drawable/house"></ImageButton>
+            android:background="@drawable/house"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"></ImageButton>
 
     </androidx.appcompat.widget.Toolbar>
     <WebView
