@@ -50,7 +50,7 @@ public class webv extends MainActivity {
             public void onClick(View v) {
                 switch ( v.getId() ) {
                     case R.id.back :
-                        i = new Intent(getApplicationContext(), spring.class);
+                        i = new Intent(getApplicationContext(), smart.class);
                         startActivity(i);
                         break;
                 }
