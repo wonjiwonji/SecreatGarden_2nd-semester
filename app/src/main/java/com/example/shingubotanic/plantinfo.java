@@ -76,33 +76,38 @@ public class plantinfo extends AppCompatActivity {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String str = (String) parent.getItemAtPosition(position);
-                switch (position){
-                    case(1):
-                    if (position == 1) {    //(봄)튤립
+                String str = (String) parent.getItemAtPosition(position);
+                switch (str){
+                    case("튤립"):
+//                    if (position == 1) {    //(봄)튤립
                         plantTulip tul = plantTulip.getInstance();
                         tul.show(getSupportFragmentManager(), plantTulip.TAG_EVENT_DIALOG);
-                    } break;
-                    case(2):
-                        if (position == 2) {    //(봄)라일락
-                            plantLilac lil = plantLilac.getInstance();
-                            lil.show(getSupportFragmentManager(), plantLilac.TAG_EVENT_DIALOG);
-                        } break;
-                    case(5):
-                        if (position == 5) {    //(여름)산수국
-                            plantMountain mou = plantMountain.getInstance();
-                            mou.show(getSupportFragmentManager(), plantMountain.TAG_EVENT_DIALOG);
-                        } break;
-                    case(9):
-                        if (position == 9) {    //(가을)꽃무릇
-                            plantFlower flo = plantFlower.getInstance();
-                            flo.show(getSupportFragmentManager(), plantFlower.TAG_EVENT_DIALOG);
-                        } break;
-                    case(14):
-                        if (position == 14) {    //(겨울)동백나무
-                            plantCamellia cam = plantCamellia.getInstance();
-                            cam.show(getSupportFragmentManager(), plantCamellia.TAG_EVENT_DIALOG);
-                        } break;
+                        break;
+//                    } break;
+                    case("라일락"):
+//                        if (position == 2) {    //(봄)라일락
+                        plantLilac lil = plantLilac.getInstance();
+                        lil.show(getSupportFragmentManager(), plantLilac.TAG_EVENT_DIALOG);
+                        break;
+//                        } break;
+                    case("산수국"):
+//                        if (position == 5) {    //(여름)산수국
+                        plantMountain mou = plantMountain.getInstance();
+                        mou.show(getSupportFragmentManager(), plantMountain.TAG_EVENT_DIALOG);
+                        break;
+//                        } break;
+                    case("꽃무릇"):
+//                        if (position == 9) {    //(가을)꽃무릇
+                        plantFlower flo = plantFlower.getInstance();
+                        flo.show(getSupportFragmentManager(), plantFlower.TAG_EVENT_DIALOG);
+                        break;
+//                        } break;
+                    case("동백나무"):
+//                        if (position == 14) {    //(겨울)동백나무
+                        plantCamellia cam = plantCamellia.getInstance();
+                        cam.show(getSupportFragmentManager(), plantCamellia.TAG_EVENT_DIALOG);
+                        break;
+//                        } break;
                 }
             }
         });
@@ -117,6 +122,29 @@ public class plantinfo extends AppCompatActivity {
             }
         };
         back.setOnClickListener(cl);
+
+
+        stext.addTextChangedListener(new TextWatcher() {    //검색 기능
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {    //텍스트 바뀌기 전에 실행
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {   //텍스트 바뀌는 순간
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {  //텍스트 바뀌고 난 후
+                String searchText = s.toString();
+                if (searchText.length() > 0) {
+                    list.setFilterText(searchText); //textFilterEnabled = true 필수
+                } else {
+                    list.clearTextFilter();
+                }
+            }
+        });
 
 //        FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
 //        StorageReference listRef = storage.getReference("plant");
@@ -153,29 +181,6 @@ public class plantinfo extends AppCompatActivity {
 //                adap.notifyDataSetChanged();
 //            }
 //        });
-
-
-        stext.addTextChangedListener(new TextWatcher() {    //검색 기능
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {    //텍스트 바뀌기 전에 실행
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {   //텍스트 바뀌는 순간
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {  //텍스트 바뀌고 난 후
-                String searchText = s.toString();
-                if (searchText.length() > 0) {
-                    list.setFilterText(searchText); //textFilterEnabled = true 필수
-                } else {
-                    list.clearTextFilter();
-                }
-            }
-        });
 
     }
 
