@@ -190,7 +190,6 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                 else if (a==2) {
                     smartLayout.openDrawer(summerNev);
                 }
-                //smartLayout.openDrawer(springNev);
             }
         });
 
