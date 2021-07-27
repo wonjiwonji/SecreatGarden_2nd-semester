@@ -70,11 +70,11 @@ import java.util.ArrayList;
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, gopro, psilver;
+    ImageButton home, spring, summer, fall, winter;
     View.OnClickListener cl;
     Intent i;
     int a=1;
-    LinearLayout scon, sc;
+    LinearLayout scon;
 
 
     private static final String LOG_TAG = "MainActivity";
