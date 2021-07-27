@@ -14,7 +14,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -28,8 +27,32 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.example.shingubotanic.plantFSpring.springLilac;
-import com.example.shingubotanic.plantFSpring.springTulip;
+import com.example.shingubotanic.gardenMarker.central;
+import com.example.shingubotanic.gardenMarker.children;
+import com.example.shingubotanic.gardenMarker.echo;
+import com.example.shingubotanic.gardenMarker.extinction;
+import com.example.shingubotanic.gardenMarker.fivesenses;
+import com.example.shingubotanic.gardenMarker.gardencafe;
+import com.example.shingubotanic.gardenMarker.gardencenter;
+import com.example.shingubotanic.gardenMarker.grass;
+import com.example.shingubotanic.gardenMarker.herbgarden;
+import com.example.shingubotanic.gardenMarker.high;
+import com.example.shingubotanic.gardenMarker.lilacgarden;
+import com.example.shingubotanic.gardenMarker.lycoris;
+import com.example.shingubotanic.gardenMarker.maple;
+import com.example.shingubotanic.gardenMarker.metasequoia;
+import com.example.shingubotanic.gardenMarker.observatory;
+import com.example.shingubotanic.gardenMarker.parking;
+import com.example.shingubotanic.gardenMarker.peremptoryagent;
+import com.example.shingubotanic.gardenMarker.roofgarden;
+import com.example.shingubotanic.gardenMarker.silvergrass;
+import com.example.shingubotanic.gardenMarker.toadfountain;
+import com.example.shingubotanic.gardenMarker.toilet;
+import com.example.shingubotanic.gardenMarker.tradition;
+import com.example.shingubotanic.gardenMarker.treeinspector;
+import com.example.shingubotanic.gardenMarker.vineyard;
+import com.example.shingubotanic.gardenMarker.vista;
+import com.example.shingubotanic.gardenMarker.wetlands;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -47,14 +70,11 @@ import java.util.ArrayList;
 
 public class smart extends MainActivity  implements MapView.POIItemEventListener, MapView.CurrentLocationEventListener, MapReverseGeoCoder.ReverseGeoCodingResultListener {
     Toolbar toolbar;
-    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, back_menu, eventView, gopro, gosea, psilver, left_btn, right_btn;
+    ImageButton home, flower_icon, spring, summer, fall, winter, allmap, plantinfo, gopro, psilver;
     View.OnClickListener cl;
     Intent i;
     int a=1;
-    private DrawerLayout smartLayout;
-    private View springNev, summerNev;
-    private ListView list1;
-    LinearLayout scon, sc, pcon, pc, webCon1, webCon2;
+    LinearLayout scon, sc;
 
 
     private static final String LOG_TAG = "MainActivity";
@@ -79,43 +99,12 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         summer = (ImageButton) findViewById(R.id.summer);
         fall = (ImageButton) findViewById(R.id.fall);
         winter = (ImageButton)findViewById(R.id.winter);
-        allmap = (ImageButton) findViewById(R.id.allmap);
-        plantinfo = (ImageButton) findViewById(R.id.plantinfo);
-
-        flower_icon = (ImageButton) findViewById(R.id.tulip);
-
-        smartLayout = (DrawerLayout) findViewById(R.id.smartLayout);
-        springNev = (View) findViewById(R.id.springNev);
-        summerNev = (View) findViewById(R.id.summerNev);
-
-        back_menu = (ImageButton) findViewById(R.id.back_menu);
-        eventView = (ImageButton) findViewById(R.id.eventView);
-
-        list1 = (ListView) findViewById(R.id.list1);
 
         scon = (LinearLayout) findViewById(R.id.scontainer);
-        gopro = (ImageButton) findViewById(R.id.gopro);
-        sc = (LinearLayout) findViewById(R.id.scon);
-
-//        View smartv = View.inflate(this, R.layout.smart, null);
-        View prov = View.inflate(this, R.layout.probono, null);  //프로보노 레이아웃을 View 객체로 만들긔
-//        scon.addView(prov); //스마트 linear에 View 추가
-        pcon = (LinearLayout) prov.findViewById(R.id.pcontainer);
-        pc = (LinearLayout) prov.findViewById(R.id.pcon);
-        gosea = (ImageButton) prov.findViewById(R.id.gosea);
-        psilver = (ImageButton) prov.findViewById(R.id.prosilver);
-
-        left_btn = (ImageButton) findViewById(R.id.left_btn);
-        right_btn = (ImageButton) findViewById(R.id.right_btn);
-
-        webCon1 = (LinearLayout) findViewById(R.id.webCon1);
-        webCon2 = (LinearLayout) findViewById(R.id.webCon2);
-
 
         ArrayList<String> data = new ArrayList<String>();
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, data);
-        list1.setAdapter(adapter);
 
 //        //데이터추가
 //        data.add("식물1");
@@ -147,26 +136,6 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         mapView.setPOIItemEventListener(this);
         mapView.setCurrentLocationEventListener(this);
 
-        list1.setOnItemClickListener(new AdapterView.OnItemClickListener() {     //listView 클릭 이벤트
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                String str = (String) parent.getItemAtPosition(position);
-                switch (position){
-                    case(0):
-                        if (position == 0) {    //튤립
-                            springTulip stul = springTulip.getInstance();
-                            stul.show(getSupportFragmentManager(), springTulip.TAG_EVENT_DIALOG);
-                        } break;
-                    case(1):
-                        if (position == 1) {    //라일락
-                            springLilac slil = springLilac.getInstance();
-                            slil.show(getSupportFragmentManager(), springLilac.TAG_EVENT_DIALOG);
-                        } break;
-                }
-            }
-        });
-
-
 
 //        pcouple.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -180,33 +149,6 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 //                marker1.setSelectedMarkerType(MapPOIItem.MarkerType.RedPin); // 마커를 클릭했을때, 기본으로 제공하는 RedPin 마커 모양.
 //            }
 //        });
-
-        flower_icon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (a==1) {
-                    smartLayout.openDrawer(springNev);
-                }
-                else if (a==2) {
-                    smartLayout.openDrawer(summerNev);
-                }
-            }
-        });
-
-        smartLayout.setDrawerListener(listener);
-        springNev.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-        summerNev.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                return true;
-            }
-        });
-
 
 
         if (!checkLocationServicesStatus()) {
@@ -511,32 +453,7 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         MapPolyline polyline3 = new MapPolyline();
 
 
-
-        gopro.setOnClickListener(new View.OnClickListener() {   //프로보노 레이아웃으로 교체
-            @Override
-            public void onClick(View v) {
-                //sc.setVisibility(View.GONE); //작은 linearlayout
-                scon.addView(prov); //스마트 linear에 View 추가
-//                LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//                inflater.inflate(R.layout.probono, pcon, true);
-            }
-        });
-
-        gosea.setOnClickListener(new View.OnClickListener() {   //스마트 레이아웃 다시 띄우기
-            @Override
-            public void onClick(View v) {
-//                prov.setVisibility(View.GONE);
-                scon.removeView(prov);
-                setContentView(R.layout.smart);   //야매 성공
-
-//                pcon.removeView(sc);
-//                scon.removeView(sc);
-//                scon.addView(sc);
-//                pcon.removeView(scon);
-            }
-        });
-
-
+        /*
         psilver.setOnClickListener(new View.OnClickListener() {   //프로보노 레이아웃에서 노인코스 클릭 시
             @Override
             public void onClick(View v) {
@@ -568,6 +485,8 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
 
             }
         });
+        */
+
 
         cl = new View.OnClickListener() {
             @Override
@@ -658,54 +577,12 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
                         mapView.addPolyline(polyline2);
 
                         break;
-                    case R.id.fall:
-                        i = new Intent(getApplicationContext(), fall.class);
-                        startActivity(i);
-                        break;
-                    case R.id.winter:
-                        i = new Intent(getApplicationContext(), winter.class);
-                        startActivity(i);
-                        break;
-                    case R.id.allmap:
-                        i = new Intent(getApplicationContext(), allmap.class);
-                        startActivity(i);
-                        break;
-                    case R.id.plantinfo:
-                        i = new Intent(getApplicationContext(), plantinfo.class);
-                        startActivity(i);
-                        break;
-                    case R.id.back_menu:
-                        smartLayout.closeDrawers();
-                        break;
-                    case R.id.eventView:
-                        i = new Intent(getApplicationContext(), webv.class);
-                        startActivity(i);
-                        break;
-                    case R.id.right_btn :
-                        LayoutInflater inflater3 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                        inflater3.inflate(R.layout.sub_menu, webCon1, true);
-                        webCon2.setVisibility(View.GONE);
-                        break;
-
-                    case R.id.left_btn :
-                        LayoutInflater inflater2 = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                        inflater2.inflate(R.layout.sub_menu2, webCon1, true);
-                        webCon2.setVisibility(View.GONE);
-                        break;
                 }
             }
         };
         home.setOnClickListener(cl);
         spring.setOnClickListener(cl);
         summer.setOnClickListener(cl);
-        fall.setOnClickListener(cl);
-        winter.setOnClickListener(cl);
-        allmap.setOnClickListener(cl);
-        plantinfo.setOnClickListener(cl);
-        back_menu.setOnClickListener(cl);
-        eventView.setOnClickListener(cl);
-        left_btn.setOnClickListener(cl);
-        right_btn.setOnClickListener(cl);
     }
 
     @Override
@@ -1050,34 +927,5 @@ public class smart extends MainActivity  implements MapView.POIItemEventListener
         return locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
                 || locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
     }
-
-    //드로워레이아웃 했을때 상태값 받아옴
-    DrawerLayout.DrawerListener listener = new DrawerLayout.DrawerListener() {
-
-        //슬라이더
-        @Override
-        public void onDrawerSlide(@NonNull View drawerView, float slideOffset) {
-
-        }
-
-        //오픈
-        @Override
-        public void onDrawerOpened(@NonNull View drawerView) {
-
-        }
-
-        //슬라이더 닫혔을때
-        @Override
-        public void onDrawerClosed(@NonNull View drawerView) {
-
-        }
-
-        //상태가 바꼈을때
-        @Override
-        public void onDrawerStateChanged(int newState) {
-
-        }
-    };
-
 
 }
