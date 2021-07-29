@@ -26,16 +26,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".smart"></activity>
-        <activity android:name=".guide"></activity>
-        <activity android:name=".event"></activity>
-        <activity android:name=".map"></activity>
         <activity android:name=".home"></activity>
-        <activity android:name=".spring"></activity>
-        <activity android:name=".fall"></activity>
-        <activity android:name=".winter"></activity>
-        <activity android:name=".plantinfo"></activity>
-        <activity android:name=".allmap"></activity>
-        <activity android:name=".webv"></activity>
 
 
     </application>
