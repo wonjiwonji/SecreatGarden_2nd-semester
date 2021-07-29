@@ -21,28 +21,11 @@ public class home extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
-        home= (ImageButton) findViewById(R.id.home);
-
-        b1 = (ImageButton) findViewById(R.id.button1);
-
-        cl = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switch ( v.getId() ) {
-                    case R.id.button1 :
-                        i = new Intent(getApplicationContext(), smart.class);
-                        startActivity(i);
-                        break;
-                    case R.id.home :
-                        i = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(i);
-                        break;
-                }
-            }
-        };
-        b1.setOnClickListener(cl);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        Toolbar toolbar2 = (Toolbar)findViewById(R.id.toolbar2);
         setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar2);
+
     }
 }
