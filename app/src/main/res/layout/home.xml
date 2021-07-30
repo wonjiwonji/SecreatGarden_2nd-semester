@@ -64,7 +64,7 @@
 
 
         <ImageButton
-            android:id="@+id/guide"
+            android:id="@+id/h_guide"
             android:layout_width="157dp"
             android:layout_height="225dp"
             android:background="@android:color/transparent"
@@ -72,14 +72,14 @@
             app:srcCompat="@drawable/test1" />
 
         <ImageButton
-            android:id="@+id/weathercourse"
+            android:id="@+id/h_weathercourse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/course"
+            android:id="@+id/h_course"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
@@ -93,21 +93,21 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/info"
+            android:id="@+id/h_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/shop"
+            android:id="@+id/h_shop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             tools:srcCompat="@tools:sample/avatars" />
 
         <ImageButton
-            android:id="@+id/foreign"
+            android:id="@+id/h_foreign"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
