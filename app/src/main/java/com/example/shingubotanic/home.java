@@ -18,10 +18,6 @@ public class home extends MainActivity {
     View.OnClickListener cl;
     Intent i;
 
-    //프래그먼트 객체 선언
-    guide guide;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,24 +35,14 @@ public class home extends MainActivity {
         setSupportActionBar(toolbar);
         setSupportActionBar(toolbar2);
 
-        //프래그먼트 생성
-        guide = new guide();
-
-        //프래그먼트 매니저, 프래그먼트 트랜잭션 생성
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        //프래그먼트 매니저란? Activity에서  fragment를 관리.
-        //프래그먼트 트랜잭션이란? fragment를 동적으로 생성(add)/제거(remove)/교체(replace)하기 위해 사용.
-
 
         cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction transaction = manager.beginTransaction();
                 switch (v.getId()) {
                     case R.id.h_guide:
-                        transaction.replace(R.id.fragment_container, guide);
-                        transaction.commitAllowingStateLoss();
+                        i = new Intent(getApplicationContext(), guide.class);
+                        startActivity(i);
                         break;
                     case R.id.h_weathercourse:
                         i = new Intent(getApplicationContext(), weathercou.class);
