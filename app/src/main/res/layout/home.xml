@@ -68,8 +68,8 @@
             android:layout_width="157dp"
             android:layout_height="225dp"
             android:background="@android:color/transparent"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/pic1" />
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/test1" />
 
         <ImageButton
             android:id="@+id/weathercourse"
