@@ -36,44 +36,43 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
         <ImageButton
             android:id="@+id/intro"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             app:srcCompat="@drawable/guide_intro" />
 
         <ImageButton
             android:id="@+id/info"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             android:background="#FFFFFF"
             app:srcCompat="@drawable/guide_info" />
 
         <ImageButton
             android:id="@+id/money"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             app:srcCompat="@drawable/guide_money" />
 
         <ImageButton
             android:id="@+id/members"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             android:background="#FFFFFF"
             app:srcCompat="@drawable/guide_members" />
 
         <ImageButton
             android:id="@+id/note"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             android:background="#FFFFFF"
             app:srcCompat="@drawable/guide_note" />
 
         <ImageButton
             android:id="@+id/road"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="95dp"
             app:srcCompat="@drawable/guide_road" />
 
 

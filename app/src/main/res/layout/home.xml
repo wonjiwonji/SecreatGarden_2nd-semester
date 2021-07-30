@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <androidx.appcompat.widget.Toolbar
 
         android:id="@+id/toolbar"
@@ -22,7 +21,6 @@
             android:layout_height="wrap_content"
             android:background="@android:color/transparent"
             app:srcCompat="@drawable/shingu_white" />
-
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -56,77 +54,75 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/h_guide"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/guidebtn" />
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/h_weathercourse"
+            <ImageButton
+                android:id="@+id/h_guide"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/guidebtn" />
+
+            <ImageButton
+                android:id="@+id/h_weathercourse"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/weatherbtn" />
+
+            <ImageButton
+                android:id="@+id/h_course"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/coursebtn" />
+
+        </LinearLayout>
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/weatherbtn" />
+            android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/h_course"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/coursebtn" />
+            <ImageButton
+                android:id="@+id/h_info"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/infobtn" />
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/h_shop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/shopbtn" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/h_info"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/infobtn" />
-
-        <ImageButton
-            android:id="@+id/h_shop"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/shopbtn" />
-
-        <ImageButton
-            android:id="@+id/h_foreign"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/transparent"
-            android:scaleType="fitXY"
-            android:src="@drawable/foreignbtn" />
+            <ImageButton
+                android:id="@+id/h_foreign"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:scaleType="fitXY"
+                android:src="@drawable/foreignbtn" />
 
 
-    </LinearLayout>
+        </LinearLayout>
 
 </LinearLayout>
