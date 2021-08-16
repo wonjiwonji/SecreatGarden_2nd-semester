@@ -1,24 +1,21 @@
 package com.example.shingubotanic;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-public class home extends MainActivity {
+import com.example.shingubotanic.guide.guide;
+
+public class home extends AppCompatActivity {
     private String TAG = "VideoActivity";
 
     ImageButton gui,wea,cou,info,shop,fore;
     View.OnClickListener cl;
     Intent i;
-
-    guide guide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +34,9 @@ public class home extends MainActivity {
         setSupportActionBar(toolbar);
         setSupportActionBar(toolbar2);
 
-        guide = new guide();
-
-        FragmentManager manager = getSupportFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-
-
         cl = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentTransaction transaction = manager.beginTransaction();
                 switch (v.getId()) {
                     case R.id.h_guide:
                         i = new Intent(getApplicationContext(), guide.class);

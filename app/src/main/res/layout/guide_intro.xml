@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/thingreen">
+
+        <ImageButton
+            android:id="@+id/intro_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@color/thingreen"
+            app:srcCompat="@drawable/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:textStyle="normal"
+            android:text="식물원소개"
+            android:textColor="@color/backgroundgray"
+            android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
+            android:textSize="30dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.Toolbar
+
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@color/backgroundgreen"
+        app:contentInsetStart="0dp">
+
+        <ImageView
+            android:id="@+id/intro_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton2"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/leaf"
+                    android:layout_gravity="center"/>
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/titleunderline"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textPersonName"
+                    android:text="설립기관"
+                    android:textColor="@color/leafgreen"
+                    android:textSize="25dp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="125dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton3"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/leaf" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/titleunderline"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textPersonName"
+                    android:text="설립목적"
+                    android:textColor="@color/leafgreen"
+                    android:textSize="25dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="325dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton4"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/leaf" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/titleunderline"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="신구대학교식물원이 하는 일"
+                    android:textColor="@color/leafgreen"
+                    android:textSize="25dp"
+                    android:focusableInTouchMode="false"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"/>
+
+            <LinearLayout
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton5"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/leaf" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/titleunderline"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="규모 및 위치"
+                    android:textColor="@color/leafgreen"
+                    android:textSize="25dp"
+                    android:focusableInTouchMode="false"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

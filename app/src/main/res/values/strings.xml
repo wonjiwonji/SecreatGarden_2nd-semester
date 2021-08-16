@@ -1,3 +1,25 @@
 <resources>
+
     <string name="app_name">secret-garden_vacation</string>
+<!--    <string name="intro_underlineT1"> <u>설립기관</u> </string>-->
+<!--    <string name="intro_underlineT2"> <u>설립목적</u> </string>-->
+<!--    <string name="intro_underlineT3"> <u>신구대학교 식물원이 하는 일</u> </string>-->
+<!--    <string name="intro_underlineT4"> <u>규모 및 위치</u> </string>-->
+
+<!--    <string name="info_underlineT1"> <u>관람시간 안내</u> </string>-->
+
+<!--    <string name="fee_underlineT1"> <u>요금안내</u> </string>-->
+<!--    <string name="fee_underlineT2"> <u>동절기 요금 안내</u> </string>-->
+<!--    <string name="fee_underlineT3"> <u>무료 입장</u> </string>-->
+<!--    <string name="fee_underlineT4"> <u>할인 입장</u> </string>-->
+<!--    <string name="fee_underlineT5"> <u>기타</u> </string>-->
+
+<!--    <string name="street_underlineT1"> <u>대중교통 이용 시</u> </string>-->
+
+<!--    <string name="members_underlineT1"> <u>연간회원</u> </string>-->
+<!--    <string name="members_underlineT2"> <u>가입방법</u> </string>-->
+
+<!--    <string name="note_underlineT1"> <u>관람시 유의사항</u> </string>-->
+
+
 </resources>
