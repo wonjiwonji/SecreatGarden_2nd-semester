@@ -27,6 +27,7 @@
         </activity>
 
         <activity android:name=".home"></activity>
+        <activity android:name=".info.info"></activity>
         <activity android:name=".guide.guide"></activity>
         <activity android:name=".guide.guide_intro"></activity>
         <activity android:name=".guide.guide_info"></activity>

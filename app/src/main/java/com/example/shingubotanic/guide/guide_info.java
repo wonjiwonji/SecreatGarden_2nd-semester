@@ -51,7 +51,6 @@ public class guide_info extends AppCompatActivity {
         x4 = (TextView) findViewById(R.id.text4);
         x5 = (TextView) findViewById(R.id.text5);
         x6 = (TextView) findViewById(R.id.text6);
-//        t1 = (TextView) findViewById(R.id.title1);
 
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");

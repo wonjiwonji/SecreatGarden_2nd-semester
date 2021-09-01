@@ -51,7 +51,7 @@ public class home extends AppCompatActivity {
                         startActivity(i);
                         break;
                     case R.id.h_info:
-                        i = new Intent(getApplicationContext(), info.class);
+                        i = new Intent(getApplicationContext(), com.example.shingubotanic.info.info.class);
                         startActivity(i);
                         break;
                     case R.id.h_shop:
