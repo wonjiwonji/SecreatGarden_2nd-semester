@@ -13,46 +13,42 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen"
+        android:background="@color/hpgreen2"
         app:contentInsetStart="0dp">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/home"
-            android:layout_width="match_parent"
+            android:layout_width="190dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
             android:background="@android:color/transparent"
-            app:srcCompat="@drawable/shingu_white" />
+            app:srcCompat="@drawable/logo_white_ver" />
+
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:background="@android:color/transparent"
-        android:scaleType="fitCenter"
-        app:srcCompat="@drawable/festival1" />
-
-    <TextView
-        android:id="@+id/textView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="2021 SUMMER 신구대학교 식물원에서 여름나기 \n\n\n"
-        android:textColor="@android:color/white" />
+        android:layout_height="260dp">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/viewpager">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+
+    </FrameLayout>
 
     <androidx.appcompat.widget.Toolbar
 
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen"
+        android:background="@color/hpgreen2"
         app:contentInsetStart="0dp">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -126,5 +122,6 @@
 
 
         </LinearLayout>
+
 
 </LinearLayout>

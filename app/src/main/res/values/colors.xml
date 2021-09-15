@@ -4,11 +4,15 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#8ABB33</color>
     <color name="thingreen">#a6e535</color>
-    <color name="backgroundgray">#f5f5f5</color>
-    <color name="gray">#828282</color>
+    <color name="leafgreen">#8ABB33</color>
     <color name="backgroundgreen">#c2e583</color>
+    <color name="hpgreen">#a6c54c</color>
+    <color name="hpgreen2">#88c83e</color>
+    <color name="backgroundgray">#f5f5f5</color>
+    <color name="homegray">#ababab</color>
+    <color name="gray">#828282</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>FF0000
     <color name="red">#FF0000</color>
-    <color name="leafgreen">#8ABB33</color>
+
 </resources>
