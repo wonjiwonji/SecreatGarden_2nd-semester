@@ -1,5 +1,6 @@
 package com.example.shingubotanic.info.summer;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -17,6 +19,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.bumptech.glide.Glide;
 import com.example.shingubotanic.R;
+import com.example.shingubotanic.info.info;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -24,9 +27,9 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.Objects;
 
-public class info_summer_plant4_sum extends DialogFragment implements View.OnClickListener{
+public class info_summer_plant4_sum extends DialogFragment {
 
-    public static String TAG_EVENT_DIALOG = "info_summer_plant4_sum";
+    public static String TAG_EVENT_DIALOG = "info_summer_plant4_sum";   //섬시호
 
     public static info_summer_plant4_sum getInstance(){
         info_summer_plant4_sum isspd4 = new info_summer_plant4_sum();
@@ -35,15 +38,20 @@ public class info_summer_plant4_sum extends DialogFragment implements View.OnCli
 
     ImageButton cancel;
     ImageView img1, img2;
+    Button back, next;
+    View.OnClickListener cl;
+    Intent i;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.info_summer_plant4_sum, container);
+        View v4 = inflater.inflate(R.layout.info_summer_plant4_sum, container);
 
-        cancel = (ImageButton) v.findViewById(R.id.cancel);
-        img1 = (ImageView) v.findViewById(R.id.isspd4_img1);
-        img2 = (ImageView) v.findViewById(R.id.isspd4_img2);
+        cancel = (ImageButton) v4.findViewById(R.id.cancel);
+        img1 = (ImageView) v4.findViewById(R.id.isspd4_img1);
+        img2 = (ImageView) v4.findViewById(R.id.isspd4_img2);
+        back = (Button) v4.findViewById(R.id.sum_back);
+        next = (Button) v4.findViewById(R.id.sum_next);
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference("plantInfo").child("summer");
@@ -84,12 +92,33 @@ public class info_summer_plant4_sum extends DialogFragment implements View.OnCli
             }
         });
 
-        cancel.setOnClickListener(this);
-        return v;
+        cl = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.cancel:
+                        i = new Intent(getActivity().getApplicationContext(), info.class);
+                        startActivity(i);
+                        break;
+                    case R.id.sum_back:
+                        v4.setVisibility(v4.GONE);
+                        info_summer_plant3_byeong isspd3 = info_summer_plant3_byeong.getInstance();
+                        isspd3.show(getFragmentManager(), info_summer_plant3_byeong.TAG_EVENT_DIALOG);
+                        break;
+                    case R.id.sum_next:
+                        v4.setVisibility(v4.GONE);
+                        info_summer_plant5_ki isspd5 = info_summer_plant5_ki.getInstance();
+                        isspd5.show(getFragmentManager(), info_summer_plant5_ki.TAG_EVENT_DIALOG);
+                        break;
+                }
+            }
+        };
+        cancel.setOnClickListener(cl);
+        back.setOnClickListener(cl);
+        next.setOnClickListener(cl);
+        setCancelable(false);
+
+        return v4;
     }
 
-    @Override
-    public void onClick(View v) {
-        dismiss();
-    }
 }

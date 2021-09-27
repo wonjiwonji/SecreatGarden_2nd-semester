@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/container">
 
     <androidx.appcompat.widget.Toolbar
 
@@ -37,16 +38,11 @@
         android:layout_height="50dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="8dp"
-            android:layout_height="wrap_content"
-            android:text="" />
-
         <EditText
             android:id="@+id/editText"
             android:layout_width="405dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
             android:ems="10"
             android:inputType="textPersonName"
             android:text=" 찾으시는 꽃을 입력하세요"
@@ -56,7 +52,7 @@
             android:layout_gravity="center"/>
 
         <ImageButton
-            android:id="@+id/imageButton14"
+            android:id="@+id/imageButton1"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:layout_weight="1"
@@ -79,7 +75,7 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -124,10 +120,12 @@
                                         android:id="@+id/textView17"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="돌단풍"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img1_txt"
@@ -155,10 +153,12 @@
                                         android:id="@+id/textView18"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="수선화"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img2_txt"
@@ -186,10 +186,12 @@
                                         android:id="@+id/textView19"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="만리화"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img3_txt"
@@ -225,10 +227,12 @@
                                         android:id="@+id/textView23"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="백서향"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img4_txt"
@@ -256,10 +260,12 @@
                                         android:id="@+id/textView25"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="제주양지꽃"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img5_txt"
@@ -287,10 +293,12 @@
                                         android:id="@+id/textView27"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="장수만리화"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img6_txt"
@@ -326,10 +334,12 @@
                                         android:id="@+id/textView30"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="수호초"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img7_txt"
@@ -357,10 +367,12 @@
                                         android:id="@+id/textView32"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="히어리"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img8_txt"
@@ -388,10 +400,12 @@
                                         android:id="@+id/textView34"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="목련"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img9_txt"
@@ -404,106 +418,112 @@
 
                             </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="20dp"
-                            android:orientation="horizontal">
-
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal">
 
-                                <ImageView
-                                    android:id="@+id/info_img10"
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:onClick="clickImg10"
-                                    tools:srcCompat="@tools:sample/avatars" />
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
 
-                                <TextView
-                                    android:id="@+id/textView37"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="진달래"
-                                    android:textColor="@color/black"
-                                    android:textSize="15dp" />
+                                    <ImageView
+                                        android:id="@+id/info_img10"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="clickImg10"
+                                        tools:srcCompat="@tools:sample/avatars" />
 
-                                <TextView
-                                    android:id="@+id/img10_txt"
+                                    <TextView
+                                        android:id="@+id/textView37"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="진달래"
+                                        android:textColor="@color/black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/img10_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="설명준비중..." />
+
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="설명준비중..." />
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/info_img11"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="clickImg11"
+                                        tools:srcCompat="@tools:sample/avatars" />
+
+                                    <TextView
+                                        android:id="@+id/textView39"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="깽깽이풀"
+                                        android:textColor="@color/black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/img11_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="설명준비중..." />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <ImageView
+                                        android:id="@+id/info_img12"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:onClick="clickImg12"
+                                        tools:srcCompat="@tools:sample/avatars" />
+
+                                    <TextView
+                                        android:id="@+id/textView41"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:gravity="center"
+                                        android:text="노루귀"
+                                        android:textColor="@color/black"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/img12_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="설명준비중..." />
+
+                                </LinearLayout>
 
                             </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:id="@+id/info_img11"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:onClick="clickImg11"
-                                    tools:srcCompat="@tools:sample/avatars" />
-
-                                <TextView
-                                    android:id="@+id/textView39"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="깽깽이풀"
-                                    android:textColor="@color/black"
-                                    android:textSize="15dp" />
-
-                                <TextView
-                                    android:id="@+id/img11_txt"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="설명준비중..." />
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:orientation="vertical">
-
-                                <ImageView
-                                    android:id="@+id/info_img12"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:onClick="clickImg12"
-                                    tools:srcCompat="@tools:sample/avatars" />
-
-                                <TextView
-                                    android:id="@+id/textView41"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="노루귀"
-                                    android:textColor="@color/black"
-                                    android:textSize="15dp" />
-
-                                <TextView
-                                    android:id="@+id/img12_txt"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:gravity="center"
-                                    android:text="설명준비중..." />
-
-                            </LinearLayout>
-
-                        </LinearLayout>
 
                         </LinearLayout>
 
@@ -549,10 +569,12 @@
                                         android:id="@+id/textView43"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="돌가시나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img13_txt"
@@ -580,10 +602,12 @@
                                         android:id="@+id/textView45"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="정향풀"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img14_txt"
@@ -611,10 +635,12 @@
                                         android:id="@+id/textView47"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="병아리꽃나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img15_txt"
@@ -650,10 +676,12 @@
                                         android:id="@+id/textView50"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="섬시호"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img16_txt"
@@ -681,10 +709,12 @@
                                         android:id="@+id/textView52"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="기린초"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img17_txt"
@@ -712,10 +742,12 @@
                                         android:id="@+id/textView54"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="섬백리향"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img18_txt"
@@ -751,10 +783,12 @@
                                         android:id="@+id/textView57"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="물레나물"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img19_txt"
@@ -782,10 +816,12 @@
                                         android:id="@+id/textView59"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="매발톱"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img20_txt"
@@ -813,10 +849,12 @@
                                         android:id="@+id/textView61"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="해당화"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img21_txt"
@@ -852,10 +890,12 @@
                                         android:id="@+id/textView64"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="박쥐나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img22_txt"
@@ -883,10 +923,12 @@
                                         android:id="@+id/textView66"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="태산목"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img23_txt"
@@ -914,10 +956,12 @@
                                         android:id="@+id/textView68"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="때죽나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img24_txt"
@@ -974,10 +1018,12 @@
                                         android:id="@+id/textView70"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="가막살나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img25_txt"
@@ -1005,10 +1051,12 @@
                                         android:id="@+id/textView72"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="개버무리"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img26_txt"
@@ -1036,10 +1084,12 @@
                                         android:id="@+id/textView74"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="단양쑥부쟁이"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img27_txt"
@@ -1075,10 +1125,12 @@
                                         android:id="@+id/textView77"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="고마리"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img28_txt"
@@ -1106,10 +1158,12 @@
                                         android:id="@+id/textView79"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="구와꼬리풀"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img29_txt"
@@ -1137,10 +1191,12 @@
                                         android:id="@+id/textView81"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="동자꽃"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img30_txt"
@@ -1176,10 +1232,12 @@
                                         android:id="@+id/textView84"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="흑산도비비추"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img31_txt"
@@ -1207,10 +1265,12 @@
                                         android:id="@+id/textView86"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="해국"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img32_txt"
@@ -1238,10 +1298,12 @@
                                         android:id="@+id/textView88"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="가시연꽃"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img33_txt"
@@ -1277,10 +1339,12 @@
                                         android:id="@+id/textView91"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="고구마"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img34_txt"
@@ -1308,10 +1372,12 @@
                                         android:id="@+id/textView93"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="용담"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img35_txt"
@@ -1339,10 +1405,12 @@
                                         android:id="@+id/textView95"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="배롱나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img36_txt"
@@ -1399,10 +1467,12 @@
                                         android:id="@+id/textView97"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="애기동백나무"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img37_txt"
@@ -1430,10 +1500,12 @@
                                         android:id="@+id/textView99"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
                                         android:gravity="center"
                                         android:text="복수초"
                                         android:textColor="@color/black"
-                                        android:textSize="15dp" />
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
 
                                     <TextView
                                         android:id="@+id/img38_txt"

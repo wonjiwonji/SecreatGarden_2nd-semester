@@ -1,5 +1,6 @@
 package com.example.shingubotanic.info.fall;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -17,6 +19,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.bumptech.glide.Glide;
 import com.example.shingubotanic.R;
+import com.example.shingubotanic.info.info;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -24,9 +27,9 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.Objects;
 
-public class info_fall_plant7_black extends DialogFragment implements View.OnClickListener{
+public class info_fall_plant7_black extends DialogFragment {
 
-    public static String TAG_EVENT_DIALOG = "info_fall_plant7_black";
+    public static String TAG_EVENT_DIALOG = "info_fall_plant7_black";   //흑산도비비추
 
     public static info_fall_plant7_black getInstance(){
         info_fall_plant7_black ifpg7 = new info_fall_plant7_black();
@@ -35,15 +38,20 @@ public class info_fall_plant7_black extends DialogFragment implements View.OnCli
 
     ImageButton cancel;
     ImageView img1, img2;
+    Button back, next;
+    View.OnClickListener cl;
+    Intent i;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.info_fall_plant7_black, container);
+        View v7 = inflater.inflate(R.layout.info_fall_plant7_black, container);
 
-        cancel = (ImageButton) v.findViewById(R.id.cancel);
-        img1 = (ImageView) v.findViewById(R.id.ifpg7_img1);
-        img2 = (ImageView) v.findViewById(R.id.ifpg7_img2);
+        cancel = (ImageButton) v7.findViewById(R.id.cancel);
+        img1 = (ImageView) v7.findViewById(R.id.ifpg7_img1);
+        img2 = (ImageView) v7.findViewById(R.id.ifpg7_img2);
+        back = (Button) v7.findViewById(R.id.black_back);
+        next = (Button) v7.findViewById(R.id.black_next);
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference("plantInfo").child("fall");
@@ -84,12 +92,33 @@ public class info_fall_plant7_black extends DialogFragment implements View.OnCli
             }
         });
 
-        cancel.setOnClickListener(this);
-        return v;
+        cl = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.cancel:
+                        i = new Intent(getActivity().getApplicationContext(), info.class);
+                        startActivity(i);
+                        break;
+                    case R.id.black_back:
+                        v7.setVisibility(v7.GONE);
+                        info_fall_plant6_dong ifpg6 = info_fall_plant6_dong.getInstance();
+                        ifpg6.show(getFragmentManager(), info_fall_plant6_dong.TAG_EVENT_DIALOG);
+                        break;
+                    case R.id.black_next:
+                        v7.setVisibility(v7.GONE);
+                        info_fall_plant8_hae ifpg8 = info_fall_plant8_hae.getInstance();
+                        ifpg8.show(getFragmentManager(), info_fall_plant8_hae.TAG_EVENT_DIALOG);
+                        break;
+                }
+            }
+        };
+        cancel.setOnClickListener(cl);
+        back.setOnClickListener(cl);
+        next.setOnClickListener(cl);
+        setCancelable(false);
+
+        return v7;
     }
 
-    @Override
-    public void onClick(View v) {
-        dismiss();
-    }
 }

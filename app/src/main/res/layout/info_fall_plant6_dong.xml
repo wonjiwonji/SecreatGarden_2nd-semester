@@ -60,17 +60,21 @@
 
             <Button
                 android:id="@+id/dong_back"
-                android:layout_width="match_parent"
+                android:layout_width="95dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="이전" />
+                android:text="이전"
+                android:layout_gravity="left"
+                android:textColor="@color/white"
+                android:background="@color/thingreen" />
 
             <Button
                 android:id="@+id/dong_next"
-                android:layout_width="match_parent"
+                android:layout_width="95dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="다음" />
+                android:text="다음"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/white"
+                android:background="@color/thingreen"/>
 
         </LinearLayout>
 

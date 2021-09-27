@@ -1,5 +1,6 @@
 package com.example.shingubotanic.info.spring;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -17,6 +19,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.bumptech.glide.Glide;
 import com.example.shingubotanic.R;
+import com.example.shingubotanic.info.info;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
@@ -24,7 +27,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.Objects;
 
-public class info_spring_plant10_jin extends DialogFragment implements View.OnClickListener{
+public class info_spring_plant10_jin extends DialogFragment {
 
     public static String TAG_EVENT_DIALOG = "info_spring_plant10_jin";   //진달래
 
@@ -35,15 +38,20 @@ public class info_spring_plant10_jin extends DialogFragment implements View.OnCl
 
     ImageButton cancel;
     ImageView img1, img2;
+    Button back, next;
+    View.OnClickListener cl;
+    Intent i;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.info_spring_plant10_jin, container);
+        View v10 = inflater.inflate(R.layout.info_spring_plant10_jin, container);
 
-        cancel = (ImageButton) v.findViewById(R.id.cancel);
-        img1 = (ImageView) v.findViewById(R.id.ispd10_img1);
-        img2 = (ImageView) v.findViewById(R.id.ispd10_img2);
+        cancel = (ImageButton) v10.findViewById(R.id.cancel);
+        img1 = (ImageView) v10.findViewById(R.id.ispd10_img1);
+        img2 = (ImageView) v10.findViewById(R.id.ispd10_img2);
+        back = (Button) v10.findViewById(R.id.jin_back);
+        next = (Button) v10.findViewById(R.id.jin_next);
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference("plantInfo").child("spring");
@@ -84,12 +92,33 @@ public class info_spring_plant10_jin extends DialogFragment implements View.OnCl
             }
         });
 
-        cancel.setOnClickListener(this);
-        return v;
+        cl = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch (v.getId()){
+                    case R.id.cancel:
+                        i = new Intent(getActivity().getApplicationContext(), info.class);
+                        startActivity(i);
+                        break;
+                    case R.id.jin_back:
+                        v10.setVisibility(v10.GONE);
+                        info_spring_plant9_mok ispd9 = info_spring_plant9_mok.getInstance();
+                        ispd9.show(getFragmentManager(), info_spring_plant9_mok.TAG_EVENT_DIALOG);
+                        break;
+                    case R.id.jin_next:
+                        v10.setVisibility(v10.GONE);
+                        info_spring_plant11_kkang ispd11 = info_spring_plant11_kkang.getInstance();
+                        ispd11.show(getFragmentManager(), info_spring_plant11_kkang.TAG_EVENT_DIALOG);
+                        break;
+                }
+            }
+        };
+        cancel.setOnClickListener(cl);
+        back.setOnClickListener(cl);
+        next.setOnClickListener(cl);
+        setCancelable(false);
+
+        return v10;
     }
 
-    @Override
-    public void onClick(View v) {
-        dismiss();
-    }
 }
