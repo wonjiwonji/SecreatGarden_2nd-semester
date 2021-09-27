@@ -30,7 +30,7 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="260dp">
+        android:layout_height="280dp">
 
         <androidx.viewpager2.widget.ViewPager2
             android:layout_width="match_parent"
@@ -65,7 +65,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:scaleType="fitXY"
-                android:src="@drawable/guidebtn" />
+                android:src="@drawable/guidebtn_dark" />
 
             <ImageButton
                 android:id="@+id/h_weathercourse"
@@ -83,7 +83,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:scaleType="fitXY"
-                android:src="@drawable/coursebtn" />
+                android:src="@drawable/coursebtn_dark" />
 
         </LinearLayout>
 
@@ -109,7 +109,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:scaleType="fitXY"
-                android:src="@drawable/shopbtn" />
+                android:src="@drawable/shopbtn_dark" />
 
             <ImageButton
                 android:id="@+id/h_foreign"
@@ -118,7 +118,7 @@
                 android:layout_weight="1"
                 android:background="@android:color/transparent"
                 android:scaleType="fitXY"
-                android:src="@drawable/foreignbtn" />
+                android:src="@drawable/foreignbtn_dark" />
 
 
         </LinearLayout>
