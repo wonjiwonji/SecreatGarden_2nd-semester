@@ -1,8 +1,10 @@
 package com.example.shingubotanic.guide;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.Nullable;
@@ -13,22 +15,25 @@ import com.example.shingubotanic.home;
 
 public class guide extends AppCompatActivity {  //관람안내(홈)
 
-    ImageButton back, intro, info, fee, members, note, street;
+    Button intro, info, fee, members, note, street;
+    ImageButton back;
     View.OnClickListener cl;
     Intent i;
 
+    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guide);
 
         back = (ImageButton) findViewById(R.id.guide_back);
-        intro = (ImageButton) findViewById(R.id.intro);
-        info = (ImageButton) findViewById(R.id.info);
-        fee = (ImageButton) findViewById(R.id.fee);
-        members = (ImageButton) findViewById(R.id.members);
-        note = (ImageButton) findViewById(R.id.note);
-        street = (ImageButton) findViewById(R.id.street);
+        intro = (Button) findViewById(R.id.intro);
+        info = (Button) findViewById(R.id.info);
+        fee = (Button) findViewById(R.id.fee);
+        members = (Button) findViewById(R.id.members);
+        note = (Button) findViewById(R.id.note);
+        street = (Button) findViewById(R.id.street);
+
 
         cl = new View.OnClickListener() {
             @Override

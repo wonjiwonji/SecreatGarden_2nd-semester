@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
 
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen">
+        android:background="@color/hpgreen2">
 
         <ImageButton
             android:id="@+id/guide_back"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@color/thingreen"
+            android:background="@color/hpgreen2"
             app:srcCompat="@drawable/left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@android:dimen/app_icon_size"
-            android:textStyle="normal"
             android:text="관람안내"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="30dp" />
+            android:textSize="28dp"
+            android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -36,44 +36,53 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageButton
+        <Button
             android:id="@+id/intro"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            app:srcCompat="@drawable/guide_intro" />
+            android:drawableLeft="@drawable/guide_intro"
+            android:text="식물원 소개"
+            android:textSize="22dp" />
 
-        <ImageButton
+        <Button
             android:id="@+id/info"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:background="#FFFFFF"
-            app:srcCompat="@drawable/guide_info" />
+            android:drawableLeft="@drawable/guide_info"
+            android:text="관람정보"
+            android:textSize="22dp"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/fee"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            app:srcCompat="@drawable/guide_fee" />
+            android:drawableLeft="@drawable/guide_fee"
+            android:text="요금안내"
+            android:textSize="22dp"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/members"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:background="#FFFFFF"
-            app:srcCompat="@drawable/guide_members" />
+            android:drawableLeft="@drawable/guide_members"
+            android:text="연간회원"
+            android:textSize="22dp"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/note"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            android:background="#FFFFFF"
-            app:srcCompat="@drawable/guide_note" />
+            android:drawableLeft="@drawable/guide_note"
+            android:text="유의사항"
+            android:textSize="22dp"/>
 
-        <ImageButton
+        <Button
             android:id="@+id/street"
             android:layout_width="match_parent"
             android:layout_height="95dp"
-            app:srcCompat="@drawable/guide_street" />
+            android:drawableLeft="@drawable/guide_street"
+            android:text="길찾기"
+            android:textSize="22dp"/>
 
 
     </LinearLayout>
