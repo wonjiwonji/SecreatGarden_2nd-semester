@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="2b7ba728b54433d03f97d4bba07b0948"/>
+        <meta-data android:name="com.naver.maps.map.CLIENT_ID" android:value="ntf39b87aq"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
