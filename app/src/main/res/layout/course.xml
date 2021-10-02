@@ -49,11 +49,10 @@
 
         </androidx.appcompat.widget.Toolbar>
 
-        <fragment
-            android:id="@+id/map_fragment"
+        <com.naver.maps.map.MapView
+            android:id="@+id/map_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:name="com.naver.maps.map.MapFragment" />
+            android:layout_height="match_parent" />
 
 <!--        <ImageView-->
 <!--            android:id="@+id/child_image"-->

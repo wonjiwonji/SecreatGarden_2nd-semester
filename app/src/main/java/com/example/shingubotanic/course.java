@@ -8,6 +8,7 @@ import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -21,11 +22,17 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.naver.maps.geometry.LatLng;
+import com.naver.maps.map.CameraPosition;
+import com.naver.maps.map.MapView;
+import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.OnMapReadyCallback;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class course extends AppCompatActivity {
+public class course extends AppCompatActivity implements OnMapReadyCallback {
 
     ImageButton back, nevi_icon;
     View.OnClickListener cl;
@@ -36,7 +43,8 @@ public class course extends AppCompatActivity {
     private ExpandableListView expListView;
     private List<String> listDataHeader;
     private HashMap<String, List<String>> listDataChild;
-
+    private MapView mapView;
+    private static NaverMap naverMap;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,6 +56,12 @@ public class course extends AppCompatActivity {
 
         back = (ImageButton) findViewById(R.id.back);
         nevi_icon = (ImageButton) findViewById(R.id.nevi_icon);
+
+        // 네이버 지도
+        mapView = (MapView) findViewById(R.id.map_view);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
+
 
         //jiwon listview
         // 확장 리스트뷰를 가져온다.
@@ -189,6 +203,23 @@ public class course extends AppCompatActivity {
         };
         back.setOnClickListener(cl);
     }
+
+
+    @Override
+    public void onMapReady(@NonNull NaverMap naverMap) {
+        this.naverMap = naverMap;
+
+//        naverMap.setLayerGroupEnabled(naverMap.LAYER_GROUP_BUILDING, true);
+//        //건물표시
+
+        CameraPosition cameraPosition = new CameraPosition(
+                new LatLng(37.434412970034, 127.08084512504904),   //위치 지정
+                17   //줌 레벨
+        );
+        naverMap.setCameraPosition(cameraPosition);
+
+    }
+
 
     /**
      * 부모 뷰 타이틀 및 차일드 뷰 데이터 넣는 곳

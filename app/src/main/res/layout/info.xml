@@ -12,13 +12,13 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen">
+        android:background="@color/hpgreen2">
 
         <ImageButton
             android:id="@+id/info_back"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:background="@color/thingreen"
+            android:background="@color/hpgreen2"
             app:srcCompat="@drawable/left" />
 
         <TextView
