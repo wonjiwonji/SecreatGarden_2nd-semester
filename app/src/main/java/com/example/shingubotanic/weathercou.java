@@ -27,6 +27,8 @@ import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.overlay.OverlayImage;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -45,6 +47,37 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
     private HashMap<String, List<String>> listDataChild;
     private MapView mapView;
     private static NaverMap naverMap;
+
+    //마커 변수 선언 및 초기화
+    private Marker marker1 = new Marker();
+    private Marker marker2 = new Marker();
+    private Marker marker3 = new Marker();
+    private Marker marker4 = new Marker();
+    private Marker marker5 = new Marker();
+    private Marker marker6 = new Marker();
+    private Marker marker7 = new Marker();
+    private Marker marker8 = new Marker();
+    private Marker marker9 = new Marker();
+    private Marker marker10 = new Marker();
+    private Marker marker11 = new Marker();
+    private Marker marker12 = new Marker();
+    private Marker marker13 = new Marker();
+    private Marker marker14 = new Marker();
+    private Marker marker15 = new Marker();
+    private Marker marker16 = new Marker();
+    private Marker marker17 = new Marker();
+    private Marker marker18 = new Marker();
+    private Marker marker19 = new Marker();
+    private Marker marker20 = new Marker();
+    private Marker marker21 = new Marker();
+    private Marker marker22 = new Marker();
+    private Marker marker23 = new Marker();
+    private Marker marker24 = new Marker();
+    private Marker marker25 = new Marker();
+    private Marker marker26 = new Marker();
+    private Marker marker27 = new Marker();
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -200,6 +233,29 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
         back.setOnClickListener(cl);
     }
 
+    //마커 커스텀
+    private void setMarker(Marker marker,  double lat, double lng, int resourceID, int zIndex, String text)
+    {
+        //마커 크기
+        marker.setWidth(marker.SIZE_AUTO);
+        marker.setHeight(marker.SIZE_AUTO);
+        //원근감 표시
+        marker.setIconPerspectiveEnabled(true);
+        //아이콘 지정
+        marker.setIcon(OverlayImage.fromResource(resourceID));
+//        //마커의 투명도
+//        marker.setAlpha(0.8f);
+        //마커 위치
+        marker.setPosition(new LatLng(lat, lng));
+        //마커 우선순위
+        marker.setZIndex(zIndex);
+        //마커 텍스트
+        marker.setCaptionText(text);
+        //마커 표시
+        marker.setMap(naverMap);
+    }
+
+    //지도 특성
     @Override
     public void onMapReady(@NonNull NaverMap naverMap) {
         this.naverMap = naverMap;
@@ -212,6 +268,35 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                 17   //줌 레벨
         );
         naverMap.setCameraPosition(cameraPosition);
+
+        //마커 지정
+        setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
+        setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
+        setMarker(marker3, 37.43405849102472, 127.08087070726651, R.drawable.marker_red, 0, "비스타정원");
+        setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "정통정원");
+        setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, "작약원");
+        setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
+        setMarker(marker7, 37.43453092199691, 127.08023793052985, R.drawable.marker_red, 0, "어린이정원");
+        setMarker(marker8, 37.43440920000004, 127.08032980000007, R.drawable.marker_red, 0, "오감정원");
+        setMarker(marker9, 37.43431240322188, 127.08000265298142, R.drawable.marker_red, 0, "수목관찰원");
+        setMarker(marker10, 37.43516570835482, 127.07920936229561, R.drawable.marker_red, 0, "약초원");
+        setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
+        setMarker(marker12, 37.43497920000003, 127.07983260000003, R.drawable.marker_red, 0, "멸종위기식물원");
+        setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, "그라스품종원");
+        setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, "꽃무릇군락지");
+        setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, "습지생태원");
+        setMarker(marker16, 37.43619319999999, 127.07871640000008, R.drawable.marker_red, 0, "고층습지원");
+        setMarker(marker17, 37.436818099999975, 127.07884680000006, R.drawable.marker_red, 0, "포도원");
+        setMarker(marker18, 37.437062299999994, 127.07769869999993, R.drawable.marker_red, 0, "단풍나무길");
+        setMarker(marker19, 37.43732969999999 , 127.07770260000007, R.drawable.marker_red, 0, "억새원");
+        setMarker(marker20, 37.43831869999999 , 127.07702510000001, R.drawable.marker_red, 0, "라일락원");
+        setMarker(marker21, 37.43484208519403 , 127.08035347746568, R.drawable.marker_red, 0, "에코센터");
+        setMarker(marker22, 37.4349547471053, 127.080159117062, R.drawable.observatory_icon, 0, "전망대");
+        setMarker(marker23, 37.433800524222114, 127.08150811566452, R.drawable.info_icon, 0, "가든센터");
+        setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, "화장실");
+        setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, "화장실");
+        setMarker(marker26, 37.4337449824962, 127.08189373068059, R.drawable.parking_icon, 0, "주차장");
+        setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, "가든카페");
 
     }
 
