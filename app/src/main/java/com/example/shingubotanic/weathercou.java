@@ -87,6 +87,9 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weathercou);
 
+        //프래그 봄 추가
+        FragmentView(Fragment_1);
+
         drawerLayout = (DrawerLayout) findViewById(R.id.course);
         drawerView = (View) findViewById(R.id.course_nevi);
 

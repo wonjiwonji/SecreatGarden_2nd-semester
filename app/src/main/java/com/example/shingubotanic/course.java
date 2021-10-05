@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
@@ -47,6 +48,8 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
     private HashMap<String, List<String>> listDataChild;
     private MapView mapView;
     private static NaverMap naverMap;
+    private final int Fragment_1 = 1;
+    private final int Fragment_2 = 2;
 
     //마커 변수 선언 및 초기화
     private Marker marker1 = new Marker();
@@ -81,6 +84,9 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.course);
+
+        //프래그 봄 추가
+        FragmentView(Fragment_1);
 
         drawerLayout = (DrawerLayout) findViewById(R.id.course);
         drawerView = (View) findViewById(R.id.course_nevi);
@@ -193,8 +199,10 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                     case "전체코스" :
                         break;
                     case "어린이체험코스":
+                        FragmentView(Fragment_1);
                         break;
                     case "어르신추천코스":
+                        FragmentView(Fragment_2);
                         break;
                     case "단체관람코스" :
                         break;
@@ -263,6 +271,31 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         marker27.setMap(null);
 
     }
+
+    //상단 뷰
+    private void FragmentView(int fragment){
+
+        //FragmentTransactiom를 이용해 프래그먼트를 사용합니다.
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        switch (fragment){
+            case 1:
+                // 첫번 째 프래그먼트 호출
+                frag_children fragment1 = new frag_children();
+                transaction.replace(R.id.fragment_container, fragment1);
+                transaction.commit();
+                break;
+
+            case 2:
+                // 두번 째 프래그먼트 호출
+                frag_old fragment2 = new frag_old();
+                transaction.replace(R.id.fragment_container, fragment2);
+                transaction.commit();
+                break;
+        }
+
+    }
+
 
     //마커 커스텀
     private void setMarker(Marker marker,  double lat, double lng, int resourceID, int zIndex, String text)
