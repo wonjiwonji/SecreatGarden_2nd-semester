@@ -166,8 +166,6 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
 //                        .show();
 //                return false;
 //            }
-
-            //지원 0921
 //            ImageView imageView = (ImageView) findViewById(R.id.child_image);
 
             @Override
