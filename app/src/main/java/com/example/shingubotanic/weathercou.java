@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
@@ -47,6 +48,8 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
     private HashMap<String, List<String>> listDataChild;
     private MapView mapView;
     private static NaverMap naverMap;
+    private final int Fragment_1 = 1;
+    private final int Fragment_2 = 2;
 
     //마커 변수 선언 및 초기화
     private Marker marker1 = new Marker();
@@ -195,8 +198,10 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                     case "전체코스" :
                         break;
                     case "봄코스":
+                        FragmentView(Fragment_1);
                         break;
                     case "여름코스":
+                        FragmentView(Fragment_2);
                         break;
                     case "가을코스" :
                         break;
@@ -231,6 +236,30 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
             }
         };
         back.setOnClickListener(cl);
+    }
+
+    //상단 뷰
+    private void FragmentView(int fragment){
+
+        //FragmentTransactiom를 이용해 프래그먼트를 사용합니다.
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+        switch (fragment){
+            case 1:
+                // 첫번 째 프래그먼트 호출
+                frag_spring fragment1 = new frag_spring();
+                transaction.replace(R.id.fragment_container, fragment1);
+                transaction.commit();
+                break;
+
+            case 2:
+                // 두번 째 프래그먼트 호출
+                frag_summer fragment2 = new frag_summer();
+                transaction.replace(R.id.fragment_container, fragment2);
+                transaction.commit();
+                break;
+        }
+
     }
 
     //마커 커스텀
