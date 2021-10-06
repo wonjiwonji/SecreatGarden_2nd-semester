@@ -7,6 +7,7 @@ import android.view.Display;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -55,6 +56,10 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
     private static NaverMap naverMap;
     private final int Fragment_1 = 1;
     private final int Fragment_2 = 2;
+    private final int Fragment_3 = 3;
+    private final int Fragment_4 = 4;
+    private FrameLayout frame;
+
 
     //마커 변수 선언 및 초기화
     private Marker marker1 = new Marker();
@@ -101,6 +106,8 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
 
         back = (ImageButton) findViewById(R.id.back);
         nevi_icon = (ImageButton) findViewById(R.id.nevi_icon);
+
+        frame = (FrameLayout) findViewById(R.id.fragment_container);
 
         // 네이버 지도
         mapView = (MapView) findViewById(R.id.map_view);
@@ -192,32 +199,43 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                 path.setMap(null); //폴리라인 지우기
                 switch (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition)) {
                     case "전체보기":
+                        frame.setVisibility(FrameLayout.GONE);
                         insert_marker(0);
                         break;
                     case "봄코스":
+                        frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_1);
                         insert_marker(1);
                         insert_polyline(1);
                         break;
                     case "여름코스":
+                        frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_2);
                         insert_marker(2);
                         insert_polyline(2);
                         break;
                     case "가을코스":
+                        frame.setVisibility(View.VISIBLE);
+                        FragmentView(Fragment_3);
                         break;
                     case "겨울코스":
+                        frame.setVisibility(View.VISIBLE);
+                        FragmentView(Fragment_4);
                         break;
                     case "화장실":
+                        frame.setVisibility(FrameLayout.GONE);
                         insert_marker(11);
                         break;
                     case "주차장":
+                        frame.setVisibility(FrameLayout.GONE);
                         insert_marker(12);
                         break;
                     case "가든카페":
+                        frame.setVisibility(FrameLayout.GONE);
                         insert_marker(13);
                         break;
                     case "가든샵":
+                        frame.setVisibility(FrameLayout.GONE);
                         insert_marker(14);
                         break;
 
@@ -257,11 +275,22 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                 transaction.replace(R.id.fragment_container, fragment1);
                 transaction.commit();
                 break;
-
             case 2:
                 // 두번 째 프래그먼트 호출
                 frag_summer fragment2 = new frag_summer();
                 transaction.replace(R.id.fragment_container, fragment2);
+                transaction.commit();
+                break;
+            case 3:
+                // 세번 째 프래그먼트 호출
+                frag_fall fragment3 = new frag_fall();
+                transaction.replace(R.id.fragment_container, fragment3);
+                transaction.commit();
+                break;
+            case 4:
+                // 네번 째 프래그먼트 호출
+                frag_winter fragment4 = new frag_winter();
+                transaction.replace(R.id.fragment_container, fragment4);
                 transaction.commit();
                 break;
         }
@@ -485,7 +514,7 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
         List<String> nowShowing = new ArrayList<String>();
         nowShowing.add("봄코스");
         nowShowing.add("여름코스");
-        nowShowing.add("가을");
+        nowShowing.add("가을코스");
         nowShowing.add("겨울코스");
 
         List<String> comingSoon = new ArrayList<String>();
