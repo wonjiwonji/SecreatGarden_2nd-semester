@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.">
         <meta-data android:name="com.naver.maps.map.CLIENT_ID" android:value="jq36xceyvz"/>
 
         <activity android:name=".MainActivity">

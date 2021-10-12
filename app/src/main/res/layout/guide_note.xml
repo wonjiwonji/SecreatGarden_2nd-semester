@@ -10,19 +10,20 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen">
+        android:background="@color/thingreen"
+        app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/note_back"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@color/thingreen"
-            app:srcCompat="@drawable/left" />
+            app:srcCompat="@drawable/left"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_marginLeft="20dp"
             android:textStyle="normal"
             android:text="유의사항"
             android:textColor="@color/backgroundgray"
@@ -32,7 +33,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
-        android:layout_width="203dp"
+        android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
@@ -53,21 +54,16 @@
             android:inputType="textPersonName"
             android:text="관람시 유의사항"
             android:textColor="@color/leafgreen"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:focusableInTouchMode="false"/>
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_marginTop="15dp"
         android:background="@color/backgroundgray"
         app:contentInsetStart="0dp">
 
@@ -89,227 +85,239 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView"
-                android:textSize="18dp"
+                android:textSize="15dp"
                 android:layout_gravity="center"/>
 
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>
 
-    <TextView
-        android:id="@+id/textView15"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="" />
+        android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-    <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        app:srcCompat="@drawable/guide_note_icon1"
-        android:background="@android:color/transparent"/>
-
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_gravity="center"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon2"
-            android:background="#00000000" />
-
-        <TextView
-            android:id="@+id/text2"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/guide_note_icon1" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TextView"
+                android:textSize="13dp" />
 
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon3"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text3"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon2"
+                android:background="#00000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
 
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon4"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text4"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon3"
+                android:background="#00000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
 
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon5"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text5"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon4"
+                android:background="#00000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
 
-        <ImageButton
-            android:id="@+id/imageButton7"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon6"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text6"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon5"
+                android:background="#00000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
 
-        <ImageButton
-            android:id="@+id/imageButton8"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon7"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text7"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton7"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon6"
+                android:background="#00000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
 
-        <ImageButton
-            android:id="@+id/imageButton9"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon8"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text8"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton8"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/guide_note_icon7" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TextView"
+                android:textSize="13dp" />
 
-        <ImageButton
-            android:id="@+id/imageButton10"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon9"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text9"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton9"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon8"
+                android:background="#00000000" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+            <TextView
+                android:id="@+id/text8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
 
-        <ImageButton
-            android:id="@+id/imageButton11"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            app:srcCompat="@drawable/guide_note_icon10"
-            android:background="#00000000" />
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/text10"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
-            android:layout_gravity="center"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton10"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon9"
+                android:background="#00000000" />
+
+            <TextView
+                android:id="@+id/text9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton11"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/guide_note_icon10"
+                android:background="#00000000" />
+
+            <TextView
+                android:id="@+id/text10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textSize="13dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

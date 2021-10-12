@@ -11,19 +11,20 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen">
+        android:background="@color/thingreen"
+        app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/fee_back"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@color/thingreen"
             app:srcCompat="@drawable/left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_marginLeft="20dp"
             android:textStyle="normal"
             android:text="요금안내"
             android:textColor="@color/backgroundgray"
@@ -32,249 +33,246 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <ImageButton
-            android:id="@+id/imageButton2"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:background="#00000000"
-            app:srcCompat="@drawable/leaf" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="110dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/titleunderline"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="요금안내"
-            android:textColor="@color/leafgreen"
-            android:textSize="25dp"
-            android:focusableInTouchMode="false"/>
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/leaf" />
 
-    <ImageView
-        android:id="@+id/fee_img"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+            <EditText
+                android:id="@+id/editTextTextPersonName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/titleunderline"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="요금안내"
+                android:textColor="@color/leafgreen"
+                android:textSize="20dp"
+                android:focusableInTouchMode="false"/>
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="28dp"/>
+        </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="202dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <ImageButton
-            android:id="@+id/imageButton3"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:background="#00000000"
-            app:srcCompat="@drawable/leaf"
-            android:layout_gravity="bottom"/>
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/titleunderline"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="동절기 요금안내"
-            android:textColor="@color/leafgreen"
-            android:textSize="25dp"
-            android:focusableInTouchMode="false"/>
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/fee_img2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/red"/>
-
-    <LinearLayout
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton4"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:background="#00000000"
-            app:srcCompat="@drawable/leaf" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/titleunderline"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="무료입장"
-            android:textColor="@color/leafgreen"
-            android:textSize="25dp"
-            android:focusableInTouchMode="false"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/black" />
-
-    <LinearLayout
-        android:layout_width="125dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton5"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:background="#00000000"
-            app:srcCompat="@drawable/leaf" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/titleunderline"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="할인입장"
-            android:textColor="@color/leafgreen"
-            android:textSize="25dp"
-            android:focusableInTouchMode="false"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/black"/>
-
-    <LinearLayout
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageButton
-            android:id="@+id/imageButton6"
-            android:layout_width="33dp"
-            android:layout_height="33dp"
-            android:background="#00000000"
-            app:srcCompat="@drawable/leaf" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/titleunderline"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="기타"
-            android:textColor="@color/leafgreen"
-            android:textSize="25dp"
-            android:focusableInTouchMode="false"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/text4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="@color/black"/>
-
-    <TextView
-        android:id="@+id/textView14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="8dp" />
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <androidx.appcompat.widget.Toolbar
-
-            android:id="@+id/toolbar2"
+        <ImageView
+            android:id="@+id/fee_img"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/backgroundgreen">
+            tools:srcCompat="@tools:sample/avatars" />
 
-            <LinearLayout
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/leaf"
+                android:layout_gravity="bottom"/>
+
+            <EditText
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/titleunderline"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="동절기 요금안내"
+                android:textColor="@color/leafgreen"
+                android:textSize="20dp"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/fee_img2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="13dp"
+            android:textColor="@color/red"/>
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/leaf" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/titleunderline"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="무료입장"
+                android:textColor="@color/leafgreen"
+                android:textSize="20dp"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="13dp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton5"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/leaf" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/titleunderline"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="할인입장"
+                android:textColor="@color/leafgreen"
+                android:textSize="20dp"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="13dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imageButton6"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="#00000000"
+                app:srcCompat="@drawable/leaf" />
+
+            <EditText
+                android:id="@+id/editTextTextPersonName5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/titleunderline"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="기타"
+                android:textColor="@color/leafgreen"
+                android:textSize="20dp"
+                android:focusableInTouchMode="false"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="13dp"
+            android:textColor="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.Toolbar
+
+                android:id="@+id/toolbar2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content"
+                android:background="@color/backgroundgreen">
 
-                <ImageButton
-                    android:id="@+id/imageButton13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/guide_fee_img3" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/text5"
-                    android:layout_width="120dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="left"
-                    android:text="일반단체 예약안내 및 \n교육프로그램 예약안내"
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
+                    <ImageButton
+                        android:id="@+id/imageButton13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/guide_fee_img3" />
 
-                <TextView
-                    android:id="@+id/text6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="031-724-1602"
-                    android:textColor="@color/white"
-                    android:textSize="18dp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"/>
+                    <TextView
+                        android:id="@+id/text5"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:text="일반단체 예약안내 및 \n교육프로그램 예약안내"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/text6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="031-724-1602"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"/>
 
-        </androidx.appcompat.widget.Toolbar>
+                </LinearLayout>
 
-    </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

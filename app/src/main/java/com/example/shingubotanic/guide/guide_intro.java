@@ -55,8 +55,8 @@ public class guide_intro extends AppCompatActivity {
         x4 = (TextView) findViewById(R.id.text4);
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com");
-        StorageReference storageRef = storage.getReference();
-        String cent = "central.jpg";
+        StorageReference storageRef = storage.getReference("guide");
+        String cent = "guide_intro_img.jpg";
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
         DatabaseReference dbRef = database.getReference("guide");

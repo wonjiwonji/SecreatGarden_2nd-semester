@@ -15,19 +15,19 @@
 
         <ImageButton
             android:id="@+id/guide_back"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:background="@color/hpgreen2"
             app:srcCompat="@drawable/left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@android:dimen/app_icon_size"
+            android:layout_marginLeft="20dp"
             android:text="관람안내"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="28dp"
+            android:textSize="30dp"
             android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
