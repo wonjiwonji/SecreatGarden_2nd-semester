@@ -3,20 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment_1">
-
+    tools:context=".fragment_4">
 
     <TextView
-        android:id="@+id/frag1text"
+        android:id="@+id/frag4text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:bufferType="spannable"
-        android:drawableTop="@drawable/banner_customise"
+        android:drawableTop="@drawable/banner4_customise"
         android:drawablePadding="12dp"
-        android:lineSpacingExtra="5dp"
+        android:lineSpacingExtra="4dp"
         android:text=" AUTUMN BOTANIC GARDEN \n
-10월에 만나는 선물같은 식물, 갯쑥부쟁이"
+10월에 만나는 선물같은 식물, 털머위"
         android:textSize="14dp" />
-
 
 </FrameLayout>

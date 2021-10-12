@@ -17,7 +17,7 @@ public class home extends AppCompatActivity {
 
     private ViewPager2 mPager ;
     private FragmentStateAdapter pagerAdapter ;
-    private int num_page=3; //ViewPager 넘길 페이지 수
+    private int num_page=4; //ViewPager 넘길 페이지 수
 
     ImageButton gui,wea,cou,info,shop,fore;
     View.OnClickListener cl;
@@ -33,7 +33,7 @@ public class home extends AppCompatActivity {
         cou = (ImageButton) findViewById(R.id.h_course);
         info = (ImageButton) findViewById(R.id.h_info);
         shop = (ImageButton) findViewById(R.id.h_shop);
-        fore = (ImageButton) findViewById(R.id.h_foreign);
+        //fore = (ImageButton) findViewById(R.id.h_foreign);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         Toolbar toolbar2 = (Toolbar)findViewById(R.id.toolbar2);
@@ -48,7 +48,7 @@ public class home extends AppCompatActivity {
         //ViewPager Setting
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         mPager.setCurrentItem(1000); //시작지점
-        mPager.setOffscreenPageLimit(3); //최대 이미지 수
+        mPager.setOffscreenPageLimit(4); //최대 이미지 수
 
         cl = new View.OnClickListener() {
             @Override
@@ -74,10 +74,10 @@ public class home extends AppCompatActivity {
                         i = new Intent(getApplicationContext(), shop.class);
                         startActivity(i);
                         break;
-                    case R.id.h_foreign:
-                        i = new Intent(getApplicationContext(), foreign.class);
-                        startActivity(i);
-                        break;
+//                    case R.id.h_foreign:
+//                        i = new Intent(getApplicationContext(), foreign.class);
+//                        startActivity(i);
+//                        break;
                 }
             }
         };
@@ -86,6 +86,6 @@ public class home extends AppCompatActivity {
         cou.setOnClickListener(cl);
         info.setOnClickListener(cl);
         shop.setOnClickListener(cl);
-        fore.setOnClickListener(cl);
+//        fore.setOnClickListener(cl);
     }
 }

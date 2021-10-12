@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:drawable="@drawable/banner3"
-        android:width="@dimen/width"
-        android:height="@dimen/height"></item>
+        android:width="360dp"
+        android:height="130dp"
+        android:drawable="@drawable/banner_sun"></item>
 </layer-list>

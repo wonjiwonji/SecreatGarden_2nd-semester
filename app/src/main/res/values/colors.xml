@@ -15,5 +15,8 @@
     <color name="black">#000000</color>FF0000
     <color name="red">#FF0000</color>
     <color name="backgrounddarkgray">#EBEBEB</color>
+    <color name="textcolor">#484848</color>
+    <color name="grayy">#dcdcdc</color>
+    <color name="bg_green">#a1c575</color>
 
 </resources>

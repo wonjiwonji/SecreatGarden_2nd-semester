@@ -4,124 +4,201 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
+    android:background="@drawable/bg_home"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <androidx.appcompat.widget.Toolbar
-
-        android:id="@+id/toolbar"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/hpgreen2"
-        app:contentInsetStart="0dp">
+        android:layout_height="match_parent"
+        android:layout_marginTop="188dp">
 
-        <ImageView
-            android:id="@+id/home"
-            android:layout_width="190dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:scaleType="centerInside"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/logo_white_ver" />
+            android:orientation="vertical">
 
 
-    </androidx.appcompat.widget.Toolbar>
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="280dp">
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/viewpager">
-
-        </androidx.viewpager2.widget.ViewPager2>
-
-
-    </FrameLayout>
-
-    <androidx.appcompat.widget.Toolbar
-
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/hpgreen2"
-        app:contentInsetStart="0dp">
-
-    </androidx.appcompat.widget.Toolbar>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/h_guide"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/guidebtn_dark" />
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/h_weathercourse"
+
+                <ImageButton
+                    android:id="@+id/h_guide"
+                    android:layout_width="@dimen/homebtnsize"
+                    android:layout_height="@dimen/homebtnsize"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/home_guide" />
+
+                <ImageButton
+                    android:id="@+id/h_weathercourse"
+                    android:layout_width="@dimen/homebtnsize"
+                    android:layout_height="@dimen/homebtnsize"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/home_weather" />
+
+                <ImageButton
+                    android:id="@+id/h_course"
+                    android:layout_width="@dimen/homebtnsize"
+                    android:layout_height="@dimen/homebtnsize"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/home_course" />
+
+                <ImageButton
+                    android:id="@+id/h_info"
+                    android:layout_width="@dimen/homebtnsize"
+                    android:layout_height="@dimen/homebtnsize"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="12.5dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/home_info" />
+
+                <ImageButton
+                    android:id="@+id/h_shop"
+                    android:layout_width="@dimen/homebtnsize"
+                    android:layout_height="@dimen/homebtnsize"
+                    android:layout_marginLeft="12.5dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/home_shop" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/weatherbtn" />
+                android:orientation="horizontal">
 
-            <ImageButton
-                android:id="@+id/h_course"
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="13dp"
+                    android:text="관람안내"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp"
+                    android:gravity="center_horizontal" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="13dp"
+                    android:text="계절코스"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp"
+                    android:gravity="center_horizontal" />
+
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="13dp"
+                    android:text="추천코스"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="13dp"
+                    android:text="식물정보"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp"
+                    android:gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="4dp"
+                    android:text="가든샵"
+                    android:textAlignment="center"
+                    android:textColor="@color/textcolor"
+                    android:textSize="12dp"
+                    android:gravity="center_horizontal" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="22dp"
+                android:text="이 달의 축제"
+                android:textColor="@color/textcolor"
+                android:textSize="18dp"
+                android:textStyle="normal" />
+
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/coursebtn_dark" />
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewpager"
+                    android:background="@color/bg_green"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                </androidx.viewpager2.widget.ViewPager2>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="22dp"
+                android:text="오늘의 운동량"
+                android:textColor="@color/textcolor"
+                android:textSize="20dp"
+                android:textStyle="normal" />
+
+
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
-
-            <ImageButton
-                android:id="@+id/h_info"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/infobtn" />
-
-            <ImageButton
-                android:id="@+id/h_shop"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/shopbtn_dark" />
-
-            <ImageButton
-                android:id="@+id/h_foreign"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/foreignbtn_dark" />
-
-
-        </LinearLayout>
+    </ScrollView>
 
 
 </LinearLayout>

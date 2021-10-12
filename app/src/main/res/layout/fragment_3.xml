@@ -11,9 +11,10 @@
         android:layout_height="match_parent"
         android:bufferType="spannable"
         android:drawableTop="@drawable/banner3_customise"
-        android:drawablePadding="11dp"
-        android:text="     AUTUMN BOTANIC GARDEN \n
-     9월에 만나는 선물같은 식물, 백부자"
-        android:textSize="@dimen/fontsize" />
+        android:drawablePadding="12dp"
+        android:lineSpacingExtra="4dp"
+        android:text=" AUTUMN BOTANIC GARDEN \n
+10월에 만나는 선물같은 식물, 해국"
+        android:textSize="14dp" />
 
 </FrameLayout>

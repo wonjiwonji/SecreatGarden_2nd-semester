@@ -18,21 +18,20 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 
-public class fragment_2 extends Fragment {
+public class fragment_4 extends Fragment {
 
     TextView text;
 
-    public fragment_2() {
-        // Required empty public constructor
+    public fragment_4() {
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         View view = null;
-        view = inflater.inflate(R.layout.fragment_2,null);
-        text = (TextView)view.findViewById(R.id.frag2text);
+        view = inflater.inflate(R.layout.fragment_4,null);
+        text = (TextView)view.findViewById(R.id.frag4text);
 
         Spannable span = (Spannable) text.getText();
         String url = "https://www.sbg.or.kr/event/event.html?bun=3";  //연결시킬 url주소 입력

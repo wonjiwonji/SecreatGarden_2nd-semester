@@ -7,4 +7,5 @@
     <dimen name="height">180dp</dimen>
     <dimen name="pageMarginAndOffset">40dp</dimen>
     <dimen name="frameSize">180dp</dimen>
+    <dimen name="homebtnsize">40dp</dimen>
 </resources>
