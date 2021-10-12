@@ -116,7 +116,7 @@ public class info_spring_plant1_dol extends DialogFragment {
                         break;
                     case R.id.dol_next:
                         v1.setVisibility(v1.GONE);
-                        info_spring_plant2_soo ispd2  = info_spring_plant2_soo.getInstance();
+                        info_spring_plant2_soo ispd2 = info_spring_plant2_soo.getInstance();
                         ispd2.show(getFragmentManager(), info_spring_plant2_soo.TAG_EVENT_DIALOG);
                         break;
                 }

@@ -15,8 +15,8 @@
 
         <ImageButton
             android:id="@+id/guide_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@color/hpgreen2"
             app:srcCompat="@drawable/left" />
 
@@ -27,7 +27,7 @@
             android:text="관람안내"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="30dp"
+            android:textSize="26dp"
             android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -41,8 +41,7 @@
                 android:id="@+id/listview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:dividerHeight="2dp"
-                />
+                android:dividerHeight="2dp"/>
 
     </LinearLayout>
 

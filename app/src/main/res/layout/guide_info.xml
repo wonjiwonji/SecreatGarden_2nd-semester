@@ -10,14 +10,14 @@
 
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/thingreen"
         app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/info_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@color/thingreen"
             app:srcCompat="@drawable/left"/>
 
@@ -29,7 +29,7 @@
             android:text="관람정보"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="30dp" />
+            android:textSize="26dp" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -58,58 +58,94 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/imageButton0"
+                    android:layout_width="33dp"
+                    android:layout_height="33dp"
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/leaf" />
+
+                <EditText
+                    android:id="@+id/editTextTextPersonName2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/titleunderline"
+                    android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:inputType="textPersonName"
+                    android:text="관람정보"
+                    android:textColor="@color/leafgreen"
+                    android:fontFamily="@font/bmjua"
+                    android:textSize="22dp" />
+
+            </LinearLayout>
+
             <TextView
                 android:id="@+id/text1"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textColor="@color/black" />
 
             <TextView
                 android:id="@+id/text2"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text3"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text4"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text5"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"/>
 
             <TextView
                 android:id="@+id/text6"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="13dp"
+                android:textSize="15dp"
                 android:textColor="@color/black"/>
 
 
             <LinearLayout
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -130,7 +166,8 @@
                     android:inputType="textPersonName"
                     android:text="관람시간 안내"
                     android:textColor="@color/leafgreen"
-                    android:textSize="20dp" />
+                    android:fontFamily="@font/bmjua"
+                    android:textSize="22dp" />
 
             </LinearLayout>
 

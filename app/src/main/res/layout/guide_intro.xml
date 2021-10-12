@@ -10,14 +10,14 @@
 
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:background="@color/thingreen"
         app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/intro_back"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:background="@color/thingreen"
             app:srcCompat="@drawable/left" />
 
@@ -28,7 +28,7 @@
             android:text="식물원소개"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="28dp"
+            android:textSize="26dp"
             android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -84,15 +84,16 @@
                     android:text="설립기관"
                     android:fontFamily="@font/bmjua"
                     android:textColor="@color/leafgreen"
-                    android:textSize="23dp" />
+                    android:textSize="22dp" />
 
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/text"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
                 android:textSize="15dp"
                 android:textColor="@color/black"/>
@@ -122,20 +123,22 @@
                     android:text="설립목적"
                     android:fontFamily="@font/bmjua"
                     android:textColor="@color/leafgreen"
-                    android:textSize="23dp" />
+                    android:textSize="22dp" />
 
             </LinearLayout>
 
             <TextView
                 android:id="@+id/text2"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
                 android:textSize="15dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:lineSpacingExtra="5dp"/>
 
             <LinearLayout
-                android:layout_width="270dp"
+                android:layout_width="265dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
 
@@ -157,7 +160,7 @@
                     android:inputType="textPersonName"
                     android:text="신구대학교식물원이 하는 일"
                     android:textColor="@color/leafgreen"
-                    android:textSize="23dp"
+                    android:textSize="22dp"
                     android:fontFamily="@font/bmjua"
                     android:focusableInTouchMode="false"/>
 
@@ -165,10 +168,12 @@
 
             <TextView
                 android:id="@+id/text3"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
                 android:textSize="15dp"
+                android:lineSpacingExtra="8dp"
                 android:textColor="@color/black"/>
 
             <LinearLayout
@@ -194,7 +199,7 @@
                     android:inputType="textPersonName"
                     android:text="규모 및 위치"
                     android:textColor="@color/leafgreen"
-                    android:textSize="23dp"
+                    android:textSize="22dp"
                     android:fontFamily="@font/bmjua"
                     android:focusableInTouchMode="false"/>
 
@@ -202,10 +207,12 @@
 
             <TextView
                 android:id="@+id/text4"
-                android:layout_width="match_parent"
+                android:layout_width="320dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="TextView"
                 android:textSize="15dp"
+                android:lineSpacingExtra="5dp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
