@@ -3,7 +3,6 @@ package com.example.shingubotanic;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -15,22 +14,43 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.os.Bundle;
-
-import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.shingubotanic.gardenMarker.central;
+import com.example.shingubotanic.gardenMarker.children;
+import com.example.shingubotanic.gardenMarker.echo;
+import com.example.shingubotanic.gardenMarker.extinction;
+import com.example.shingubotanic.gardenMarker.fivesenses;
+import com.example.shingubotanic.gardenMarker.gardencafe;
+import com.example.shingubotanic.gardenMarker.gardencenter;
+import com.example.shingubotanic.gardenMarker.grass;
+import com.example.shingubotanic.gardenMarker.herbgarden;
+import com.example.shingubotanic.gardenMarker.high;
+import com.example.shingubotanic.gardenMarker.lilacgarden;
+import com.example.shingubotanic.gardenMarker.lycoris;
+import com.example.shingubotanic.gardenMarker.maple;
+import com.example.shingubotanic.gardenMarker.metasequoia;
+import com.example.shingubotanic.gardenMarker.observatory;
+import com.example.shingubotanic.gardenMarker.parking;
+import com.example.shingubotanic.gardenMarker.peremptoryagent;
+import com.example.shingubotanic.gardenMarker.roofgarden;
+import com.example.shingubotanic.gardenMarker.silvergrass;
+import com.example.shingubotanic.gardenMarker.toadfountain;
+import com.example.shingubotanic.gardenMarker.toilet;
+import com.example.shingubotanic.gardenMarker.tradition;
+import com.example.shingubotanic.gardenMarker.treeinspector;
+import com.example.shingubotanic.gardenMarker.vineyard;
+import com.example.shingubotanic.gardenMarker.vista;
+import com.example.shingubotanic.gardenMarker.wetlands;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapView;
 import com.naver.maps.map.NaverMap;
 import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.overlay.Overlay;
 import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.overlay.PathOverlay;
 
@@ -106,6 +126,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
 
         frame = (FrameLayout) findViewById(R.id.fragment_container);
 
+
         // 네이버 지도
         mapView = (MapView) findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
@@ -117,6 +138,234 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         path.setWidth(5);
         path.setPatternImage(OverlayImage.fromResource(R.drawable.poly_up));
         path.setPatternInterval(30);
+
+        // 그룹이 닫힐 경우 이벤트 발생
+        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+//                Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " Collapsed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        //마커 클릭이벤트
+        marker1.setOnClickListener(new Overlay.OnClickListener() { //중앙광장
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                central cen = central.getInstance();
+                cen.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker2.setOnClickListener(new Overlay.OnClickListener() { //하늘정원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                roofgarden roo = roofgarden.getInstance();
+                roo.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker3.setOnClickListener(new Overlay.OnClickListener() { //비스타정원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                vista vis = vista.getInstance();
+                vis.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker4.setOnClickListener(new Overlay.OnClickListener() { //전통정원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                tradition tra = tradition.getInstance();
+                tra.show(getSupportFragmentManager(), tradition.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker5.setOnClickListener(new Overlay.OnClickListener() {//작약원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                peremptoryagent per = peremptoryagent.getInstance();
+                per.show(getSupportFragmentManager(), peremptoryagent.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker6.setOnClickListener(new Overlay.OnClickListener() {//두꺼비 분수
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                toadfountain toa = toadfountain.getInstance();
+                toa.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker7.setOnClickListener(new Overlay.OnClickListener() { //어린이정원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                children chi = children.getInstance();
+                chi.show(getSupportFragmentManager(), children.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker8.setOnClickListener(new Overlay.OnClickListener() { //오감정원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                fivesenses fiv = fivesenses.getInstance();
+                fiv.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker9.setOnClickListener(new Overlay.OnClickListener() {//수목관찰원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                treeinspector tre = treeinspector.getInstance();
+                tre.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker10.setOnClickListener(new Overlay.OnClickListener() {//약초원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                herbgarden herbg = herbgarden.getInstance();
+                herbg.show(getSupportFragmentManager(), herbgarden.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker11.setOnClickListener(new Overlay.OnClickListener() {//메타세쿼이아길
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                metasequoia met = metasequoia.getInstance();
+                met.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker12.setOnClickListener(new Overlay.OnClickListener() {//멸종위기 식물원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                extinction ext = extinction.getInstance();
+                ext.show(getSupportFragmentManager(), extinction.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker13.setOnClickListener(new Overlay.OnClickListener() {//그라스품종원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                grass gra = grass.getInstance();
+                gra.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker14.setOnClickListener(new Overlay.OnClickListener() {//꽃무릇군락지
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                lycoris lyc = lycoris.getInstance();
+                lyc.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker15.setOnClickListener(new Overlay.OnClickListener() {//습지생태원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                wetlands wet = wetlands.getInstance();
+                wet.show(getSupportFragmentManager(), wetlands.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker16.setOnClickListener(new Overlay.OnClickListener() {//고층습지원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                high hig = high.getInstance();
+                hig.show(getSupportFragmentManager(), high.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker17.setOnClickListener(new Overlay.OnClickListener() {//포도원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                vineyard vin = vineyard.getInstance();
+                vin.show(getSupportFragmentManager(), vineyard.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker18.setOnClickListener(new Overlay.OnClickListener() {//포도원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                maple map = maple.getInstance();
+                map.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker19.setOnClickListener(new Overlay.OnClickListener() {//억새원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                silvergrass sil = silvergrass.getInstance();
+                sil.show(getSupportFragmentManager(), vista.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker20.setOnClickListener(new Overlay.OnClickListener() {//라일락원
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                lilacgarden lil = lilacgarden.getInstance();
+                lil.show(getSupportFragmentManager(), roofgarden.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker21.setOnClickListener(new Overlay.OnClickListener() { //에코센터
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                echo ech = echo.getInstance();
+                ech.show(getSupportFragmentManager(), echo.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker22.setOnClickListener(new Overlay.OnClickListener() {//전망대
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                observatory obs = observatory.getInstance();
+                obs.show(getSupportFragmentManager(), observatory.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker23.setOnClickListener(new Overlay.OnClickListener() {//가든센터
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                gardencenter cen = gardencenter.getInstance();
+                cen.show(getSupportFragmentManager(), gardencenter.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker24.setOnClickListener(new Overlay.OnClickListener() {//화장실
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                toilet toi = toilet.getInstance();
+                toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker25.setOnClickListener(new Overlay.OnClickListener() {//화장실
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                toilet toi = toilet.getInstance();
+                toi.show(getSupportFragmentManager(), toilet.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker26.setOnClickListener(new Overlay.OnClickListener() {//주차장
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                parking par = parking.getInstance();
+                par.show(getSupportFragmentManager(), parking.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
+        marker27.setOnClickListener(new Overlay.OnClickListener() {//가든카페
+            @Override
+            public boolean onClick(@NonNull Overlay overlay) {
+                gardencafe caf = gardencafe.getInstance();
+                caf.show(getSupportFragmentManager(), gardencafe.TAG_EVENT_DIALOG);
+                return false;
+            }
+        });
 
 
         //jiwon listview
@@ -149,6 +398,8 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
 
+
+
         // 그룹이 열릴 경우 이벤트 발생
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
@@ -158,21 +409,14 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
 
-        // 그룹이 닫힐 경우 이벤트 발생
-        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-//                Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " Collapsed", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         // 차일드 뷰를 눌렀을 경우 이벤트 발생
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
-
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
+                delete_marker(); //모든 마커 지우기
+                path.setMap(null); //폴리라인 지우기
                 switch (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition)) {
                     case "전체코스" :
                         frame.setVisibility(FrameLayout.GONE);
@@ -235,37 +479,6 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         back.setOnClickListener(cl);
     }
 
-    private void deleteMarker() {
-        marker1.setMap(null);
-        marker2.setMap(null);
-        marker3.setMap(null);
-        marker4.setMap(null);
-        marker5.setMap(null);
-        marker6.setMap(null);
-        marker7.setMap(null);
-        marker8.setMap(null);
-        marker9.setMap(null);
-        marker10.setMap(null);
-        marker11.setMap(null);
-        marker12.setMap(null);
-        marker13.setMap(null);
-        marker14.setMap(null);
-        marker15.setMap(null);
-        marker16.setMap(null);
-        marker17.setMap(null);
-        marker18.setMap(null);
-        marker19.setMap(null);
-        marker20.setMap(null);
-        marker21.setMap(null);
-        marker22.setMap(null);
-        marker23.setMap(null);
-        marker24.setMap(null);
-        marker25.setMap(null);
-        marker26.setMap(null);
-        marker27.setMap(null);
-
-    }
-
     //상단 뷰
     private void FragmentView(int fragment){
 
@@ -306,6 +519,8 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         }
 
     }
+
+
 
 
     //마커 커스텀
@@ -377,6 +592,8 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         marker26.setMap(null);
         marker27.setMap(null);
     }
+
+
 
     //마커 띄우기
     private void insert_marker(int a) {

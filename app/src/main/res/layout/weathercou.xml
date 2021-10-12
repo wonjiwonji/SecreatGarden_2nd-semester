@@ -76,7 +76,7 @@
 
     </LinearLayout>
 
-    <include layout="@layout/course_nevi" />
+    <include layout="@layout/weather_nevi" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
 

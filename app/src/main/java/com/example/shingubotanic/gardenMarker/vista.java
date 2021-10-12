@@ -1,5 +1,6 @@
 package com.example.shingubotanic.gardenMarker;
 
+import android.app.FragmentManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -33,7 +34,7 @@ import static android.content.ContentValues.TAG;
 
 public class vista extends DialogFragment implements View.OnClickListener{
 
-    public static final String TAG_EVENT_DIALOG ="vista"; //수정  ""
+    public static String TAG_EVENT_DIALOG ="vista"; //수정  ""
 
     public vista(){} //비스타정원(1)
 
