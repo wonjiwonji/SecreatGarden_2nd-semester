@@ -701,8 +701,10 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
             case 1:
                 path.setCoords(Arrays.asList(
                         new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
-                        new LatLng(37.433893499999975, 127.0808012),//1-3
-                        new LatLng(37.43378160000002, 127.08068609999998), //2하늘정원
+                        new LatLng(37.43376900417801, 127.08111209265323),
+                        new LatLng(37.43371672781531, 127.08072380739107),
+//                        new LatLng(37.433893499999975, 127.0808012),//1-3
+                        new LatLng(37.43371672781531, 127.08068609999998), //2하늘정원
                         new LatLng(37.43422110000004, 127.0805944),//D곤충생태관
                         new LatLng(37.43428850000004, 127.08082939999997),//4전통정원
                         new LatLng(37.4343151, 127.08108270000002),//4-2

@@ -8,6 +8,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <ImageButton
+        android:id="@+id/h_qr"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/qr" />
+
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -95,11 +105,11 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="13dp"
+                    android:gravity="center_horizontal"
                     android:text="관람안내"
                     android:textAlignment="center"
                     android:textColor="@color/textcolor"
-                    android:textSize="12dp"
-                    android:gravity="center_horizontal" />
+                    android:textSize="12dp" />
 
 
                 <TextView
@@ -109,11 +119,11 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="13dp"
+                    android:gravity="center_horizontal"
                     android:text="계절코스"
                     android:textAlignment="center"
                     android:textColor="@color/textcolor"
-                    android:textSize="12dp"
-                    android:gravity="center_horizontal" />
+                    android:textSize="12dp" />
 
 
                 <TextView
@@ -123,11 +133,11 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="13dp"
+                    android:gravity="center_horizontal"
                     android:text="추천코스"
                     android:textAlignment="center"
                     android:textColor="@color/textcolor"
-                    android:textSize="12dp"
-                    android:gravity="center_horizontal" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/textView4"
@@ -136,11 +146,11 @@
                     android:layout_marginLeft="13dp"
                     android:layout_marginTop="4dp"
                     android:layout_marginRight="13dp"
+                    android:gravity="center_horizontal"
                     android:text="식물정보"
                     android:textAlignment="center"
                     android:textColor="@color/textcolor"
-                    android:textSize="12dp"
-                    android:gravity="center_horizontal" />
+                    android:textSize="12dp" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -148,11 +158,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="17dp"
                     android:layout_marginTop="4dp"
+                    android:gravity="center_horizontal"
                     android:text="가든샵"
                     android:textAlignment="center"
                     android:textColor="@color/textcolor"
-                    android:textSize="12dp"
-                    android:gravity="center_horizontal" />
+                    android:textSize="12dp" />
 
             </LinearLayout>
 
@@ -161,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="22dp"
+                android:layout_marginTop="30dp"
                 android:text="이 달의 축제"
                 android:textColor="@color/textcolor"
                 android:textSize="18dp"
@@ -174,9 +184,9 @@
 
                 <androidx.viewpager2.widget.ViewPager2
                     android:id="@+id/viewpager"
-                    android:background="@color/bg_green"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@color/bg_green">
 
 
                 </androidx.viewpager2.widget.ViewPager2>
@@ -188,12 +198,49 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="22dp"
-                android:text="오늘의 운동량"
+                android:layout_marginTop="30dp"
+                android:text="오늘의 걸음 수"
                 android:textColor="@color/textcolor"
-                android:textSize="20dp"
+                android:textSize="18dp"
                 android:textStyle="normal" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="6dp"
+                android:background="@color/bg_green"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/stepCountTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="55dp"
+                    android:text="오늘의 운동량은 "
+                    android:textColor="@color/textcolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/stepCountView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="30dp"
+                    android:text="0"
+                    android:textColor="@color/textcolor"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/stepCountTag2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingRight="30dp"
+                    android:text="보          입니다."
+                    android:textColor="@color/textcolor"
+                    android:textSize="15dp" />
+            </LinearLayout>
 
 
         </LinearLayout>
