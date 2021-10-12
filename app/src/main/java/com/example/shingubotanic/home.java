@@ -120,10 +120,8 @@ public class home extends AppCompatActivity {
             if(result.getContents() == null){   //QR이 없으면
                 Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
             } else {    //QR이 있으면
-
                 try {
                     JSONObject obj = new JSONObject(result.getContents());
-
                     switch (obj.getString("number")) {
                         case "1":
                             i = new Intent(getApplicationContext(), qr1.class);

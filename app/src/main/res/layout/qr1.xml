@@ -16,7 +16,7 @@
         app:contentInsetStart="10dp">
 
         <ImageButton
-            android:id="@+id/info_back"
+            android:id="@+id/qr1_back"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:background="@color/hpgreen2"

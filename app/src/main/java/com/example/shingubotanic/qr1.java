@@ -1,9 +1,13 @@
 package com.example.shingubotanic;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -27,6 +31,8 @@ import static android.content.ContentValues.TAG;
 
 public class qr1 extends AppCompatActivity {
 
+    ImageButton back;
+    Intent i;
     ImageView p1, f1, f2, f3, f4;
     TextView ptxt, ftxt, ftxt2;
 
@@ -34,6 +40,8 @@ public class qr1 extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.qr1);
+
+        back = (ImageButton) findViewById(R.id.qr1_back);
 
         p1 = (ImageView) findViewById(R.id.plant_img);
         ptxt = (TextView) findViewById(R.id.plant_txt);
@@ -44,6 +52,14 @@ public class qr1 extends AppCompatActivity {
         f4 = (ImageView) findViewById(R.id.festival_img4);
         ftxt = (TextView) findViewById(R.id.festival_txt);
         ftxt2 = (TextView) findViewById(R.id.festival_txt2);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i = new Intent(getApplicationContext(), home.class);
+                startActivity(i);
+            }
+        });
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference("QR code");
