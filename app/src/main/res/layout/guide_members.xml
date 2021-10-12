@@ -11,14 +11,15 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/thingreen"
+        android:background="@color/green2"
         app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/members_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/thingreen"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@color/green2"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/left" />
 
         <TextView
@@ -28,7 +29,7 @@
             android:text="연간회원"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="26dp"
+            android:textSize="23dp"
             android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -62,12 +63,12 @@
                     android:layout_weight="1"
                     android:background="@drawable/titleunderline"
                     android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
                     android:text="연간회원"
                     android:textColor="@color/leafgreen"
-                    android:fontFamily="@font/bmjua"
-                    android:textSize="22dp"
-                    android:focusableInTouchMode="false"/>
+                    android:textSize="22dp" />
 
             </LinearLayout>
 
@@ -80,8 +81,8 @@
             <LinearLayout
                 android:layout_width="110dp"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginTop="30dp"
+                android:gravity="center"
                 android:orientation="horizontal">
 
                 <ImageButton
@@ -98,12 +99,12 @@
                     android:layout_weight="1"
                     android:background="@drawable/titleunderline"
                     android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
                     android:text="가입방법"
                     android:textColor="@color/leafgreen"
-                    android:fontFamily="@font/bmjua"
-                    android:textSize="22dp"
-                    android:focusableInTouchMode="false"/>
+                    android:textSize="22dp" />
 
             </LinearLayout>
 
@@ -117,7 +118,7 @@
                     android:id="@+id/imageButton7"
                     android:layout_width="5dp"
                     android:layout_height="30dp"
-                    android:background="#00000000"/>
+                    android:background="#00000000" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -134,21 +135,21 @@
                     android:id="@+id/imageButton4"
                     android:layout_width="7dp"
                     android:layout_height="30dp"
+                    android:layout_gravity="center"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/guide_members_right"
                     android:background="#00000000"
-                    android:layout_gravity="center"/>
+                    app:srcCompat="@drawable/guide_members_right" />
 
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="결제 (현장에서 금액 결제)"
-                    android:textSize="13dp"
-                    android:gravity="left"
                     android:layout_gravity="center"
-                    android:textColor="@color/black"/>
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:text="결제 (현장에서 금액 결제)"
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
 
             </LinearLayout>
 
@@ -162,10 +163,10 @@
                     android:id="@+id/imageButton5"
                     android:layout_width="10dp"
                     android:layout_height="30dp"
+                    android:layout_gravity="right"
                     android:layout_weight="1"
                     android:background="#00000000"
-                    app:srcCompat="@drawable/guide_members_right"
-                    android:layout_gravity="right"/>
+                    app:srcCompat="@drawable/guide_members_right" />
 
                 <TextView
                     android:id="@+id/textView6"
@@ -183,8 +184,8 @@
                     android:layout_width="10dp"
                     android:layout_height="30dp"
                     android:layout_weight="1"
-                    app:srcCompat="@drawable/guide_members_right"
-                    android:background="#00000000"/>
+                    android:background="#00000000"
+                    app:srcCompat="@drawable/guide_members_right" />
 
                 <TextView
                     android:id="@+id/textView7"
@@ -194,8 +195,8 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="신구대학교식물원 관람"
-                    android:textSize="13dp"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
 
             </LinearLayout>
 
@@ -217,8 +218,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        app:srcCompat="@drawable/guide_members_img2"
-                        android:background="@android:color/transparent"/>
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/guide_members_img2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -240,8 +241,8 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="TextView"
-                            android:textSize="15dp"
-                            android:textColor="@color/white" />
+                            android:textColor="@color/white"
+                            android:textSize="15dp" />
 
                     </LinearLayout>
 
@@ -255,8 +256,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="15dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/text2"
@@ -264,8 +265,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="15dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/text3"
@@ -273,8 +274,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="15dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/text4"
@@ -282,8 +283,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="15dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
         </LinearLayout>
 

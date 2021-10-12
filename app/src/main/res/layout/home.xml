@@ -186,7 +186,7 @@
                     android:id="@+id/viewpager"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@color/bg_green">
+                    android:background="@color/green">
 
 
                 </androidx.viewpager2.widget.ViewPager2>
@@ -208,7 +208,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
                 android:layout_marginTop="6dp"
-                android:background="@color/bg_green"
+                android:background="@color/green"
                 android:orientation="horizontal">
 
                 <TextView

@@ -17,6 +17,7 @@
     <color name="backgrounddarkgray">#EBEBEB</color>
     <color name="textcolor">#484848</color>
     <color name="grayy">#dcdcdc</color>
-    <color name="bg_green">#a1c575</color>
+    <color name="green">#a1c575</color>
+    <color name="green2">#97c263</color>
 
 </resources>

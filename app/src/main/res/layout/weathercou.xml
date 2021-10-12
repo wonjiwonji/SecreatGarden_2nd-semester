@@ -17,33 +17,34 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/thingreen"
+            android:background="@color/green2"
             app:contentInsetStart="0dp">
 
             <ImageButton
                 android:id="@+id/back"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
-                android:background="@color/thingreen"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="15dp"
+                android:background="@color/green2"
                 app:srcCompat="@drawable/left" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@android:dimen/app_icon_size"
+                android:layout_marginLeft="15dp"
                 android:text="계절 코스"
                 android:textColor="@color/backgroundgray"
                 android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-                android:textSize="30dp"
+                android:textSize="26dp"
                 android:textStyle="normal" />
 
             <ImageButton
                 android:id="@+id/nevi_icon"
                 android:layout_width="45dp"
-                android:layout_height="50dp"
+                android:layout_height="45dp"
                 android:layout_gravity="right"
                 android:layout_marginRight="15dp"
-                android:background="@color/thingreen"
+                android:background="@color/green2"
                 android:scaleType="centerCrop"
                 app:srcCompat="@drawable/view_headline"
                 tools:ignore="VectorDrawableCompat" />
@@ -52,10 +53,10 @@
         </androidx.appcompat.widget.Toolbar>
 
         <FrameLayout
-            android:visibility="gone"
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
-            android:layout_height="150dp" />
+            android:layout_height="150dp"
+            android:visibility="gone" />
 
         <com.naver.maps.map.MapView
             android:id="@+id/map_view"

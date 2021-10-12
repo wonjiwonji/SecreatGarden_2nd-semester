@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -11,14 +11,15 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/thingreen"
+        android:background="@color/green2"
         app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/intro_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/thingreen"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@color/green2"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/left" />
 
         <TextView
@@ -28,7 +29,7 @@
             android:text="식물원소개"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="26dp"
+            android:textSize="23dp"
             android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -67,22 +68,22 @@
                     android:id="@+id/imageButton2"
                     android:layout_width="33dp"
                     android:layout_height="33dp"
+                    android:layout_gravity="center"
                     android:background="#00000000"
-                    app:srcCompat="@drawable/leaf"
-                    android:layout_gravity="center"/>
+                    app:srcCompat="@drawable/leaf" />
 
                 <EditText
                     android:id="@+id/editTextTextPersonName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:background="@drawable/titleunderline"
                     android:ems="10"
                     android:focusableInTouchMode="false"
+                    android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
                     android:text="설립기관"
-                    android:fontFamily="@font/bmjua"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -95,8 +96,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="TextView"
-                android:textSize="15dp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
             <LinearLayout
                 android:layout_width="110dp"
@@ -114,14 +115,14 @@
                     android:id="@+id/editTextTextPersonName2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:background="@drawable/titleunderline"
                     android:ems="10"
                     android:focusableInTouchMode="false"
+                    android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
                     android:text="설립목적"
-                    android:fontFamily="@font/bmjua"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -132,10 +133,10 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:lineSpacingExtra="5dp"
                 android:text="TextView"
-                android:textSize="15dp"
                 android:textColor="@color/black"
-                android:lineSpacingExtra="5dp"/>
+                android:textSize="15dp" />
 
             <LinearLayout
                 android:layout_width="265dp"
@@ -153,16 +154,16 @@
                     android:id="@+id/editTextTextPersonName3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:background="@drawable/titleunderline"
                     android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
                     android:text="신구대학교식물원이 하는 일"
                     android:textColor="@color/leafgreen"
-                    android:textSize="22dp"
-                    android:fontFamily="@font/bmjua"
-                    android:focusableInTouchMode="false"/>
+                    android:textSize="22dp" />
 
             </LinearLayout>
 
@@ -171,10 +172,10 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="TextView"
-                android:textSize="15dp"
                 android:lineSpacingExtra="8dp"
-                android:textColor="@color/black"/>
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
             <LinearLayout
                 android:layout_width="140dp"
@@ -192,16 +193,16 @@
                     android:id="@+id/editTextTextPersonName4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
+                    android:layout_weight="1"
                     android:background="@drawable/titleunderline"
                     android:ems="10"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
                     android:text="규모 및 위치"
                     android:textColor="@color/leafgreen"
-                    android:textSize="22dp"
-                    android:fontFamily="@font/bmjua"
-                    android:focusableInTouchMode="false"/>
+                    android:textSize="22dp" />
 
             </LinearLayout>
 
@@ -210,10 +211,10 @@
                 android:layout_width="320dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="TextView"
-                android:textSize="15dp"
                 android:lineSpacingExtra="5dp"
-                android:textColor="@color/black"/>
+                android:text="TextView"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
 
         </LinearLayout>
     </ScrollView>

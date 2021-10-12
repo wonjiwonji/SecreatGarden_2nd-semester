@@ -11,25 +11,26 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/thingreen"
+        android:background="@color/green2"
         app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/street_back"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@color/thingreen"
-            app:srcCompat="@drawable/left"/>
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@color/green2"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:textStyle="normal"
             android:text="길찾기"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="26dp" />
+            android:textSize="23dp"
+            android:textStyle="normal" />
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -44,7 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text=""
-        android:textSize="28dp"/>
+        android:textSize="28dp" />
 
     <LinearLayout
         android:layout_width="175dp"
@@ -66,12 +67,12 @@
             android:layout_weight="1"
             android:background="@drawable/titleunderline"
             android:ems="10"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/bmjua"
             android:inputType="textPersonName"
             android:text="대중교통 이용 시"
             android:textColor="@color/leafgreen"
-            android:fontFamily="@font/bmjua"
-            android:textSize="22dp"
-            android:focusableInTouchMode="false"/>
+            android:textSize="22dp" />
 
     </LinearLayout>
 
