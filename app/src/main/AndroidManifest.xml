@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme.">
-        <meta-data android:name="com.naver.maps.map.CLIENT_ID" android:value="jq36xceyvz"/>
+        <meta-data android:name="com.naver.maps.map.CLIENT_ID" android:value="jjzb7km2lo"/>
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -35,9 +35,11 @@
         <activity android:name=".guide.guide_members"></activity>
         <activity android:name=".guide.guide_note"></activity>
         <activity android:name=".guide.guide_street"></activity>
-        <activity android:name=".course"></activity>
         <activity android:name=".weathercou"></activity>
-        <activity android:name=".shop" />
+        <activity android:name=".course"></activity>
+        <activity android:name=".shop"></activity>
+        <activity android:name=".qr1"></activity>
+        <activity android:name=".qr2"></activity>
 
     </application>
 

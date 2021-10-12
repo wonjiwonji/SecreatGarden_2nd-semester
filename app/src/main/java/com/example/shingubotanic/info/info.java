@@ -1,31 +1,22 @@
 package com.example.shingubotanic.info;
 
 import android.content.Intent;
-import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.TabHost;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.bumptech.glide.Glide;
 import com.example.shingubotanic.R;
+import com.example.shingubotanic.course;
 import com.example.shingubotanic.home;
 import com.example.shingubotanic.info.fall.info_fall_plant10_go;
 import com.example.shingubotanic.info.fall.info_fall_plant11_yong;
@@ -65,19 +56,14 @@ import com.example.shingubotanic.info.summer.info_summer_plant8_mae;
 import com.example.shingubotanic.info.summer.info_summer_plant9_hae;
 import com.example.shingubotanic.info.winter.info_winter_plant1_ae;
 import com.example.shingubotanic.info.winter.info_winter_plant2_bok;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
+import com.example.shingubotanic.qr1;
+import com.example.shingubotanic.qr2;
+import com.example.shingubotanic.weathercou;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import static android.content.ContentValues.TAG;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class info extends AppCompatActivity {
 
@@ -179,8 +165,44 @@ public class info extends AppCompatActivity {
         if(result != null){
             if(result.getContents() == null){   //QR이 없으면
                 Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
-            } else {    //QR이 있으면
-                Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
+            } else {//QR이 있으면
+//                Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
+//                i = new Intent(getApplicationContext(), course.class);
+//                startActivity(i);
+                try {
+                    JSONObject obj = new JSONObject(result.getContents());
+
+                    switch (obj.getString("number")) {
+                        case "1":
+                            i = new Intent(getApplicationContext(), qr1.class);
+                            startActivity(i);
+                            break;
+                        case "2":
+                            i = new Intent(getApplicationContext(), qr2.class);
+                            startActivity(i);
+                            break;
+
+                    }
+//                    if (obj.getString("number") == "1") {
+//                        Toast.makeText(this, "1입니다", Toast.LENGTH_SHORT).show();
+////                        i = new Intent(getApplicationContext(), course.class);
+////                        startActivity(i);
+//                    } else if (obj.getString("number") == "2"){
+//                        Toast.makeText(this, "2입니다.", Toast.LENGTH_SHORT).show();
+//
+////                        i = new Intent(getApplicationContext(), weathercou.class);
+////                        startActivity(i);
+//                    } else {
+//                        Toast.makeText(this, obj.getString("number"), Toast.LENGTH_SHORT).show();
+////                        Toast.makeText(this, "넌누구냣", Toast.LENGTH_SHORT).show();
+//
+//
+//                    }
+
+                } catch(JSONException e) {
+                    Toast.makeText(info.this, result.getContents(), Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
             }
         } else {
             super.onActivityResult(requestCode, resultCode, data);
