@@ -3,34 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_course_ver2"
+    android:background="@drawable/weather_winter"
     tools:context=".frag_spring">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="150dp"
-        android:layout_marginTop="30dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/stone_iron" />
-
-
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="350dp"
-        android:layout_height="150dp"
-        android:layout_gravity="right"
-        android:scaleType="fitXY"
-        android:src="@drawable/talk_ver2" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="270dp"
-        android:layout_height="100dp"
-        android:layout_gravity="right"
-        android:layout_marginTop="8dp"
-        android:layout_marginRight="50dp"
-        android:text="겨울"
-        android:textColor="@color/black" />
 
 </FrameLayout>
