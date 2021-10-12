@@ -145,8 +145,6 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
         path.setColor(Color.YELLOW);
         path.setOutlineColor(Color.YELLOW);
         path.setWidth(5);
-        path.setPatternImage(OverlayImage.fromResource(R.drawable.poly_up));
-        path.setPatternInterval(30);
 
         //마커 클릭이벤트
         marker1.setOnClickListener(new Overlay.OnClickListener() { //중앙광장
@@ -462,10 +460,14 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                     case "가을코스":
                         frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_3);
+                        insert_marker(3);
+                        insert_polyline(3);
                         break;
                     case "겨울코스":
                         frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_4);
+                        insert_marker(4);
+                        insert_polyline(4);
                         break;
                     case "화장실":
                         frame.setVisibility(FrameLayout.GONE);
@@ -660,10 +662,22 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                 setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
                 break;
             case 3: //가을코스
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
+                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
+                setMarker(marker22, 37.4349547471053, 127.080159117062, R.drawable.observatory_icon, 0, "전망대");
+                setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, "꽃무릇군락지");
+                setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, "그라스품종원");
+                setMarker(marker19, 37.43732969999999, 127.07770260000007, R.drawable.marker_red, 0, "억새원");
+                setMarker(marker18, 37.437062299999994, 127.07769869999993, R.drawable.marker_red, 0, "단풍나무길");
                 break;
             case 4: //겨울코스
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
+                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
+                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "정통정원");
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
+                setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, "습지생태원");
+                setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
                 break;
-
             case 11: //화장실
                 setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, "화장실");
                 setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, "화장실");
@@ -712,6 +726,43 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                 path.setMap(naverMap);
                 break;
             case 2:
+                path.setCoords(Arrays.asList(
+                        new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
+                        new LatLng(37.433871, 127.080796),
+                        new LatLng(37.433815, 127.080666),
+                        new LatLng(37.433963, 127.080558),
+                        new LatLng(37.43378160000002, 127.08068609999998),
+                        new LatLng(37.433847, 127.080684),//하늘정원
+                        new LatLng(37.434286, 127.080644),
+                        new LatLng(37.43428850000004, 127.08082939999997),
+                        new LatLng(37.43428850000004, 127.08082939999997),//4전통정원
+                        new LatLng(37.434286, 127.080644),//4-2
+                        new LatLng(37.434603651775085, 127.08064936148412),
+                        new LatLng(37.434634, 127.080587),//두꺼비분수
+                        new LatLng(37.434631, 127.080024),
+                        new LatLng(37.434946, 127.080272),
+                        new LatLng(37.435213, 127.080114),
+                        new LatLng(37.435332, 127.080365),
+                        new LatLng(37.43529936421379, 127.07952713349141),
+                        new LatLng(37.435426, 127.079775), //습지생태원
+                        new LatLng(37.435274, 127.079558),
+                        new LatLng(37.435119, 127.079433)//메타세쿼이아길
+                ));
+                path.setMap(naverMap);
+                break;
+            case 3:
+                path.setCoords(Arrays.asList(
+                        new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
+                        new LatLng(37.43378160000002, 127.08068609999998),//14하늘정원
+                        new LatLng(37.4349547471053, 127.080159117062),//전망대
+                        new LatLng(37.4353757, 127.07966280000005),//꽃무릇군락지
+                        new LatLng(37.43545487038663, 127.079948650858),//그라스품종원
+                        new LatLng(37.43732969999999, 127.07770260000007),//억새원
+                        new LatLng(37.437062299999994, 127.07769869999993)//단풍나무길
+                ));
+                path.setMap(naverMap);
+                break;
+            case 4:
                 path.setCoords(Arrays.asList(
                         new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
                         new LatLng(37.433871, 127.080796),

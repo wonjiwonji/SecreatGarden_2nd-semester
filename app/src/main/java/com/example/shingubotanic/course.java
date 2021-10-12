@@ -3,6 +3,7 @@ package com.example.shingubotanic;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -14,8 +15,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.os.Bundle;
+
+import android.view.View;
+import android.widget.ExpandableListView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.shingubotanic.gardenMarker.central;
@@ -44,6 +51,7 @@ import com.example.shingubotanic.gardenMarker.treeinspector;
 import com.example.shingubotanic.gardenMarker.vineyard;
 import com.example.shingubotanic.gardenMarker.vista;
 import com.example.shingubotanic.gardenMarker.wetlands;
+import com.google.android.gms.maps.model.Polyline;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapView;
@@ -54,6 +62,7 @@ import com.naver.maps.map.overlay.Overlay;
 import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.overlay.PathOverlay;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -76,8 +85,8 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
     private final int Fragment_2 = 2;
     private final int Fragment_3 = 3;
     private final int Fragment_4 = 4;
-    private final int Fragment_5 = 5;
     private FrameLayout frame;
+
 
     //마커 변수 선언 및 초기화
     private Marker marker1 = new Marker();
@@ -110,6 +119,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
 
     PathOverlay path = new PathOverlay();
 
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -126,7 +136,6 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
 
         frame = (FrameLayout) findViewById(R.id.fragment_container);
 
-
         // 네이버 지도
         mapView = (MapView) findViewById(R.id.map_view);
         mapView.onCreate(savedInstanceState);
@@ -136,18 +145,6 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         path.setColor(Color.YELLOW);
         path.setOutlineColor(Color.YELLOW);
         path.setWidth(5);
-        path.setPatternImage(OverlayImage.fromResource(R.drawable.poly_up));
-        path.setPatternInterval(30);
-
-        // 그룹이 닫힐 경우 이벤트 발생
-        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
-
-            @Override
-            public void onGroupCollapse(int groupPosition) {
-//                Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " Collapsed", Toast.LENGTH_SHORT).show();
-            }
-        });
-
 
         //마커 클릭이벤트
         marker1.setOnClickListener(new Overlay.OnClickListener() { //중앙광장
@@ -367,8 +364,6 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
 
-
-        //jiwon listview
         // 확장 리스트뷰를 가져온다.
         expListView = (ExpandableListView) findViewById(R.id.lvExp);
 
@@ -386,7 +381,9 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             @Override
             public boolean onGroupClick(ExpandableListView parent, View v,
                                         int groupPosition, long id) {
-//                 Toast.makeText(getApplicationContext(), "Group Clicked " + listDataHeader.get(groupPosition), Toast.LENGTH_SHORT).show();
+                // Toast.makeText(getApplicationContext(),
+                // "Group Clicked " + listDataHeader.get(groupPosition),
+                // Toast.LENGTH_SHORT).show();
                 return false;
             }
         });
@@ -398,8 +395,6 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
 
-
-
         // 그룹이 열릴 경우 이벤트 발생
         expListView.setOnGroupExpandListener(new ExpandableListView.OnGroupExpandListener() {
 
@@ -409,16 +404,27 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             }
         });
 
+        // 그룹이 닫힐 경우 이벤트 발생
+        expListView.setOnGroupCollapseListener(new ExpandableListView.OnGroupCollapseListener() {
+
+            @Override
+            public void onGroupCollapse(int groupPosition) {
+//                Toast.makeText(getApplicationContext(), listDataHeader.get(groupPosition) + " Collapsed", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
         // 차일드 뷰를 눌렀을 경우 이벤트 발생
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+
+
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
                 delete_marker(); //모든 마커 지우기
                 path.setMap(null); //폴리라인 지우기
                 switch (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition)) {
-                    case "전체코스" :
+                    case "전체보기":
                         frame.setVisibility(FrameLayout.GONE);
                         insert_marker(0);
                         break;
@@ -431,30 +437,42 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                     case "어르신추천코스":
                         frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_2);
+                        insert_marker(2);
+                        insert_polyline(2);
                         break;
-                    case "단체관람코스" :
+                    case "단체관람코스":
                         frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_3);
+                        insert_marker(3);
+                        insert_polyline(3);
                         break;
                     case "커플코스":
                         frame.setVisibility(View.VISIBLE);
                         FragmentView(Fragment_4);
+                        insert_marker(4);
+                        insert_polyline(4);
                         break;
                     case "산책로코스":
                         frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_5);
+                        FragmentView(Fragment_4);
+                        insert_marker(5);
+                        insert_polyline(5);
                         break;
                     case "화장실":
                         frame.setVisibility(FrameLayout.GONE);
+                        insert_marker(11);
                         break;
                     case "주차장":
                         frame.setVisibility(FrameLayout.GONE);
+                        insert_marker(12);
                         break;
                     case "가든카페":
                         frame.setVisibility(FrameLayout.GONE);
+                        insert_marker(13);
                         break;
                     case "가든샵":
                         frame.setVisibility(FrameLayout.GONE);
+                        insert_marker(14);
                         break;
 
                 }
@@ -477,15 +495,16 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
             }
         };
         back.setOnClickListener(cl);
+
     }
 
     //상단 뷰
-    private void FragmentView(int fragment){
+    private void FragmentView(int fragment) {
 
         //FragmentTransactiom를 이용해 프래그먼트를 사용합니다.
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
-        switch (fragment){
+        switch (fragment) {
             case 1:
                 // 첫번 째 프래그먼트 호출
                 frag_children fragment1 = new frag_children();
@@ -511,7 +530,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                 transaction.commit();
                 break;
             case 5:
-                // 다섯번 째 프래그먼트 호출
+                // 네번 째 프래그먼트 호출
                 frag_walk fragment5 = new frag_walk();
                 transaction.replace(R.id.fragment_container, fragment5);
                 transaction.commit();
@@ -520,12 +539,8 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
 
     }
 
-
-
-
     //마커 커스텀
-    private void setMarker(Marker marker,  double lat, double lng, int resourceID, int zIndex, String text)
-    {
+    private void setMarker(Marker marker, double lat, double lng, int resourceID, int zIndex, String text) {
         //마커 크기
         marker.setWidth(marker.SIZE_AUTO);
         marker.setHeight(marker.SIZE_AUTO);
@@ -593,12 +608,10 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
         marker27.setMap(null);
     }
 
-
-
     //마커 띄우기
     private void insert_marker(int a) {
         switch (a) {
-            case 0: //기본(전체)
+            case 0:
                 setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
                 setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
                 setMarker(marker3, 37.43405849102472, 127.08087070726651, R.drawable.marker_red, 0, "비스타정원");
@@ -627,7 +640,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                 setMarker(marker26, 37.4337449824962, 127.08189373068059, R.drawable.parking_icon, 0, "주차장");
                 setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, "가든카페");
                 break;
-            case 1: //봄코스
+            case 1: //어린이체험코스
                 setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
                 setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
                 setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, "작약원");
@@ -635,7 +648,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                 setMarker(marker16, 37.43619319999999, 127.07871640000008, R.drawable.marker_red, 0, "고층습지원");
                 setMarker(marker20, 37.43831869999999, 127.07702510000001, R.drawable.marker_red, 0, "라일락원");
                 break;
-            case 2: //여름코스
+            case 2: //어르신추천코스
                 setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
                 setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
                 setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "정통정원");
@@ -643,11 +656,31 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                 setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, "습지생태원");
                 setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
                 break;
-            case 3: //가을코스
+            case 3: //단체관람코스
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
+                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
+                setMarker(marker22, 37.4349547471053, 127.080159117062, R.drawable.observatory_icon, 0, "전망대");
+                setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, "꽃무릇군락지");
+                setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, "그라스품종원");
+                setMarker(marker19, 37.43732969999999, 127.07770260000007, R.drawable.marker_red, 0, "억새원");
+                setMarker(marker18, 37.437062299999994, 127.07769869999993, R.drawable.marker_red, 0, "단풍나무길");
                 break;
-            case 4: //겨울코스
+            case 4: //커플코스
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
+                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
+                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "정통정원");
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
+                setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, "습지생태원");
+                setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
                 break;
-
+            case 5: //산책로코스
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
+                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
+                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "정통정원");
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
+                setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, "습지생태원");
+                setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
+                break;
             case 11: //화장실
                 setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, "화장실");
                 setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, "화장실");
@@ -696,6 +729,68 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                 path.setMap(naverMap);
                 break;
             case 2:
+                path.setCoords(Arrays.asList(
+                        new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
+                        new LatLng(37.433871, 127.080796),
+                        new LatLng(37.433815, 127.080666),
+                        new LatLng(37.433963, 127.080558),
+                        new LatLng(37.43378160000002, 127.08068609999998),
+                        new LatLng(37.433847, 127.080684),//하늘정원
+                        new LatLng(37.434286, 127.080644),
+                        new LatLng(37.43428850000004, 127.08082939999997),
+                        new LatLng(37.43428850000004, 127.08082939999997),//4전통정원
+                        new LatLng(37.434286, 127.080644),//4-2
+                        new LatLng(37.434603651775085, 127.08064936148412),
+                        new LatLng(37.434634, 127.080587),//두꺼비분수
+                        new LatLng(37.434631, 127.080024),
+                        new LatLng(37.434946, 127.080272),
+                        new LatLng(37.435213, 127.080114),
+                        new LatLng(37.435332, 127.080365),
+                        new LatLng(37.43529936421379, 127.07952713349141),
+                        new LatLng(37.435426, 127.079775), //습지생태원
+                        new LatLng(37.435274, 127.079558),
+                        new LatLng(37.435119, 127.079433)//메타세쿼이아길
+                ));
+                path.setMap(naverMap);
+                break;
+            case 3:
+                path.setCoords(Arrays.asList(
+                        new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
+                        new LatLng(37.43378160000002, 127.08068609999998),//14하늘정원
+                        new LatLng(37.4349547471053, 127.080159117062),//전망대
+                        new LatLng(37.4353757, 127.07966280000005),//꽃무릇군락지
+                        new LatLng(37.43545487038663, 127.079948650858),//그라스품종원
+                        new LatLng(37.43732969999999, 127.07770260000007),//억새원
+                        new LatLng(37.437062299999994, 127.07769869999993)//단풍나무길
+                ));
+                path.setMap(naverMap);
+                break;
+            case 4:
+                path.setCoords(Arrays.asList(
+                        new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
+                        new LatLng(37.433871, 127.080796),
+                        new LatLng(37.433815, 127.080666),
+                        new LatLng(37.433963, 127.080558),
+                        new LatLng(37.43378160000002, 127.08068609999998),
+                        new LatLng(37.433847, 127.080684),//하늘정원
+                        new LatLng(37.434286, 127.080644),
+                        new LatLng(37.43428850000004, 127.08082939999997),
+                        new LatLng(37.43428850000004, 127.08082939999997),//4전통정원
+                        new LatLng(37.434286, 127.080644),//4-2
+                        new LatLng(37.434603651775085, 127.08064936148412),
+                        new LatLng(37.434634, 127.080587),//두꺼비분수
+                        new LatLng(37.434631, 127.080024),
+                        new LatLng(37.434946, 127.080272),
+                        new LatLng(37.435213, 127.080114),
+                        new LatLng(37.435332, 127.080365),
+                        new LatLng(37.43529936421379, 127.07952713349141),
+                        new LatLng(37.435426, 127.079775), //습지생태원
+                        new LatLng(37.435274, 127.079558),
+                        new LatLng(37.435119, 127.079433)//메타세쿼이아길
+                ));
+                path.setMap(naverMap);
+                break;
+            case 5:
                 path.setCoords(Arrays.asList(
                         new LatLng(37.43374990000003, 127.08111759999997),//1중앙광장
                         new LatLng(37.433871, 127.080796),
