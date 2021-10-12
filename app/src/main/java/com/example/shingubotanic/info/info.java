@@ -77,7 +77,7 @@ public class info extends AppCompatActivity {
     infoList infolist;
 
     IntentIntegrator qrscan;
-    Button scan;
+    Button scan, p1, p2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -95,6 +95,9 @@ public class info extends AppCompatActivity {
         scan = (Button) findViewById(R.id.scanner);
         qrscan = new IntentIntegrator(this);
 
+        p1 = (Button) findViewById(R.id.plant1);
+        p2 = (Button) findViewById(R.id.plant2);
+
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.frame, infotab).commitAllowingStateLoss();
@@ -108,10 +111,20 @@ public class info extends AppCompatActivity {
                         i = new Intent(getApplicationContext(), home.class);
                         startActivity(i);
                         break;
+                    case R.id.plant1:
+                        i = new Intent(getApplicationContext(), qr1.class);
+                        startActivity(i);
+                        break;
+                    case R.id.plant2:
+                        i = new Intent(getApplicationContext(), qr2.class);
+                        startActivity(i);
+                        break;
                 }
             }
         };
         back.setOnClickListener(cl);
+        p1.setOnClickListener(cl);
+        p2.setOnClickListener(cl);
 
         while(sbtn.hasOnClickListeners() == false) {
             sbtn.setOnClickListener(new View.OnClickListener() {
@@ -165,7 +178,7 @@ public class info extends AppCompatActivity {
         if(result != null){
             if(result.getContents() == null){   //QR이 없으면
                 Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
-            } else {//QR이 있으면
+            } else {    //QR이 있으면
 //                Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
 //                i = new Intent(getApplicationContext(), course.class);
 //                startActivity(i);

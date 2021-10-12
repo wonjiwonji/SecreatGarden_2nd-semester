@@ -39,6 +39,20 @@
             android:layout_marginLeft="50dp"
             android:text="QR Code"/>
 
+        <Button
+            android:id="@+id/plant1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="꽃무릇"/>
+
+        <Button
+            android:id="@+id/plant2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="국화"/>
+
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
