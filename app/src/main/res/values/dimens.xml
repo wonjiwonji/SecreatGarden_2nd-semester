@@ -3,9 +3,5 @@
     <dimen name="pageMargin">20dp</dimen>
     <dimen name="offset">20dp</dimen>
     <dimen name="fontsize">17dp</dimen>
-    <dimen name="width">500dp</dimen>
-    <dimen name="height">180dp</dimen>
-    <dimen name="pageMarginAndOffset">40dp</dimen>
-    <dimen name="frameSize">180dp</dimen>
     <dimen name="homebtnsize">40dp</dimen>
 </resources>
