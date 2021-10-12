@@ -28,7 +28,7 @@ import static android.content.ContentValues.TAG;
 public class qr1 extends AppCompatActivity {
 
     ImageView p1, f1, f2, f3, f4;
-    TextView ptxt, ftxt;
+    TextView ptxt, ftxt, ftxt2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,6 +43,7 @@ public class qr1 extends AppCompatActivity {
         f3 = (ImageView) findViewById(R.id.festival_img3);
         f4 = (ImageView) findViewById(R.id.festival_img4);
         ftxt = (TextView) findViewById(R.id.festival_txt);
+        ftxt2 = (TextView) findViewById(R.id.festival_txt2);
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference("QR code");
@@ -149,8 +150,8 @@ public class qr1 extends AppCompatActivity {
                 // whenever data at this location is updated.
                 String val1 = dataSnapshot.child("QR1").getValue(String.class);
                 ptxt.setText(val1);
-//                String val2 = dataSnapshot.child("QR2").getValue(String.class);
-//                txt2.setText(val2);
+                String val2 = dataSnapshot.child("QR1-1").getValue(String.class);
+                ftxt2.setText(val2);
             }
 
             @Override
