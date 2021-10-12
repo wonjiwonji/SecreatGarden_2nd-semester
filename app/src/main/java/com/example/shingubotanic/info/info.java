@@ -76,7 +76,7 @@ public class info extends AppCompatActivity {
     infoTab infotab;
     infoList infolist;
 
-    IntentIntegrator qrscan;
+//    IntentIntegrator qrscan;
     Button scan, p1, p2;
 
     @Override
@@ -93,7 +93,7 @@ public class info extends AppCompatActivity {
         infolist = new infoList();
 
         scan = (Button) findViewById(R.id.scanner);
-        qrscan = new IntentIntegrator(this);
+//        qrscan = new IntentIntegrator(this);
 
         p1 = (Button) findViewById(R.id.plant1);
         p2 = (Button) findViewById(R.id.plant2);
@@ -159,68 +159,68 @@ public class info extends AppCompatActivity {
             }
         });
 
-        //스캔 중...
-        scan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                qrscan.setPrompt("Scanning...");
-                qrscan.setBeepEnabled(true);    //인식 시 '삑'소리
-                qrscan.initiateScan();
-            }
-        });
+//        //스캔 중...
+//        scan.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                qrscan.setPrompt("Scanning...");
+//                qrscan.setBeepEnabled(true);    //인식 시 '삑'소리
+//                qrscan.initiateScan();
+//            }
+//        });
 
     }
 
-    //스캔 결과
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if(result != null){
-            if(result.getContents() == null){   //QR이 없으면
-                Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
-            } else {    //QR이 있으면
-//                Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
-//                i = new Intent(getApplicationContext(), course.class);
-//                startActivity(i);
-                try {
-                    JSONObject obj = new JSONObject(result.getContents());
-
-                    switch (obj.getString("number")) {
-                        case "1":
-                            i = new Intent(getApplicationContext(), qr1.class);
-                            startActivity(i);
-                            break;
-                        case "2":
-                            i = new Intent(getApplicationContext(), qr2.class);
-                            startActivity(i);
-                            break;
-
-                    }
-//                    if (obj.getString("number") == "1") {
-//                        Toast.makeText(this, "1입니다", Toast.LENGTH_SHORT).show();
-////                        i = new Intent(getApplicationContext(), course.class);
-////                        startActivity(i);
-//                    } else if (obj.getString("number") == "2"){
-//                        Toast.makeText(this, "2입니다.", Toast.LENGTH_SHORT).show();
+//    //스캔 결과
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+//        if(result != null){
+//            if(result.getContents() == null){   //QR이 없으면
+//                Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
+//            } else {    //QR이 있으면
+////                Toast.makeText(this, "스캔완료!", Toast.LENGTH_SHORT).show();
+////                i = new Intent(getApplicationContext(), course.class);
+////                startActivity(i);
+//                try {
+//                    JSONObject obj = new JSONObject(result.getContents());
 //
-////                        i = new Intent(getApplicationContext(), weathercou.class);
-////                        startActivity(i);
-//                    } else {
-//                        Toast.makeText(this, obj.getString("number"), Toast.LENGTH_SHORT).show();
-////                        Toast.makeText(this, "넌누구냣", Toast.LENGTH_SHORT).show();
-//
+//                    switch (obj.getString("number")) {
+//                        case "1":
+//                            i = new Intent(getApplicationContext(), qr1.class);
+//                            startActivity(i);
+//                            break;
+//                        case "2":
+//                            i = new Intent(getApplicationContext(), qr2.class);
+//                            startActivity(i);
+//                            break;
 //
 //                    }
-
-                } catch(JSONException e) {
-                    Toast.makeText(info.this, result.getContents(), Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
+////                    if (obj.getString("number") == "1") {
+////                        Toast.makeText(this, "1입니다", Toast.LENGTH_SHORT).show();
+//////                        i = new Intent(getApplicationContext(), course.class);
+//////                        startActivity(i);
+////                    } else if (obj.getString("number") == "2"){
+////                        Toast.makeText(this, "2입니다.", Toast.LENGTH_SHORT).show();
+////
+//////                        i = new Intent(getApplicationContext(), weathercou.class);
+//////                        startActivity(i);
+////                    } else {
+////                        Toast.makeText(this, obj.getString("number"), Toast.LENGTH_SHORT).show();
+//////                        Toast.makeText(this, "넌누구냣", Toast.LENGTH_SHORT).show();
+////
+////
+////                    }
+//
+//                } catch(JSONException e) {
+//                    Toast.makeText(info.this, result.getContents(), Toast.LENGTH_SHORT).show();
+//                    e.printStackTrace();
+//                }
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data);
+//        }
+//    }
 
 
     //봄
