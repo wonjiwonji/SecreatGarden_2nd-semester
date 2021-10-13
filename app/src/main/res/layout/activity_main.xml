@@ -26,14 +26,7 @@
             android:layout_marginRight="0dp"
             android:layout_marginBottom="0dp" />
 
-        <ImageButton
-            android:id="@+id/home"
-            android:layout_width="fill_parent"
-            android:layout_height="80dp"
-            android:foregroundGravity="center_horizontal"
-            android:layout_margin="10dp"
-            android:background="@android:color/transparent"
-            app:srcCompat="@drawable/shingu" />
+        
 
         <Button
             android:id="@+id/button"
