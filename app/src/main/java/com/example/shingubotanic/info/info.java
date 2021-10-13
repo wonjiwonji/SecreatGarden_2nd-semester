@@ -77,7 +77,6 @@ public class info extends AppCompatActivity {
     infoList infolist;
 
 //    IntentIntegrator qrscan;
-    Button scan, p1, p2;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -92,11 +91,7 @@ public class info extends AppCompatActivity {
         infotab = new infoTab();
         infolist = new infoList();
 
-        scan = (Button) findViewById(R.id.scanner);
 //        qrscan = new IntentIntegrator(this);
-
-        p1 = (Button) findViewById(R.id.plant1);
-        p2 = (Button) findViewById(R.id.plant2);
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
@@ -111,20 +106,10 @@ public class info extends AppCompatActivity {
                         i = new Intent(getApplicationContext(), home.class);
                         startActivity(i);
                         break;
-                    case R.id.plant1:
-                        i = new Intent(getApplicationContext(), qr1.class);
-                        startActivity(i);
-                        break;
-                    case R.id.plant2:
-                        i = new Intent(getApplicationContext(), qr2.class);
-                        startActivity(i);
-                        break;
                 }
             }
         };
         back.setOnClickListener(cl);
-        p1.setOnClickListener(cl);
-        p2.setOnClickListener(cl);
 
         while(sbtn.hasOnClickListeners() == false) {
             sbtn.setOnClickListener(new View.OnClickListener() {
