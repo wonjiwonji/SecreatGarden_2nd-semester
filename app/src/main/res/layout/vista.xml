@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/thingreen">
+        android:background="@color/green2">
 
         //text 변경
         <TextView
@@ -33,7 +33,7 @@
             android:textColor="@android:color/white"
             android:id="@+id/cancel"
             android:layout_gravity="right"
-            android:background="#00ff0000"
+            android:background="@color/green2"
             android:layout_width="70dp"
             android:layout_height="40dp"
             android:text="닫기" />
