@@ -619,7 +619,7 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
             case 0:
                 setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
                 setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
-                setMarker(marker3, 37.43405849102472, 127.08087070726651, R.drawable.marker_red, 0, "비스타정원");
+                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, "비스타정원");
                 setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "전통정원");
                 setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, "작약원");
                 setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
@@ -855,7 +855,6 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                         new LatLng(37.43400906, 127.08067153), //2-2
                         new LatLng(37.43406423, 127.08061632), //2-3
                         new LatLng(37.43422110, 127.0805944),//D곤충생태관
-                        new LatLng(37.43424529, 127.08075702),//3-1
                         new LatLng(37.43425523, 127.08082445),//3-2
                         new LatLng(37.43429279, 127.08082940),//4전통정원
                         new LatLng(37.43430551, 127.08080676),//3-3
