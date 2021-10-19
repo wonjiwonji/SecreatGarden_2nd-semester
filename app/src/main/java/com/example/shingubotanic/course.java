@@ -85,6 +85,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
     private final int Fragment_2 = 2;
     private final int Fragment_3 = 3;
     private final int Fragment_4 = 4;
+    private final int Fragment_5 = 5;
     private FrameLayout frame;
 
 
@@ -454,7 +455,7 @@ public class course extends AppCompatActivity implements OnMapReadyCallback {
                         break;
                     case "산책로코스":
                         frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_4);
+                        FragmentView(Fragment_5);
                         insert_marker(5);
                         insert_polyline(5);
                         break;
