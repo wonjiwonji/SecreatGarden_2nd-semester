@@ -13,7 +13,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="@color/thingreen">
+        android:background="@color/green2">
 
         //text 변경
         <TextView
