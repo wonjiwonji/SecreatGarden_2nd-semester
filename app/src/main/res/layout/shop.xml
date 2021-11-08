@@ -10,24 +10,24 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/thingreen"
+        android:background="@color/green2"
         app:contentInsetStart="10dp">
 
         <ImageButton
             android:id="@+id/shop_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:background="@color/thingreen"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@color/green2"
             app:srcCompat="@drawable/left" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="15dp"
             android:text="가든샵"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
-            android:textSize="30dp"
+            android:textSize="26dp"
             android:textStyle="normal" />
 
 
