@@ -22,7 +22,7 @@ public class btnAdapter extends FragmentStateAdapter {
         int index = getRealPosition(position);
 
         if(index==0) return new btnfrag_1();
-        else return new btnfrag_2();
+        else return new fragment_1();
     }
 
 

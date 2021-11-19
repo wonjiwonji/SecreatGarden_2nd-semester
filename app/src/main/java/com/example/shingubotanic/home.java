@@ -28,9 +28,9 @@ public class home extends AppCompatActivity {
     private int num_page=4; //ViewPager 넘길 페이지 수
     private int num_page2=2; //ViewPager 넘길 페이지 수
 
-//    ImageButton  qr;
-//    View.OnClickListener cl;
-//    Intent i;
+    ImageButton  qr;
+    View.OnClickListener cl;
+    Intent i;
 
     IntentIntegrator qrscan;
 
@@ -39,8 +39,8 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-//        qr = (ImageButton) findViewById(R.id.h_qr);
-//        qrscan = new IntentIntegrator(this);
+        qr = (ImageButton) findViewById(R.id.h_qr);
+        qrscan = new IntentIntegrator(this);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         Toolbar toolbar2 = (Toolbar)findViewById(R.id.toolbar2);
@@ -64,45 +64,45 @@ public class home extends AppCompatActivity {
         mPager2.setCurrentItem(1000); //시작지점
         mPager2.setOffscreenPageLimit(2); //최대 이미지 수
 
-//        //스캔 중...
-//        qr.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                qrscan.setPrompt("Scanning...");
-//                qrscan.setBeepEnabled(true);    //인식 시 '삑'소리
-//                qrscan.initiateScan();
-//            }
-//        });
+        //스캔 중...
+        qr.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                qrscan.setPrompt("Scanning...");
+                qrscan.setBeepEnabled(true);    //인식 시 '삑'소리
+                qrscan.initiateScan();
+            }
+        });
 
     }
 
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-//        if(result != null){
-//            if(result.getContents() == null){   //QR이 없으면
-//                Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
-//            } else {    //QR이 있으면
-//                try {
-//                    JSONObject obj = new JSONObject(result.getContents());
-//                    switch (obj.getString("number")) {
-//                        case "1":
-//                            i = new Intent(getApplicationContext(), qr1.class);
-//                            startActivity(i);
-//                            break;
-//                        case "2":
-//                            i = new Intent(getApplicationContext(), qr2.class);
-//                            startActivity(i);
-//                            break;
-//                    }
-//                } catch(JSONException e) {
-//                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-//                    e.printStackTrace();
-//                }
-//            }
-//        } else {
-//            super.onActivityResult(requestCode, resultCode, data);
-//        }
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+        if(result != null){
+            if(result.getContents() == null){   //QR이 없으면
+                Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
+            } else {    //QR이 있으면
+                try {
+                    JSONObject obj = new JSONObject(result.getContents());
+                    switch (obj.getString("number")) {
+                        case "1":
+                            i = new Intent(getApplicationContext(), qr1.class);
+                            startActivity(i);
+                            break;
+                        case "2":
+                            i = new Intent(getApplicationContext(), qr2.class);
+                            startActivity(i);
+                            break;
+                    }
+                } catch(JSONException e) {
+                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
+                    e.printStackTrace();
+                }
+            }
+        } else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+    }
 
 }
