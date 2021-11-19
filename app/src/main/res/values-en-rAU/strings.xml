@@ -1,10 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_name">secret-garden_vacation</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="camellia">꽃무릇</string>
-    <string name="close">닫기</string>
+    <string name="hello_blank_fragment">hello_blank_fragment</string>
+    <string name="camellia">camellia</string>
+    <string name="close">close</string>
     <string name="gardenshop">gardenshop</string>
     <string name="Visitinginformation">Visiting information</string>
     <string name="Seasoncourse">Season course</string>
@@ -12,16 +11,16 @@
     <string name="Plantinformation">Plant information</string>
     <string name="QRscan">QR scan</string>
     <string name="centralplaza">central plaza</string>
-    <string name="childrengarden">children\'s garden</string>
+    <string name="childrengarden" translatable="false">children\'s garden</string>
     <string name="EcoCenter">Eco Center</string>
-    <string name="EndangeredBotanicalGarden">Endangered Botanical Garden</string>
+    <string name="EndangeredBotanicalGarden">" Endangered Botanical Garden"</string>
     <string name="FiveSensesGarden">Five Senses Garden</string>
     <string name="forestpavilion">forest pavilion</string>
-    <string name="AUTUMNBOTANIC">AUTUMN BOTANIC</string>
-    <string name="gardencafe">garden cafe</string>
+    <string name="AUTUMNBOTANIC">AUTUMN BOTANIC GARDEN  \\n A gift-like plant to meet in October, sagebrush</string>
+    <string name="gardencafe">"garden cafe "</string>
     <string name="gardencenter">garden center</string>
     <string name="Grass">Grass Pum Jongwon</string>
-    <string name="Feeinformation">Fee information</string>
+    <string name="Feeinformation">"Fee information "</string>
     <string name="Winterrateguide">Winter rate guide</string>
     <string name="freeentry">free entry</string>
     <string name="discountadmission">discount admission</string>
@@ -41,6 +40,4 @@
     <string name="Annualmemberbenefits">Annual member benefits</string>
     <string name="Notice">Notice</string>
     <string name="Precautionsforviewing">Precautions for viewing</string>
-
-
 </resources>

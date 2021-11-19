@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="요금안내"
+            android:text="料金案内"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:textSize="23dp"
@@ -66,7 +66,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="요금안내"
+                    android:text="料金案内"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -103,7 +103,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="동절기 요금안내"
+                    android:text="@string/Winterrateguide"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -147,7 +147,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="무료입장"
+                    android:text="@string/freeentry"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -186,7 +186,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="할인입장"
+                    android:text="@string/discountadmission"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -225,7 +225,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="기타"
+                    android:text="@string/etc"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 

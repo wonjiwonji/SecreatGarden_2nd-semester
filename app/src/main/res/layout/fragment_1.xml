@@ -14,8 +14,7 @@
         android:drawableTop="@drawable/banner_customise"
         android:drawablePadding="12dp"
         android:lineSpacingExtra="5dp"
-        android:text=" AUTUMN BOTANIC GARDEN \n
-10월에 만나는 선물같은 식물, 갯쑥부쟁이"
+        android:text="AUTUMN BOTANIC GARDEN  \n A gift-like plant to meet in October, sagebrush"
         android:textSize="14dp" />
 
 

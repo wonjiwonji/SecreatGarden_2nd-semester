@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">secret-garden_vacation</string>
+    <string name="hello_blank_fragment">hello_blank_fragment</string>
+    <string name="camellia">꽃무릇</string>
+    <string name="close">닫기</string>
+    <string name="gardenshop">가든샵</string>
+    <string name="Visitinginformation">관람안내</string>
+    <string name="Seasoncourse">계절코스</string>
+    <string name="Recommendedcourse">추천코스</string>
+    <string name="Plantinformation">식물정보</string>
+    <string name="QRscan">QR 스캔</string>
+    <string name="centralplaza">중앙광장</string>
+    <string name="childrengarden">어린이정원</string>
+    <string name="EcoCenter">에코센터</string>
+    <string name="EndangeredBotanicalGarden">멸종위기식물원</string>
+    <string name="FiveSensesGarden">오감정원</string>
+    <string name="forestpavilion">숲 전시관</string>
+    <string name="AUTUMNBOTANIC">AUTUMN BOTANIC GARDEN \\n 10月に出会うプレゼントのような植物、つるぎ</string>
+    <string name="gardencafe">가든 카페</string>
+    <string name="gardencenter">가든 센터</string>
+    <string name="Grass">그라스품 종원</string>
+    <string name="Feeinformation">요금안내</string>
+    <string name="Winterrateguide">동절기 요금안내</string>
+    <string name="freeentry">무료입장</string>
+    <string name="discountadmission">할인입장</string>
+    <string name="etc">기타</string>
+    <string name="Visitinghours">관람시간 안내</string>
+    <string name="Aboutgarden">식물원소개</string>
+    <string name="foundinginstitution">설립기관</string>
+    <string name="Purposeofestablishment">설립목적</string>
+    <string name="WhatShingu">신구대학교식물원이 하는 일</string>
+    <string name="sizeandlocation">규모 및 위치</string>
+    <string name="annualmembership">연간회원</string>
+    <string name="Howtojoin">가입방법</string>
+    <string name="Applyfor">현장 방문 신청</string>
+    <string name="Payment">결제 (현장에서 금액 결제)</string>
+    <string name="Annualmembershipcard">연간회원 카드 발급</string>
+    <string name="VisitShinguUniversityBotanicalGarden">신구대학교식물원 관람</string>
+    <string name="Annualmemberbenefits">연간회원 혜택</string>
+    <string name="Notice">유의사항</string>
+    <string name="Precautionsforviewing">관람시 유의사항</string>
+</resources>

@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="관람정보"
+            android:text="@string/Visitinginformation"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:textSize="23dp"
@@ -82,7 +82,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="관람정보"
+                    android:text="@string/Visitinginformation"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -166,7 +166,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="관람시간 안내"
+                    android:text="@string/Visitinghours"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 

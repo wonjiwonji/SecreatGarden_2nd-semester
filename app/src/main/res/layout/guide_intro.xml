@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="식물원소개"
+            android:text="@string/Aboutgarden"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:textSize="23dp"
@@ -83,7 +83,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="설립기관"
+                    android:text="@string/foundinginstitution"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -122,7 +122,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="설립목적"
+                    android:text="@string/Purposeofestablishment"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -161,7 +161,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="신구대학교식물원이 하는 일"
+                    android:text="@string/WhatShingu"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -200,7 +200,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="규모 및 위치"
+                    android:text="@string/sizeandlocation"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 

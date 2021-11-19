@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="연간회원"
+            android:text="@string/annualmembership"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:textSize="23dp"
@@ -66,7 +66,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="연간회원"
+                    android:text="@string/annualmembership"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -102,7 +102,7 @@
                     android:focusableInTouchMode="false"
                     android:fontFamily="@font/bmjua"
                     android:inputType="textPersonName"
-                    android:text="가입방법"
+                    android:text="@string/Howtojoin"
                     android:textColor="@color/leafgreen"
                     android:textSize="22dp" />
 
@@ -127,7 +127,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="right"
-                    android:text="현장 방문 신청"
+                    android:text="@string/Applyfor"
                     android:textColor="@color/black"
                     android:textSize="13dp" />
 
@@ -147,7 +147,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="left"
-                    android:text="결제 (현장에서 금액 결제)"
+                    android:text="@string/Payment"
                     android:textColor="@color/black"
                     android:textSize="13dp" />
 
@@ -175,7 +175,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="연간회원 카드 발급"
+                    android:text="@string/Annualmembershipcard"
                     android:textColor="@color/black"
                     android:textSize="13dp" />
 
@@ -194,7 +194,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="신구대학교식물원 관람"
+                    android:text="@string/VisitShinguUniversityBotanicalGarden"
                     android:textColor="@color/black"
                     android:textSize="13dp" />
 
@@ -231,7 +231,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:text="연간회원 혜택"
+                            android:text="@string/Annualmemberbenefits"
                             android:textColor="@color/white"
                             android:textSize="16dp" />
 

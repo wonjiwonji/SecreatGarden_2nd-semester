@@ -84,7 +84,7 @@
             android:layout_marginTop="53dp"
             android:layout_marginRight="13dp"
             android:gravity="center_horizontal"
-            android:text="관람안내"
+            android:text="@string/Visitinginformation"
             android:textAlignment="center"
             android:textColor="@color/textcolor"
             android:textSize="12dp" />
@@ -98,7 +98,7 @@
             android:layout_marginTop="53dp"
             android:layout_marginRight="13dp"
             android:gravity="center_horizontal"
-            android:text="계절코스"
+            android:text="@string/Seasoncourse"
             android:textAlignment="center"
             android:textColor="@color/textcolor"
             android:textSize="12dp" />
@@ -112,7 +112,7 @@
             android:layout_marginTop="53dp"
             android:layout_marginRight="13dp"
             android:gravity="center_horizontal"
-            android:text="추천코스"
+            android:text="@string/Recommendedcourse"
             android:textAlignment="center"
             android:textColor="@color/textcolor"
             android:textSize="12dp" />
@@ -125,7 +125,7 @@
             android:layout_marginTop="53dp"
             android:layout_marginRight="13dp"
             android:gravity="center_horizontal"
-            android:text="식물정보"
+            android:text="@string/Plantinformation"
             android:textAlignment="center"
             android:textColor="@color/textcolor"
             android:textSize="12dp" />
@@ -137,7 +137,7 @@
             android:layout_marginLeft="17dp"
             android:layout_marginTop="53dp"
             android:gravity="center_horizontal"
-            android:text="가든샵"
+            android:text="@string/gardenshop"
             android:textAlignment="center"
             android:textColor="@color/textcolor"
             android:textSize="12dp" />
