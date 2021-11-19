@@ -23,13 +23,14 @@ import org.json.JSONObject;
 public class home extends AppCompatActivity {
     private String TAG = "VideoActivity";
 
-    private ViewPager2 mPager ;
-    private FragmentStateAdapter pagerAdapter ;
+    private ViewPager2 mPager, mPager2 ;
+    private FragmentStateAdapter pagerAdapter, pagerAdapter2 ;
     private int num_page=4; //ViewPager 넘길 페이지 수
+    private int num_page2=2; //ViewPager 넘길 페이지 수
 
-    ImageButton gui, wea, cou, info, shop, qr,fore;
-    View.OnClickListener cl;
-    Intent i;
+//    ImageButton  qr;
+//    View.OnClickListener cl;
+//    Intent i;
 
     IntentIntegrator qrscan;
 
@@ -38,15 +39,8 @@ public class home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home);
 
-        gui = (ImageButton) findViewById(R.id.h_guide);
-        wea = (ImageButton) findViewById(R.id.h_weathercourse);
-        cou = (ImageButton) findViewById(R.id.h_course);
-        info = (ImageButton) findViewById(R.id.h_info);
-        shop = (ImageButton) findViewById(R.id.h_shop);
-        qr = (ImageButton) findViewById(R.id.h_qr);
-        //fore = (ImageButton) findViewById(R.id.h_foreign);
-
-        qrscan = new IntentIntegrator(this);
+//        qr = (ImageButton) findViewById(R.id.h_qr);
+//        qrscan = new IntentIntegrator(this);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         Toolbar toolbar2 = (Toolbar)findViewById(R.id.toolbar2);
@@ -55,91 +49,60 @@ public class home extends AppCompatActivity {
 
         //ViewPager2
         mPager = findViewById(R.id.viewpager);
+        mPager2 = findViewById(R.id.viewpager2);
         //Adapter
         pagerAdapter = new MyAdapter(this,num_page);
+        pagerAdapter2 = new btnAdapter(this,num_page2);
         mPager.setAdapter(pagerAdapter); //ViewPager랑 Adapter랑 연결
+        mPager2.setAdapter(pagerAdapter2);
         //ViewPager Setting
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         mPager.setCurrentItem(1000); //시작지점
         mPager.setOffscreenPageLimit(4); //최대 이미지 수
 
-        cl = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.h_guide:
-                        i = new Intent(getApplicationContext(), guide.class);
-                        startActivity(i);
-                        break;
-                    case R.id.h_weathercourse:
-                        i = new Intent(getApplicationContext(), weathercou.class);
-                        startActivity(i);
-                        break;
-                    case  R.id.h_course:
-                        i = new Intent(getApplicationContext(), course.class);
-                        startActivity(i);
-                        break;
-                    case R.id.h_info:
-                        i = new Intent(getApplicationContext(), com.example.shingubotanic.info.info.class);
-                        startActivity(i);
-                        break;
-                    case R.id.h_shop:
-                        i = new Intent(getApplicationContext(), shop.class);
-                        startActivity(i);
-                        break;
-//                    case R.id.h_foreign:
-//                        i = new Intent(getApplicationContext(), foreign.class);
-//                        startActivity(i);
-//                        break;
-                }
-            }
-        };
-        gui.setOnClickListener(cl);
-        wea.setOnClickListener(cl);
-        cou.setOnClickListener(cl);
-        info.setOnClickListener(cl);
-        shop.setOnClickListener(cl);
-//        fore.setOnClickListener(cl);
+        mPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
+        mPager2.setCurrentItem(1000); //시작지점
+        mPager2.setOffscreenPageLimit(2); //최대 이미지 수
 
-        //스캔 중...
-        qr.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                qrscan.setPrompt("Scanning...");
-                qrscan.setBeepEnabled(true);    //인식 시 '삑'소리
-                qrscan.initiateScan();
-            }
-        });
+//        //스캔 중...
+//        qr.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                qrscan.setPrompt("Scanning...");
+//                qrscan.setBeepEnabled(true);    //인식 시 '삑'소리
+//                qrscan.initiateScan();
+//            }
+//        });
 
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-        if(result != null){
-            if(result.getContents() == null){   //QR이 없으면
-                Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
-            } else {    //QR이 있으면
-                try {
-                    JSONObject obj = new JSONObject(result.getContents());
-                    switch (obj.getString("number")) {
-                        case "1":
-                            i = new Intent(getApplicationContext(), qr1.class);
-                            startActivity(i);
-                            break;
-                        case "2":
-                            i = new Intent(getApplicationContext(), qr2.class);
-                            startActivity(i);
-                            break;
-                    }
-                } catch(JSONException e) {
-                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
-                    e.printStackTrace();
-                }
-            }
-        } else {
-            super.onActivityResult(requestCode, resultCode, data);
-        }
-    }
+//    @Override
+//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+//        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+//        if(result != null){
+//            if(result.getContents() == null){   //QR이 없으면
+//                Toast.makeText(this, "실패!", Toast.LENGTH_SHORT).show();
+//            } else {    //QR이 있으면
+//                try {
+//                    JSONObject obj = new JSONObject(result.getContents());
+//                    switch (obj.getString("number")) {
+//                        case "1":
+//                            i = new Intent(getApplicationContext(), qr1.class);
+//                            startActivity(i);
+//                            break;
+//                        case "2":
+//                            i = new Intent(getApplicationContext(), qr2.class);
+//                            startActivity(i);
+//                            break;
+//                    }
+//                } catch(JSONException e) {
+//                    Toast.makeText(this, result.getContents(), Toast.LENGTH_SHORT).show();
+//                    e.printStackTrace();
+//                }
+//            }
+//        } else {
+//            super.onActivityResult(requestCode, resultCode, data);
+//        }
+//    }
 
 }
