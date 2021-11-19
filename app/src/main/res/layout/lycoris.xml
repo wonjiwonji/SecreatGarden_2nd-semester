@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="꽃무릇군락지"
+            android:text="@string/Flowerhabitat"
             android:textColor="@android:color/white"
             android:textSize="25dp"
             />
