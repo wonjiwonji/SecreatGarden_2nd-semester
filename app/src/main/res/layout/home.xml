@@ -48,7 +48,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
-                android:text="이 달의 축제"
+                android:text="@string/festivalofmonth"
                 android:textColor="@color/textcolor"
                 android:textSize="18dp"
                 android:textStyle="normal" />
@@ -75,7 +75,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="30dp"
-                android:text="오늘의 걸음 수"
+                android:text="@string/todayssteps"
                 android:textColor="@color/textcolor"
                 android:textSize="18dp"
                 android:textStyle="normal" />
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="55dp"
-                    android:text="오늘의 운동량은 "
+                    android:text="@string/Todaysworkout"
                     android:textColor="@color/textcolor"
                     android:textSize="15dp" />
 
@@ -113,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:paddingRight="30dp"
-                    android:text="보          입니다."
+                    android:text="@string/step"
                     android:textColor="@color/textcolor"
                     android:textSize="15dp" />
             </LinearLayout>

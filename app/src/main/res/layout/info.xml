@@ -28,7 +28,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:textStyle="normal"
-            android:text="식물정보"
+            android:text="@string/Plantinformation"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:textSize="23dp" />

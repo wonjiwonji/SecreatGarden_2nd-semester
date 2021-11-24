@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="단풍나무길"
+            android:text="@string/mapletreeroad"
             android:textColor="@android:color/white"
             android:textSize="25dp"
             />
@@ -36,7 +36,7 @@
             android:background="#00ff0000"
             android:layout_width="70dp"
             android:layout_height="40dp"
-            android:text="닫기" />
+            android:text="@string/close" />
 
     </androidx.appcompat.widget.Toolbar>
 

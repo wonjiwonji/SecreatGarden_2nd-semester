@@ -66,7 +66,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="돌단풍"
+                                            android:text="@string/stoneleaves"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -99,7 +99,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="수선화"
+                                            android:text="@string/daffodil"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -132,7 +132,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="만리화"
+                                            android:text="@string/cartoon"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -173,7 +173,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="백서향"
+                                            android:text="@string/WhiteSeohyang"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -206,7 +206,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="제주양지꽃"
+                                            android:text="@string/JejuYangjiFlower"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -239,7 +239,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="장수만리화"
+                                            android:text="@string/longevitycartoon"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -280,7 +280,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="수호초"
+                                            android:text="@string/guardianreef"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -313,7 +313,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="히어리"
+                                            android:text="@string/herey"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -346,7 +346,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="목련"
+                                            android:text="@string/magnolia"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -387,7 +387,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="진달래"
+                                            android:text="@string/Azalea"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -420,7 +420,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="깽깽이풀"
+                                            android:text="@string/kkkkwaul"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -453,7 +453,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="노루귀"
+                                            android:text="@string/hepatica"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -515,7 +515,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="돌가시나무"
+                                            android:text="@string/stonethorn"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -548,7 +548,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="정향풀"
+                                            android:text="@string/cloves"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -581,7 +581,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="병아리꽃나무"
+                                            android:text="@string/chickflowertree"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -622,7 +622,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="섬시호"
+                                            android:text="@string/islandlake"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -655,7 +655,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="기린초"
+                                            android:text="@string/Giraffecho"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -688,7 +688,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="섬백리향"
+                                            android:text="@string/thyme"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -729,7 +729,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="물레나물"
+                                            android:text="@string/waterspinach"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -762,7 +762,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="매발톱"
+                                            android:text="@string/claw"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -795,7 +795,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="해당화"
+                                            android:text="@string/Glyphs"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -836,7 +836,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="박쥐나무"
+                                            android:text="@string/battree"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -869,7 +869,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="태산목"
+                                            android:text="@string/magnolia"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -902,7 +902,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="때죽나무"
+                                            android:text="@string/sapwood"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -964,7 +964,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="가막살나무"
+                                            android:text="@string/viburnum"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -997,7 +997,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="개버무리"
+                                            android:text="@string/Gathering"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1030,7 +1030,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="단양쑥부쟁이"
+                                            android:text="@string/DanyangWormwood"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1071,7 +1071,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="고마리"
+                                            android:text="@string/Gomari"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1104,7 +1104,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="구와꼬리풀"
+                                            android:text="@string/Guwatailgrass"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1137,7 +1137,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="동자꽃"
+                                            android:text="@string/Dongjaflower"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1178,7 +1178,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="흑산도비비추"
+                                            android:text="@string/HeuksanDobibichu"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1211,7 +1211,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="해국"
+                                            android:text="@string/naval"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1244,7 +1244,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="가시연꽃"
+                                            android:text="@string/pricklylotus"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1285,7 +1285,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="고구마"
+                                            android:text="@string/sweetpotato"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1318,7 +1318,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="용담"
+                                            android:text="@string/Gentian"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1351,7 +1351,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="배롱나무"
+                                            android:text="@string/barberry"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1413,7 +1413,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="애기동백나무"
+                                            android:text="@string/BabyCamellia"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />
@@ -1446,7 +1446,7 @@
                                             android:layout_height="wrap_content"
                                             android:layout_marginTop="5dp"
                                             android:gravity="center"
-                                            android:text="복수초"
+                                            android:text="@string/multipleplants"
                                             android:textColor="@color/black"
                                             android:textSize="15dp"
                                             android:textStyle="bold" />

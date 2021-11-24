@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="돌단풍"
+            android:text="@string/stoneleaves"
             android:textColor="@color/backgroundgray"
             android:textSize="24dp"
             android:textStyle="normal" />
@@ -63,14 +63,14 @@
                 android:layout_height="40dp"
                 android:layout_gravity="left"
                 android:background="@color/green2"
-                android:text="이전"
+                android:text="@string/back"
                 android:textColor="@color/white" />
 
             <Button
                 android:id="@+id/dol_next"
                 android:layout_width="60dp"
                 android:layout_height="40dp"
-                android:text="다음"
+                android:text="@string/next"
                 android:layout_marginLeft="10dp"
                 android:textColor="@color/white"
                 android:background="@color/green2" />

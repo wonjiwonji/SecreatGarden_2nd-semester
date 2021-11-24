@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="계절 코스"
+                android:text="@string/Seasoncourse"
                 android:textColor="@color/backgroundgray"
                 android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
                 android:textSize="26dp"

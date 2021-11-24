@@ -26,7 +26,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="길찾기"
+            android:text="@string/GetDirections"
             android:textColor="@color/backgroundgray"
             android:textFontWeight="@android:integer/status_bar_notification_info_maxnum"
             android:textSize="23dp"
@@ -70,7 +70,7 @@
             android:focusableInTouchMode="false"
             android:fontFamily="@font/bmjua"
             android:inputType="textPersonName"
-            android:text="대중교통 이용 시"
+            android:text="@string/Whenusingpublictransportation"
             android:textColor="@color/leafgreen"
             android:textSize="22dp" />
 
