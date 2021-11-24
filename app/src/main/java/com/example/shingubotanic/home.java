@@ -2,10 +2,13 @@ package com.example.shingubotanic;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -14,6 +17,9 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import com.example.shingubotanic.guide.guide;
 import com.example.shingubotanic.info.info;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -64,7 +70,7 @@ public class home extends AppCompatActivity {
         mPager2.setCurrentItem(1000); //시작지점
         mPager2.setOffscreenPageLimit(2); //최대 이미지 수
 
-        //스캔 중...
+
         qr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

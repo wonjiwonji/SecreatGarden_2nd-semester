@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "384384971865",
-    "firebase_url": "https://mapsgbt.firebaseio.com",
-    "project_id": "mapsgbt",
-    "storage_bucket": "mapsgbt.appspot.com"
+    "project_number": "948384890444",
+    "firebase_url": "https://shingubotanic-d2239-default-rtdb.firebaseio.com",
+    "project_id": "shingubotanic-d2239",
+    "storage_bucket": "shingubotanic-d2239.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:384384971865:android:facc616a93925a3b45ed48",
+        "mobilesdk_app_id": "1:948384890444:android:fd9716ff582b1a54bdbee9",
         "android_client_info": {
           "package_name": "com.example.shingubotanic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "384384971865-crmn5jdjs26saq3lej2vdsm6n2prq9i5.apps.googleusercontent.com",
+          "client_id": "948384890444-i2o2si1g842al1c32f20s6rqtu7sqi73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.shingubotanic",
+            "certificate_hash": "642dbaada2443fb9dd13a168b9ab1a5b8a20e4c3"
+          }
+        },
+        {
+          "client_id": "948384890444-uiesea96fendpaoli4epe3it1fbhmu2g.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAVjn3bTOjJKkU6x4s_-BV-w2pSXxzqQsc"
+          "current_key": "AIzaSyDhq6UnHQ-SxRNJTMkSUQxLN9FqTp10wE0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "384384971865-crmn5jdjs26saq3lej2vdsm6n2prq9i5.apps.googleusercontent.com",
+              "client_id": "948384890444-uiesea96fendpaoli4epe3it1fbhmu2g.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

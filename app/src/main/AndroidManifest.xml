@@ -18,10 +18,10 @@
         android:theme="@style/AppTheme.">
         <meta-data android:name="com.naver.maps.map.CLIENT_ID" android:value="jq36xceyvz"/>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -40,7 +40,6 @@
         <activity android:name=".shop" />
         <activity android:name=".qr1"></activity>
         <activity android:name=".qr2"></activity>
-
 
     </application>
 
