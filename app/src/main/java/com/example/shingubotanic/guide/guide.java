@@ -109,6 +109,7 @@ public class guide extends AppCompatActivity {  //관람안내(홈)
         item = new MyItem(R.drawable.guide_6, getString(R.string.GetDirections));
         mylist.add(item);
 
+
         adapter = new MyAdapter(this);
         myview = (ListView) findViewById(R.id.listview);
         myview.setAdapter(adapter);

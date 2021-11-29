@@ -177,36 +177,56 @@ public class infoTab extends Fragment {
         TabHost tabhost = (TabHost) v.findViewById(R.id.tabhost);
         tabhost.setup();
 
-        //첫 번째 Tab (탭 표시 텍스트: "봄"), (뷰: "tab1"), (탭 버튼 식별태그: "Tab Spec 1")
-        TabHost.TabSpec tab1 = tabhost.newTabSpec("Tab Spec 1");
-        tab1.setContent(R.id.tab1);
-        tab1.setIndicator("봄");
-        tabhost.addTab(tab1);
-
-        //두 번째 Tab (탭 표시 텍스트: "여름"), (뷰: "tab2"), (탭 버튼 식별태그: "Tab Spec 2")
-        TabHost.TabSpec tab2 = tabhost.newTabSpec("Tab Spec 2");
-        tab2.setContent(R.id.tab2);
-        tab2.setIndicator("여름");
-        tabhost.addTab(tab2);
-
-        //세 번째 Tab (탭 표시 텍스트: "가을"), (뷰: "tab3"), (탭 버튼 식별태그: "Tab Spec 3")
-        TabHost.TabSpec tab3 = tabhost.newTabSpec("Tab Spec 3");
-        tab3.setContent(R.id.tab3);
-        tab3.setIndicator("가을");
-        tabhost.addTab(tab3);
-
-        //네 번째 Tab (챕 표시 텍스트: "겨울"), (뷰: "tab4"), (탭 버튼 식별태그: "Tab Spec 4")
-        TabHost.TabSpec tab4 = tabhost.newTabSpec("Tab Spec 4");
-        tab4.setContent(R.id.tab4);
-        tab4.setIndicator("겨울");
-        tabhost.addTab(tab4);
-
-        if (strLang == "en") {  //수정 필요...!!!!!!!!!!
+        if (strLang == "en") {
+            //첫 번째 Tab (탭 표시 텍스트: "봄"), (뷰: "tab1"), (탭 버튼 식별태그: "Tab Spec 1")
+            TabHost.TabSpec tab1 = tabhost.newTabSpec("Tab Spec 1");
+            tab1.setContent(R.id.tab1);
             tab1.setIndicator("spring");
+            tabhost.addTab(tab1);
+
+            //두 번째 Tab (탭 표시 텍스트: "여름"), (뷰: "tab2"), (탭 버튼 식별태그: "Tab Spec 2")
+            TabHost.TabSpec tab2 = tabhost.newTabSpec("Tab Spec 2");
+            tab2.setContent(R.id.tab2);
             tab2.setIndicator("summer");
+            tabhost.addTab(tab2);
+
+            //세 번째 Tab (탭 표시 텍스트: "가을"), (뷰: "tab3"), (탭 버튼 식별태그: "Tab Spec 3")
+            TabHost.TabSpec tab3 = tabhost.newTabSpec("Tab Spec 3");
+            tab3.setContent(R.id.tab3);
             tab3.setIndicator("fall");
+            tabhost.addTab(tab3);
+
+            //네 번째 Tab (챕 표시 텍스트: "겨울"), (뷰: "tab4"), (탭 버튼 식별태그: "Tab Spec 4")
+            TabHost.TabSpec tab4 = tabhost.newTabSpec("Tab Spec 4");
+            tab4.setContent(R.id.tab4);
             tab4.setIndicator("winter");
+            tabhost.addTab(tab4);
+        } else {
+            //첫 번째 Tab (탭 표시 텍스트: "봄"), (뷰: "tab1"), (탭 버튼 식별태그: "Tab Spec 1")
+            TabHost.TabSpec tab1 = tabhost.newTabSpec("Tab Spec 1");
+            tab1.setContent(R.id.tab1);
+            tab1.setIndicator("봄");
+            tabhost.addTab(tab1);
+
+            //두 번째 Tab (탭 표시 텍스트: "여름"), (뷰: "tab2"), (탭 버튼 식별태그: "Tab Spec 2")
+            TabHost.TabSpec tab2 = tabhost.newTabSpec("Tab Spec 2");
+            tab2.setContent(R.id.tab2);
+            tab2.setIndicator("여름");
+            tabhost.addTab(tab2);
+
+            //세 번째 Tab (탭 표시 텍스트: "가을"), (뷰: "tab3"), (탭 버튼 식별태그: "Tab Spec 3")
+            TabHost.TabSpec tab3 = tabhost.newTabSpec("Tab Spec 3");
+            tab3.setContent(R.id.tab3);
+            tab3.setIndicator("가을");
+            tabhost.addTab(tab3);
+
+            //네 번째 Tab (챕 표시 텍스트: "겨울"), (뷰: "tab4"), (탭 버튼 식별태그: "Tab Spec 4")
+            TabHost.TabSpec tab4 = tabhost.newTabSpec("Tab Spec 4");
+            tab4.setContent(R.id.tab4);
+            tab4.setIndicator("겨울");
+            tabhost.addTab(tab4);
         }
+
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference().child("plantInfo").child("spring");
