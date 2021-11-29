@@ -24,6 +24,8 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Locale;
+
 import static android.content.ContentValues.TAG;
 
 public class guide_note extends AppCompatActivity {
@@ -54,6 +56,10 @@ public class guide_note extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
         DatabaseReference dbRef = database.getReference("guide");
+        DatabaseReference dbRefEn = database.getReference("guideEn");
+
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
 
         //Database
         dbRef.addValueEventListener(new ValueEventListener() {
@@ -91,6 +97,45 @@ public class guide_note extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+        if (strLang == "en") {
+            //Database
+            dbRefEn.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String val0 = dataSnapshot.child("note0").getValue(String.class);
+                    x0.setText(val0);
+                    String val1 = dataSnapshot.child("note1").getValue(String.class);
+                    x1.setText(val1);
+                    String val2 = dataSnapshot.child("note2").getValue(String.class);
+                    x2.setText(val2);
+                    String val3 = dataSnapshot.child("note3").getValue(String.class);
+                    x3.setText(val3);
+                    String val4 = dataSnapshot.child("note4").getValue(String.class);
+                    x4.setText(val4);
+                    String val5 = dataSnapshot.child("note5").getValue(String.class);
+                    x5.setText(val5);
+                    String val6 = dataSnapshot.child("note6").getValue(String.class);
+                    x6.setText(val6);
+                    String val7 = dataSnapshot.child("note7").getValue(String.class);
+                    x7.setText(val7);
+                    String val8 = dataSnapshot.child("note8").getValue(String.class);
+                    x8.setText(val8);
+                    String val9 = dataSnapshot.child("note9").getValue(String.class);
+                    x9.setText(val9);
+                    String val10 = dataSnapshot.child("note10").getValue(String.class);
+                    x10.setText(val10);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+        }
 
         cl = new View.OnClickListener() {
             @Override

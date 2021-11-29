@@ -5,10 +5,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="camellia">꽃무릇</string>
     <string name="close">닫기</string>
-    <string name="gardenshop">gardenshop</string>
-    <string name="Seasoncourse">season</string>
-    <string name="Recommendedcourse">course</string>
-    <string name="Plantinformation">Plant information</string>
+    <string name="gardenshop">"   Shop"</string>
+    <string name="Seasoncourse">"  Season"</string>
+    <string name="Recommendedcourse">Course</string>
+    <string name="Plantinformation">"   Plant"</string>
     <string name="QRscan">QR scan</string>
     <string name="centralplaza">central plaza</string>
     <string name="childrengarden">children\'s garden</string>
@@ -43,11 +43,11 @@
     <string name="GetDirections">Get Directions</string>
     <string name="Whenusingpublictransportation">When using public transportation</string>
     <string name="herbalgarden">herbal garden</string>
-    <string name="highrise">high-rise wetland support</string>
+    <string name="highrise">guide</string>
     <string name="festivalofmonth">festival of the month</string>
     <string name="todayssteps">today\'s steps</string>
     <string name="Todaysworkout">Today\'s workout</string>
-    <string name="step">step</string>
+    <string name="step">"  step"</string>
     <string name="sweetpotato">sweet potato</string>
     <string name="back">back</string>
     <string name="next">next</string>
@@ -108,6 +108,6 @@
     <string name="vineyard">vineyard</string>
     <string name="VistaGarden">Vista Garden</string>
     <string name="wetlandecologygarden">wetland ecology garden</string>
-    <string name="Visitinginformation">information</string>
+    <string name="Visitinginformation">"  Guide"</string>
 
 </resources>

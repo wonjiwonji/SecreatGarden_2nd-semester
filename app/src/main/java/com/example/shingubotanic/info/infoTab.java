@@ -66,6 +66,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.Locale;
+
 import static android.content.ContentValues.TAG;
 
 public class infoTab extends Fragment {
@@ -168,6 +170,9 @@ public class infoTab extends Fragment {
         x37 = (TextView) v.findViewById(R.id.img37_txt);
         x38 = (TextView) v.findViewById(R.id.img38_txt);
 
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
+
         //TabHost 초기화.setup();
         TabHost tabhost = (TabHost) v.findViewById(R.id.tabhost);
         tabhost.setup();
@@ -195,6 +200,13 @@ public class infoTab extends Fragment {
         tab4.setContent(R.id.tab4);
         tab4.setIndicator("겨울");
         tabhost.addTab(tab4);
+
+        if (strLang == "en") {  //수정 필요...!!!!!!!!!!
+            tab1.setIndicator("spring");
+            tab2.setIndicator("summer");
+            tab3.setIndicator("fall");
+            tab4.setIndicator("winter");
+        }
 
         FirebaseStorage storage = FirebaseStorage.getInstance("gs://shingubotanic-d2239.appspot.com/");
         StorageReference storageRef = storage.getReference().child("plantInfo").child("spring");
@@ -863,6 +875,7 @@ public class infoTab extends Fragment {
 
         //봄
         DatabaseReference dbRef = database.getReference().child("plantInfo").child("spring");
+        DatabaseReference dbRefEn = database.getReference().child("plantInfoEn").child("spring");
 
         //Database
         dbRef.addValueEventListener(new ValueEventListener() {
@@ -906,6 +919,7 @@ public class infoTab extends Fragment {
 
         //여름
         DatabaseReference dbRef2 = database.getReference().child("plantInfo").child("summer");
+        DatabaseReference dbRef2En = database.getReference().child("plantInfoEn").child("summer");
 
         //Database
         dbRef2.addValueEventListener(new ValueEventListener() {
@@ -949,9 +963,10 @@ public class infoTab extends Fragment {
 
         //가을
         DatabaseReference dbRef3 = database.getReference().child("plantInfo").child("fall");
+        DatabaseReference dbRef3En = database.getReference().child("plantInfoEn").child("fall");
 
         //Database
-        dbRef2.addValueEventListener(new ValueEventListener() {
+        dbRef3.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -992,9 +1007,10 @@ public class infoTab extends Fragment {
 
         //겨울
         DatabaseReference dbRef4 = database.getReference().child("plantInfo").child("winter");
+        DatabaseReference dbRef4En = database.getReference().child("plantInfoEn").child("winter");
 
         //Database
-        dbRef2.addValueEventListener(new ValueEventListener() {
+        dbRef4.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
@@ -1012,201 +1028,143 @@ public class infoTab extends Fragment {
             }
         });
 
+        if (strLang == "en") {
+            //Database
+            dbRefEn.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String val1 = dataSnapshot.child("plant1-1").getValue(String.class);
+                    x1.setText(val1);
+                    String val2 = dataSnapshot.child("plant1-2").getValue(String.class);
+                    x2.setText(val2);
+                    String val3 = dataSnapshot.child("plant1-3").getValue(String.class);
+                    x3.setText(val3);
+                    String val4 = dataSnapshot.child("plant2-1").getValue(String.class);
+                    x4.setText(val4);
+                    String val5 = dataSnapshot.child("plant2-2").getValue(String.class);
+                    x5.setText(val5);
+                    String val6 = dataSnapshot.child("plant2-3").getValue(String.class);
+                    x6.setText(val6);
+                    String val7 = dataSnapshot.child("plant3-1").getValue(String.class);
+                    x7.setText(val7);
+                    String val8 = dataSnapshot.child("plant3-2").getValue(String.class);
+                    x8.setText(val8);
+                    String val9 = dataSnapshot.child("plant3-3").getValue(String.class);
+                    x9.setText(val9);
+                    String val10 = dataSnapshot.child("plant4-1").getValue(String.class);
+                    x10.setText(val10);
+                    String val11 = dataSnapshot.child("plant4-2").getValue(String.class);
+                    x11.setText(val11);
+                    String val12 = dataSnapshot.child("plant4-3").getValue(String.class);
+                    x12.setText(val12);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+
+            dbRef2En.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String val13 = dataSnapshot.child("plant1-1").getValue(String.class);
+                    x13.setText(val13);
+                    String val14 = dataSnapshot.child("plant1-2").getValue(String.class);
+                    x14.setText(val14);
+                    String val15 = dataSnapshot.child("plant1-3").getValue(String.class);
+                    x15.setText(val15);
+                    String val16 = dataSnapshot.child("plant2-1").getValue(String.class);
+                    x16.setText(val16);
+                    String val17 = dataSnapshot.child("plant2-2").getValue(String.class);
+                    x17.setText(val17);
+                    String val18 = dataSnapshot.child("plant2-3").getValue(String.class);
+                    x18.setText(val18);
+                    String val19 = dataSnapshot.child("plant3-1").getValue(String.class);
+                    x19.setText(val19);
+                    String val20 = dataSnapshot.child("plant3-2").getValue(String.class);
+                    x20.setText(val20);
+                    String val21 = dataSnapshot.child("plant3-3").getValue(String.class);
+                    x21.setText(val21);
+                    String val22 = dataSnapshot.child("plant4-1").getValue(String.class);
+                    x22.setText(val22);
+                    String val23 = dataSnapshot.child("plant4-2").getValue(String.class);
+                    x23.setText(val23);
+                    String val24 = dataSnapshot.child("plant4-3").getValue(String.class);
+                    x24.setText(val24);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+
+            dbRef3En.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String val25 = dataSnapshot.child("plant1-1").getValue(String.class);
+                    x25.setText(val25);
+                    String val26 = dataSnapshot.child("plant1-2").getValue(String.class);
+                    x26.setText(val26);
+                    String val27 = dataSnapshot.child("plant1-3").getValue(String.class);
+                    x27.setText(val27);
+                    String val28 = dataSnapshot.child("plant2-1").getValue(String.class);
+                    x28.setText(val28);
+                    String val29 = dataSnapshot.child("plant2-2").getValue(String.class);
+                    x29.setText(val29);
+                    String val30 = dataSnapshot.child("plant2-3").getValue(String.class);
+                    x30.setText(val30);
+                    String val31 = dataSnapshot.child("plant3-1").getValue(String.class);
+                    x31.setText(val31);
+                    String val32 = dataSnapshot.child("plant3-2").getValue(String.class);
+                    x32.setText(val32);
+                    String val33 = dataSnapshot.child("plant3-3").getValue(String.class);
+                    x33.setText(val33);
+                    String val34 = dataSnapshot.child("plant4-1").getValue(String.class);
+                    x34.setText(val34);
+                    String val35 = dataSnapshot.child("plant4-2").getValue(String.class);
+                    x35.setText(val35);
+                    String val36 = dataSnapshot.child("plant4-3").getValue(String.class);
+                    x36.setText(val36);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+
+            dbRef4En.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String val37 = dataSnapshot.child("plant1-1").getValue(String.class);
+                    x37.setText(val37);
+                    String val38 = dataSnapshot.child("plant1-2").getValue(String.class);
+                    x38.setText(val38);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+
+        }
+
         return v;
     }
 
-//    //봄
-//    public void clickImg1(View v){
-//        info_spring_plant1_dol ispd1 = info_spring_plant1_dol.getInstance();
-//        ispd1.show(getFragmentManager(), info_spring_plant1_dol.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg2(View v){
-//        info_spring_plant2_soo ispd2 = info_spring_plant2_soo.getInstance();
-//        ispd2.show(getFragmentManager(), info_spring_plant2_soo.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg3(View v){
-//        info_spring_plant3_man ispd3 = info_spring_plant3_man.getInstance();
-//        ispd3.show(getFragmentManager(), info_spring_plant3_man.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg4(View v){
-//        info_spring_plant4_white ispd4 = info_spring_plant4_white.getInstance();
-//        ispd4.show(getFragmentManager(), info_spring_plant4_white.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg5(View v){
-//        info_spring_plant5_je ispd5 = info_spring_plant5_je.getInstance();
-//        ispd5.show(getFragmentManager(), info_spring_plant5_je.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg6(View v){
-//        info_spring_plant6_jang ispd6 = info_spring_plant6_jang.getInstance();
-//        ispd6.show(getFragmentManager(), info_spring_plant6_jang.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg7(View v){
-//        info_spring_plant7_soo ispd7 = info_spring_plant7_soo.getInstance();
-//        ispd7.show(getFragmentManager(), info_spring_plant7_soo.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg8(View v){
-//        info_spring_plant8_he ispd8 = info_spring_plant8_he.getInstance();
-//        ispd8.show(getFragmentManager(), info_spring_plant8_he.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg9(View v){
-//        info_spring_plant9_mok ispd9 = info_spring_plant9_mok.getInstance();
-//        ispd9.show(getFragmentManager(), info_spring_plant9_mok.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg10(View v){
-//        info_spring_plant10_jin ispd10 = info_spring_plant10_jin.getInstance();
-//        ispd10.show(getFragmentManager(), info_spring_plant10_jin.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg11(View v){
-//        info_spring_plant11_kkang ispd11 = info_spring_plant11_kkang.getInstance();
-//        ispd11.show(getFragmentManager(), info_spring_plant11_kkang.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg12(View v){
-//        info_spring_plant12_no ispd12 = info_spring_plant12_no.getInstance();
-//        ispd12.show(getFragmentManager(), info_spring_plant12_no.TAG_EVENT_DIALOG);
-//    }
-//
-//
-//    //여름
-//    public void clickImg13(View v){
-//        info_summer_plant1_dol isspd1 = info_summer_plant1_dol.getInstance();
-//        isspd1.show(getFragmentManager(), info_summer_plant1_dol.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg14(View v){
-//        info_summer_plant2_jung isspd2 = info_summer_plant2_jung.getInstance();
-//        isspd2.show(getFragmentManager(), info_summer_plant2_jung.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg15(View v){
-//        info_summer_plant3_byeong isspd3 = info_summer_plant3_byeong.getInstance();
-//        isspd3.show(getFragmentManager(), info_summer_plant3_byeong.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg16(View v){
-//        info_summer_plant4_sum isspd4 = info_summer_plant4_sum.getInstance();
-//        isspd4.show(getFragmentManager(), info_summer_plant4_sum.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg17(View v){
-//        info_summer_plant5_ki isspd5 = info_summer_plant5_ki.getInstance();
-//        isspd5.show(getFragmentManager(), info_summer_plant5_ki.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg18(View v){
-//        info_summer_plant6_sum isspd6 = info_summer_plant6_sum.getInstance();
-//        isspd6.show(getFragmentManager(), info_summer_plant6_sum.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg19(View v){
-//        info_summer_plant7_mool isspd7 = info_summer_plant7_mool.getInstance();
-//        isspd7.show(getFragmentManager(), info_summer_plant7_mool.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg20(View v){
-//        info_summer_plant8_mae isspd8 = info_summer_plant8_mae.getInstance();
-//        isspd8.show(getFragmentManager(), info_summer_plant8_mae.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg21(View v){
-//        info_summer_plant9_hae isspd9 = info_summer_plant9_hae.getInstance();
-//        isspd9.show(getFragmentManager(), info_summer_plant9_hae.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg22(View v){
-//        info_summer_plant10_bak isspd10 = info_summer_plant10_bak.getInstance();
-//        isspd10.show(getFragmentManager(), info_summer_plant10_bak.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg23(View v){
-//        info_summer_plant11_tae isspd11 = info_summer_plant11_tae.getInstance();
-//        isspd11.show(getFragmentManager(), info_summer_plant11_tae.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg24(View v){
-//        info_summer_plant12_ddae isspd12 = info_summer_plant12_ddae.getInstance();
-//        isspd12.show(getFragmentManager(), info_summer_plant12_ddae.TAG_EVENT_DIALOG);
-//    }
-//
-//    //가을
-//    public void clickImg25(View v){
-//        info_fall_plant1_ga ifpg1 = info_fall_plant1_ga.getInstance();
-//        ifpg1.show(getFragmentManager(), info_fall_plant1_ga.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg26(View v){
-//        info_fall_plant2_gae ifpg2 = info_fall_plant2_gae.getInstance();
-//        ifpg2.show(getFragmentManager(), info_fall_plant2_gae.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg27(View v){
-//        info_fall_plant3_dan ifpg3 = info_fall_plant3_dan.getInstance();
-//        ifpg3.show(getFragmentManager(), info_fall_plant3_dan.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg28(View v){
-//        info_fall_plant4_go ifpg4 = info_fall_plant4_go.getInstance();
-//        ifpg4.show(getFragmentManager(), info_fall_plant4_go.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg29(View v){
-//        info_fall_plant5_goo ifpg5 = info_fall_plant5_goo.getInstance();
-//        ifpg5.show(getFragmentManager(), info_fall_plant5_goo.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg30(View v){
-//        info_fall_plant6_dong ifpg6 = info_fall_plant6_dong.getInstance();
-//        ifpg6.show(getFragmentManager(), info_fall_plant6_dong.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg31(View v){
-//        info_fall_plant7_black ifpg2 = info_fall_plant7_black.getInstance();
-//        ifpg2.show(getFragmentManager(), info_fall_plant7_black.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg32(View v){
-//        info_fall_plant8_hae ifpg8 = info_fall_plant8_hae.getInstance();
-//        ifpg8.show(getFragmentManager(), info_fall_plant8_hae.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg33(View v){
-//        info_fall_plant9_ga ifpg9 = info_fall_plant9_ga.getInstance();
-//        ifpg9.show(getFragmentManager(), info_fall_plant9_ga.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg34(View v){
-//        info_fall_plant10_go ifpg10 = info_fall_plant10_go.getInstance();
-//        ifpg10.show(getFragmentManager(), info_fall_plant10_go.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg35(View v){
-//        info_fall_plant11_yong ifpg11 = info_fall_plant11_yong.getInstance();
-//        ifpg11.show(getFragmentManager(), info_fall_plant11_yong.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg36(View v){
-//        info_fall_plant12_bae ifpg12 = info_fall_plant12_bae.getInstance();
-//        ifpg12.show(getFragmentManager(), info_fall_plant12_bae.TAG_EVENT_DIALOG);
-//    }
-//
-//    //겨울
-//    public void clickImg37(View v){
-//        info_winter_plant1_ae iwpa1 = info_winter_plant1_ae.getInstance();
-//        iwpa1.show(getFragmentManager(), info_winter_plant1_ae.TAG_EVENT_DIALOG);
-//    }
-//
-//    public void clickImg38(View v){
-//        info_winter_plant2_bok iwpa2 = info_winter_plant2_bok.getInstance();
-//        iwpa2.show(getFragmentManager(), info_winter_plant2_bok.TAG_EVENT_DIALOG);
-//    }
 }

@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.Locale;
 import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
@@ -35,12 +36,13 @@ public class toilet extends DialogFragment implements View.OnClickListener{
 
     public static final String TAG_EVENT_DIALOG ="toilet";
 
-    public toilet(){}   //주차장
+    public toilet(){}   //화장실
 
     public static toilet getInstance() {
         toilet toi = new toilet();
         return toi;
     }
+
 
     public  View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle sacedInstanceState){
         View v = inflater.inflate(R.layout.toilet,container);
@@ -54,6 +56,10 @@ public class toilet extends DialogFragment implements View.OnClickListener{
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
         DatabaseReference dbRef = database.getReference("wc");
+        DatabaseReference dbRefEn = database.getReference("wcEn");
+
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
 
         //Storage
         storageRef.child(toil).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -73,6 +79,7 @@ public class toilet extends DialogFragment implements View.OnClickListener{
             }
         });
 
+
         //Database
         dbRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -90,6 +97,27 @@ public class toilet extends DialogFragment implements View.OnClickListener{
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+        if (strLang == "en"){
+            //Database
+            dbRefEn.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String value = dataSnapshot.getValue(String.class);
+                    toiE.setText(value);
+//              Log.d(TAG, "Value is: " + value);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+        }
+
 
         cancel.setOnClickListener(this);
         setCancelable(false);

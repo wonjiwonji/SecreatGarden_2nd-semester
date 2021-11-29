@@ -27,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.Locale;
 import java.util.Objects;
 
 import static android.content.ContentValues.TAG;
@@ -54,18 +55,19 @@ public class herbgarden extends DialogFragment implements View.OnClickListener{
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
         DatabaseReference dbRef = database.getReference("herb");
+        DatabaseReference dbRefEn = database.getReference("herbEn");
+
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
 
         //Storage
         storageRef.child(herbg).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-
             @RequiresApi(api = Build.VERSION_CODES.KITKAT)
             public void onSuccess(Uri uri) {
                 //이미지 로드 성공시
-
                 Glide.with(Objects.requireNonNull(getContext()))
                         .load(uri)
                         .into(herbga);
-
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override
@@ -92,6 +94,26 @@ public class herbgarden extends DialogFragment implements View.OnClickListener{
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+        if (strLang == "en") {
+            //Database
+            dbRefEn.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String value = dataSnapshot.getValue(String.class);
+                    herbgE.setText(value);
+//              Log.d(TAG, "Value is: " + value);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+        }
 
         cancel.setOnClickListener(this);
         setCancelable(false);

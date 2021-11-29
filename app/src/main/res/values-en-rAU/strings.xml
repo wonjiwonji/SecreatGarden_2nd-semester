@@ -4,11 +4,11 @@
     <string name="hello_blank_fragment">hello_blank_fragment</string>
     <string name="camellia">camellia</string>
     <string name="close">close</string>
-    <string name="gardenshop">gardenshop</string>
-    <string name="Visitinginformation">information</string>
-    <string name="Seasoncourse">season</string>
-    <string name="Recommendedcourse">course</string>
-    <string name="Plantinformation">Plant information</string>
+    <string name="gardenshop">"   Shop"</string>
+    <string name="Visitinginformation">"  Guide"</string>
+    <string name="Seasoncourse">"  Season"</string>
+    <string name="Recommendedcourse">Course</string>
+    <string name="Plantinformation">"   Plant"</string>
     <string name="QRscan">QR scan</string>
     <string name="centralplaza">central plaza</string>
     <string name="childrengarden" translatable="false">children\'s garden</string>
@@ -47,7 +47,7 @@
     <string name="festivalofmonth">festival of the month</string>
     <string name="todayssteps">today\'s steps</string>
     <string name="Todaysworkout">Today\'s workout</string>
-    <string name="step">step</string>
+    <string name="step">"  step"</string>
     <string name="sweetpotato">sweet potato</string>
     <string name="back">back</string>
     <string name="next">next</string>

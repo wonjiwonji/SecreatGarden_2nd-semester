@@ -34,7 +34,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
-        android:layout_width="170dp"
+        android:layout_width="265dp"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">

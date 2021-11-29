@@ -28,6 +28,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.Locale;
+
 import static android.content.ContentValues.TAG;
 
 public class guide_fee extends AppCompatActivity {
@@ -66,6 +68,10 @@ public class guide_fee extends AppCompatActivity {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://shingubotanic-d2239-default-rtdb.firebaseio.com/");
         DatabaseReference dbRef = database.getReference("guide");
+        DatabaseReference dbRefEn = database.getReference("guideEn");
+
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
 
         //Storage
         storageRef.child(pic).getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
@@ -123,6 +129,31 @@ public class guide_fee extends AppCompatActivity {
                 Log.w(TAG, "Failed to read value.", error.toException());
             }
         });
+
+        if (strLang == "en") {
+            //Database
+            dbRefEn.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    // This method is called once with the initial value and again
+                    // whenever data at this location is updated.
+                    String val1 = dataSnapshot.child("fee1").getValue(String.class);
+                    x1.setText(val1);
+                    String val2 = dataSnapshot.child("fee2").getValue(String.class);
+                    x2.setText(val2);
+                    String val3 = dataSnapshot.child("fee3").getValue(String.class);
+                    x3.setText(val3);
+                    String val4 = dataSnapshot.child("fee4").getValue(String.class);
+                    x4.setText(val4);
+                }
+
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    // Failed to read value
+                    Log.w(TAG, "Failed to read value.", error.toException());
+                }
+            });
+        }
 
         cl = new View.OnClickListener() {
             @Override
