@@ -108,4 +108,8 @@
     <string name="vineyard">포도원</string>
     <string name="VistaGarden">비스타정원</string>
     <string name="wetlandecologygarden">습지생태원</string>
+    <string name="Aboutthebotanicalgarden">식물원소개</string>
+    <string name="Visitinginform">관람정보</string>
+    <string name="Feeinform">요금안내</string>
+    <string name="annualmember">연간회원</string>
 </resources>

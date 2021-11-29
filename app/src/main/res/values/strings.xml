@@ -11,7 +11,7 @@
     <string name="Plantinformation">"   Plant"</string>
     <string name="QRscan">QR scan</string>
     <string name="centralplaza">central plaza</string>
-    <string name="childrengarden">children\'s garden</string>
+    <string name="childrengarden">"  children's garden"</string>
     <string name="EcoCenter">Eco Center</string>
     <string name="EndangeredBotanicalGarden">Endangered Botanical Garden</string>
     <string name="FiveSensesGarden">Five Senses Garden</string>
@@ -109,5 +109,9 @@
     <string name="VistaGarden">Vista Garden</string>
     <string name="wetlandecologygarden">wetland ecology garden</string>
     <string name="Visitinginformation">"  Guide"</string>
+    <string name="Aboutthebotanicalgarden">About the botanical garden</string>
+    <string name="Visitinginform">Visiting information</string>
+    <string name="Feeinform">Fee information</string>
+    <string name="annualmember">Annual membership</string>
 
 </resources>

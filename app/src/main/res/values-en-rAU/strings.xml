@@ -108,4 +108,8 @@
     <string name="vineyard">vineyard</string>
     <string name="VistaGarden">Vista Garden</string>
     <string name="wetlandecologygarden">wetland ecology garden</string>
+    <string name="Aboutthebotanicalgarden">About the botanical garden</string>
+    <string name="Visitinginform">Visiting information</string>
+    <string name="Feeinform">Fee information</string>
+    <string name="annualmember">Annual membership</string>
 </resources>

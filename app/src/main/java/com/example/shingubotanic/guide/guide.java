@@ -96,17 +96,17 @@ public class guide extends AppCompatActivity {  //관람안내(홈)
 
         mylist = new ArrayList<MyItem>();
         MyItem  item;
-        item = new MyItem(R.drawable.guide_1, "식물원소개");
+        item = new MyItem(R.drawable.guide_1, getString(R.string.Aboutthebotanicalgarden));
         mylist.add(item);
-        item = new MyItem(R.drawable.guide_2, "관람정보");
+        item = new MyItem(R.drawable.guide_2, getString(R.string.Visitinginform));
         mylist.add(item);
-        item = new MyItem(R.drawable.guide_3, "요금안내");
+        item = new MyItem(R.drawable.guide_3, getString(R.string.Feeinform));
         mylist.add(item);
-        item = new MyItem(R.drawable.guide_4, "연간회원");
+        item = new MyItem(R.drawable.guide_4, getString(R.string.annualmember));
         mylist.add(item);
-        item = new MyItem(R.drawable.guide_5, "유의사항");
+        item = new MyItem(R.drawable.guide_5, getString(R.string.Notice));
         mylist.add(item);
-        item = new MyItem(R.drawable.guide_6, "길찾기");
+        item = new MyItem(R.drawable.guide_6, getString(R.string.GetDirections));
         mylist.add(item);
 
         adapter = new MyAdapter(this);
