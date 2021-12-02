@@ -34,7 +34,7 @@ public class home extends AppCompatActivity {
 
     private ViewPager2 mPager, mPager2 ;
     private FragmentStateAdapter pagerAdapter, pagerAdapter2 ;
-    private int num_page=4; //ViewPager 넘길 페이지 수
+    private int num_page=3; //ViewPager 넘길 페이지 수
     private int num_page2=2; //ViewPager 넘길 페이지 수
 
     ImageButton  qr;
@@ -67,7 +67,7 @@ public class home extends AppCompatActivity {
         //ViewPager Setting
         mPager.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         mPager.setCurrentItem(1000); //시작지점
-        mPager.setOffscreenPageLimit(4); //최대 이미지 수
+        mPager.setOffscreenPageLimit(3); //최대 이미지 수
 
         mPager2.setOrientation(ViewPager2.ORIENTATION_HORIZONTAL);
         mPager2.setCurrentItem(1000); //시작지점

@@ -23,8 +23,7 @@ public class MyAdapter extends FragmentStateAdapter {
 
         if(index==0) return new fragment_1();
         else if(index==1) return new fragment_2();
-        else if(index==2) return new fragment_3();
-        else return new fragment_4();
+        else return new fragment_3();
     }
 
 

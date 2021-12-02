@@ -4,5 +4,5 @@
     <item
         android:width="360dp"
         android:height="130dp"
-        android:drawable="@drawable/banner_silver"></item>
+        android:drawable="@drawable/banner_winter2"></item>
 </layer-list>

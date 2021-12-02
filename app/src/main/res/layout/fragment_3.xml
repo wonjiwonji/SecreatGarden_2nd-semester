@@ -13,8 +13,8 @@
         android:drawableTop="@drawable/banner3_customise"
         android:drawablePadding="12dp"
         android:lineSpacingExtra="4dp"
-        android:text=" AUTUMN BOTANIC GARDEN \n
-10월에 만나는 선물같은 식물, 해국"
+        android:text=" WINTER BOTANIC GARDEN \n
+12월에 만나는 선물같은 식물, 해국"
         android:textSize="14dp" />
 
 </FrameLayout>
