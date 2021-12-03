@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
     <ImageButton
         android:id="@+id/h_qr"
         android:layout_width="50dp"

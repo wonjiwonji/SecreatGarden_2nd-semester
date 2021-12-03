@@ -100,7 +100,7 @@ public class home extends AppCompatActivity {
                             startActivity(i);
                             break;
                         case "2":
-                            i = new Intent(getApplicationContext(), qr2.class);
+                            i = new Intent(getApplicationContext(), qr_winter.class);
                             startActivity(i);
                             break;
                     }
