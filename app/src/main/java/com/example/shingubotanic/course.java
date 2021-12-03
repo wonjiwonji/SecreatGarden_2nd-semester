@@ -624,80 +624,80 @@ course extends AppCompatActivity implements OnMapReadyCallback {
     private void insert_marker(int a) {
         switch (a) {
             case 0:
-                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
-                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, "하늘정원");
-                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, "비스타정원");
-                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "전통정원");
-                setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, "작약원");
-                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
-                setMarker(marker7, 37.43453092199691, 127.08023793052985, R.drawable.marker_red, 0, "어린이정원");
-                setMarker(marker8, 37.43440920000004, 127.08032980000007, R.drawable.marker_red, 0, "오감정원");
-                setMarker(marker9, 37.43431240322188, 127.08000265298142, R.drawable.marker_red, 0, "수목관찰원");
-                setMarker(marker10, 37.43516570835482, 127.07920936229561, R.drawable.marker_red, 0, "약초원");
-                setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, "메타세쿼이아길");
-                setMarker(marker12, 37.43497920000003, 127.07983260000003, R.drawable.marker_red, 0, "멸종위기식물원");
-                setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, "그라스품종원");
-                setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, "꽃무릇군락지");
-                setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, "습지생태원");
-                setMarker(marker16, 37.43619319999999, 127.07871640000008, R.drawable.marker_red, 0, "고층습지원");
-                setMarker(marker17, 37.436818099999975, 127.07884680000006, R.drawable.marker_red, 0, "포도원");
-                setMarker(marker18, 37.437062299999994, 127.07769869999993, R.drawable.marker_red, 0, "단풍나무길");
-                setMarker(marker19, 37.43732969999999, 127.07770260000007, R.drawable.marker_red, 0, "억새원");
-                setMarker(marker20, 37.43831869999999, 127.07702510000001, R.drawable.marker_red, 0, "라일락원");
-                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, "에코센터");
-                setMarker(marker22, 37.4349547471053, 127.080159117062, R.drawable.observatory_icon, 0, "전망대");
-                setMarker(marker23, 37.433800524222114, 127.08150811566452, R.drawable.info_icon, 0, "가든센터");
-                setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, "화장실");
-                setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, "화장실");
-                setMarker(marker26, 37.4337449824962, 127.08189373068059, R.drawable.parking_icon, 0, "주차장");
-                setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, "가든카페");
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, getString(R.string.centralplaza)); //중앙광장
+                setMarker(marker2, 37.43378160000002, 127.08068609999998, R.drawable.marker_red, 0, getString(R.string.skygarden)); //하늘정원
+                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, getString(R.string.VistaGarden)); //비스타정원
+                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, getString(R.string.traditionalgarden)); //전통정원
+                setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, getString(R.string.peonygarden)); //작약원
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, getString(R.string.toadfountain)); //두꺼비분수
+                setMarker(marker7, 37.43453092199691, 127.08023793052985, R.drawable.marker_red, 0, getString(R.string.childrengarden)); //어린이정원
+                setMarker(marker8, 37.43440920000004, 127.08032980000007, R.drawable.marker_red, 0, getString(R.string.FiveSensesGarden)); //오감정원
+                setMarker(marker9, 37.43431240322188, 127.08000265298142, R.drawable.marker_red, 0, getString(R.string.arboretum)); //수목관찰원
+                setMarker(marker10, 37.43516570835482, 127.07920936229561, R.drawable.marker_red, 0, getString(R.string.herbalgarden)); //약초원
+                setMarker(marker11, 37.43537991201445, 127.0788627385964, R.drawable.marker_red, 0, getString(R.string.MetasequoiaRoad)); //메타세쿼이아길
+                setMarker(marker12, 37.43497920000003, 127.07983260000003, R.drawable.marker_red, 0, getString(R.string.EndangeredBotanicalGarden)); //멸종위기 식물원
+                setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, getString(R.string.Grass)); //그라스품종원
+                setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, getString(R.string.clusterofflowers)); //꽃무릇군락지
+                setMarker(marker15, 37.43529936421379, 127.07952713349141, R.drawable.marker_red, 0, getString(R.string.wetlandecologygarden)); //습지생태원
+                setMarker(marker16, 37.43619319999999, 127.07871640000008, R.drawable.marker_red, 0, getString(R.string.highrise)); //고층습지원
+                setMarker(marker17, 37.436818099999975, 127.07884680000006, R.drawable.marker_red, 0, getString(R.string.vineyard)); //포도원
+                setMarker(marker18, 37.437062299999994, 127.07769869999993, R.drawable.marker_red, 0, getString(R.string.mapletreeroad)); //단풍나무길
+                setMarker(marker19, 37.43732969999999, 127.07770260000007, R.drawable.marker_red, 0, getString(R.string.SilverSaewon)); //억새원
+                setMarker(marker20, 37.43831869999999, 127.07702510000001, R.drawable.marker_red, 0, getString(R.string.lilacgarden)); //라일락원
+                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, getString(R.string.EcoCenter)); //에코센터
+                setMarker(marker22, 37.4349547471053, 127.080159117062, R.drawable.observatory_icon, 0, getString(R.string.Observatory)); //전망대
+                setMarker(marker23, 37.433800524222114, 127.08150811566452, R.drawable.info_icon, 0, getString(R.string.gardencenter)); //가든센터
+                setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, getString(R.string.toilet)); //화장실
+                setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, getString(R.string.toilet)); //화장실
+                setMarker(marker26, 37.4337449824962, 127.08189373068059, R.drawable.parking_icon, 0, getString(R.string.parkinglot)); //주차장
+                setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, getString(R.string.gardencafe)); //가든카페
                 break;
             case 1: //어린이체험코스
-                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
-                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, "비스타정원");
-                setMarker(marker8, 37.43440920000004, 127.08032980000007, R.drawable.marker_red, 0, "오감정원");
-                setMarker(marker7, 37.43453092199691, 127.08023793052985, R.drawable.marker_red, 0, "어린이정원");
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, getString(R.string.centralplaza)); //중앙광장
+                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, getString(R.string.VistaGarden)); //비스타정원
+                setMarker(marker8, 37.43440920000004, 127.08032980000007, R.drawable.marker_red, 0, getString(R.string.FiveSensesGarden)); //오감정원
+                setMarker(marker7, 37.43453092199691, 127.08023793052985, R.drawable.marker_red, 0, getString(R.string.childrengarden)); //어린이정원
                 break;
             case 2: //어르신추천코스
-                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
-                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "전통정원");
-                setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, "작약원");
-                setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, "가든카페");
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, getString(R.string.centralplaza)); //중앙광장
+                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, getString(R.string.traditionalgarden)); //전통정원
+                setMarker(marker5, 37.43441749999999, 127.0810457, R.drawable.marker_red, 0, getString(R.string.peonygarden)); //작약원
+                setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, getString(R.string.gardencafe)); //가든카페
                 break;
             case 3: //단체관람코스
-                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
-                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, "전통정원");
-                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
-                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, "에코센터");
-                setMarker(marker9, 37.43431240322188, 127.08000265298142, R.drawable.marker_red, 0, "수목관찰원");
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, getString(R.string.centralplaza)); //중앙광장
+                setMarker(marker4, 37.43428850000004, 127.08082939999997, R.drawable.marker_red, 0, getString(R.string.traditionalgarden)); //전통정원
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, getString(R.string.toadfountain)); //두꺼비분수
+                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, getString(R.string.EcoCenter)); //에코센터
+                setMarker(marker9, 37.43431240322188, 127.08000265298142, R.drawable.marker_red, 0, getString(R.string.arboretum)); //수목관찰원
                 break;
             case 4: //커플코스
-                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
-                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, "비스타정원");
-                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
-                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, "에코센터");
-                setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, "그라스품종원");
-                setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, "꽃무릇군락지");
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, getString(R.string.centralplaza)); //중앙광장
+                setMarker(marker3, 37.43405173, 127.08083314, R.drawable.marker_red, 0, getString(R.string.VistaGarden)); //비스타정원
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, getString(R.string.toadfountain)); //두꺼비분수
+                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, getString(R.string.EcoCenter)); //에코센터
+                setMarker(marker13, 37.43545487038663, 127.079948650858, R.drawable.marker_red, 0, getString(R.string.Grass)); //그라스품종원
+                setMarker(marker14, 37.4353757, 127.07966280000005, R.drawable.marker_red, 0, getString(R.string.clusterofflowers)); //꽃무릇군락지
                 break;
             case 5: //산책로코스
-                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, "중앙광장");
-                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, "두꺼비분수");
-                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, "에코센터");
-                setMarker(marker12, 37.43497920000003, 127.07983260000003, R.drawable.marker_red, 0, "멸종위기식물원");
-                setMarker(marker10, 37.43516570835482, 127.07920936229561, R.drawable.marker_red, 0, "약초원");
+                setMarker(marker1, 37.43374990000003, 127.08111759999997, R.drawable.marker_red, 0, getString(R.string.centralplaza)); //중앙광장
+                setMarker(marker6, 37.434603651775085, 127.08064936148412, R.drawable.marker_red, 0, getString(R.string.toadfountain)); //두꺼비분수
+                setMarker(marker21, 37.43484208519403, 127.08035347746568, R.drawable.marker_red, 0, getString(R.string.EcoCenter)); //에코센터
+                setMarker(marker12, 37.43497920000003, 127.07983260000003, R.drawable.marker_red, 0, getString(R.string.EndangeredBotanicalGarden)); //멸종위기 식물원
+                setMarker(marker10, 37.43516570835482, 127.07920936229561, R.drawable.marker_red, 0, getString(R.string.herbalgarden)); //약초원
                 break;
             case 11: //화장실
-                setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, "화장실");
-                setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, "화장실");
+                setMarker(marker24, 37.43387937864328, 127.08148560316515, R.drawable.toilet_icon, 0, getString(R.string.toilet));//화장실
+                setMarker(marker25, 37.433996, 127.081272, R.drawable.toilet_icon, 0, getString(R.string.toilet)); //화장실
                 break;
             case 12: //주차장
-                setMarker(marker26, 37.4337449824962, 127.08189373068059, R.drawable.parking_icon, 0, "주차장");
+                setMarker(marker26, 37.4337449824962, 127.08189373068059, R.drawable.parking_icon, 0, getString(R.string.parkinglot)); //주차장
                 break;
             case 13: //가든카페
-                setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, "가든카페");
+                setMarker(marker27, 37.433831, 127.081404, R.drawable.cafe_icon, 0, getString(R.string.gardencafe)); //가든카페
                 break;
             case 14: //가든샵(가든센터)
-                setMarker(marker23, 37.433800524222114, 127.08150811566452, R.drawable.info_icon, 0, "가든센터");
+                setMarker(marker23, 37.433800524222114, 127.08150811566452, R.drawable.info_icon, 0, getString(R.string.gardencenter)); //가든센터
                 break;
         }
 

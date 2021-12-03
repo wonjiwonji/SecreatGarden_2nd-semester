@@ -39,7 +39,7 @@ public class fragment_3 extends Fragment {
         String url = "https://www.sbg.or.kr/event/event.html?bun=3";  //연결시킬 url주소 입력
         span.setSpan(new URLSpan(url), 1,22, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE); //url표시
         text.setMovementMethod(LinkMovementMethod.getInstance());   //url로 이동
-        span.setSpan(new ForegroundColorSpan(Color.parseColor("#484848")), 0, 46, Spanned.SPAN_EXCLUSIVE_INCLUSIVE); //글자색
+        span.setSpan(new ForegroundColorSpan(Color.parseColor("#484848")), 0, 22, Spanned.SPAN_EXCLUSIVE_INCLUSIVE); //글자색
         span.setSpan(new StyleSpan(Typeface.BOLD), 1, 22, Spanned.SPAN_EXCLUSIVE_INCLUSIVE); //Bold글씨체 적용
         span.setSpan(new RelativeSizeSpan(1.4f), 1, 22, Spanned.SPAN_EXCLUSIVE_INCLUSIVE); //start부터 end번째 글자는 다른 글자들의 n배 키우기
 

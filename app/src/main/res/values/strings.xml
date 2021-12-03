@@ -126,5 +126,8 @@
     <string name="WeatherC">Course</string>
     <string name="Fall">Fall</string>
     <string name="Winter">Winter</string>
+    <string name="clusterofflowers">cluster of flowers</string>
+    <string name="baby">" A gift-like plant to meet in December, the Arabidopsis Camellia"</string>
+    <string name="gift">" A gift-like plant to meet in December, Naksanhong"</string>
 
 </resources>

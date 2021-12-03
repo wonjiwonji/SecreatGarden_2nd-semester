@@ -125,4 +125,7 @@
     <string name="WeatherC">계절코스</string>
     <string name="Fall">가을코스</string>
     <string name="Winter">겨울코스</string>
+    <string name="clusterofflowers">꽃무릇군락지</string>
+    <string name="baby" translatable="false">" 12월에 만나는 선물같은 식물, 애기동백나무"</string>
+    <string name="gift">" 12월에 만나는 선물같은 식물, 낙상홍"</string>
 </resources>
