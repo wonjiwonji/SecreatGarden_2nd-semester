@@ -14,7 +14,7 @@
         android:drawablePadding="12dp"
         android:lineSpacingExtra="4dp"
         android:text=" WINTER BOTANIC GARDEN \n
-12월에 만나는 선물같은 식물, 은목서"
+12월에 만나는 선물같은 식물, 애기동백나무"
         android:textSize="14dp" />
 
 </FrameLayout>

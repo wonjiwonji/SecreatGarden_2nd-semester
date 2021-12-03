@@ -14,7 +14,7 @@
         android:drawableTop="@drawable/banner_customise"
         android:drawablePadding="12dp"
         android:lineSpacingExtra="5dp"
-        android:text="WINTER BOTANIC GARDEN  \n A gift-like plant to meet in October, sagebrush"
+        android:text=" WINTER BOTANIC GARDEN  \n 2021.12.04.SAT - 2022.02.06.SUN"
         android:textSize="14dp" />
 
 
