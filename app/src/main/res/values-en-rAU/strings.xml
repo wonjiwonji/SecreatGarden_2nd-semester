@@ -112,4 +112,17 @@
     <string name="Visitinginform">Visiting information</string>
     <string name="Feeinform">Fee information</string>
     <string name="annualmember">Annual membership</string>
+    <string name="Viewall">View all</string>
+    <string name="Recommended">Course</string>
+    <string name="Facilities">Facilities</string>
+    <string name="Children">Children</string>
+    <string name="Senior">Senior</string>
+    <string name="grouptour">Group tour</string>
+    <string name="Couple">Couple</string>
+    <string name="trail">Trail</string>
+    <string name="Spring">Spring</string>
+    <string name="Summer">Summer</string>
+    <string name="WeatherC">Course</string>
+    <string name="Fall">Fall</string>
+    <string name="Winter">Winter</string>
 </resources>

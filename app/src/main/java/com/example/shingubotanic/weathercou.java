@@ -67,6 +67,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 public class weathercou extends AppCompatActivity implements OnMapReadyCallback {
 
@@ -124,6 +125,7 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.weathercou);
+
 
         //프래그 봄 추가
         FragmentView(Fragment_1);
@@ -440,52 +442,41 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
                                         int groupPosition, int childPosition, long id) {
                 delete_marker(); //모든 마커 지우기
                 path.setMap(null); //폴리라인 지우기
-                switch (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition)) {
-                    case "전체보기":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(0);
-                        break;
-                    case "봄코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_1);
-                        insert_marker(1);
-                        insert_polyline(1);
-                        break;
-                    case "여름코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_2);
-                        insert_marker(2);
-                        insert_polyline(2);
-                        break;
-                    case "가을코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_3);
-                        insert_marker(3);
-                        insert_polyline(3);
-                        break;
-                    case "겨울코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_4);
-                        insert_marker(4);
-                        insert_polyline(4);
-                        break;
-                    case "화장실":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(11);
-                        break;
-                    case "주차장":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(12);
-                        break;
-                    case "가든카페":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(13);
-                        break;
-                    case "가든샵":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(14);
-                        break;
-
+                if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Viewall)) {
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(0);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Spring)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_1);
+                    insert_marker(1);
+                    insert_polyline(1);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Summer)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_2);
+                    insert_marker(2);
+                    insert_polyline(2);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Fall)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_3);
+                    insert_marker(3);
+                    insert_polyline(3);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Winter)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_4);
+                    insert_marker(4);
+                    insert_polyline(4);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.toilet)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(11);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.parkinglot)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(12);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.gardencafe)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(13);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.gardenshop)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(14);
                 }
                 Toast.makeText(getApplicationContext(), listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) + "입니다", Toast.LENGTH_SHORT).show();
                 drawerLayout.closeDrawers();
@@ -512,32 +503,57 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
     //상단 뷰
     private void FragmentView(int fragment) {
 
+        //다국어
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
+
+
         //FragmentTransactiom를 이용해 프래그먼트를 사용합니다.
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
         switch (fragment) {
             case 1:
                 // 첫번 째 프래그먼트 호출
-                frag_spring fragment1 = new frag_spring();
-                transaction.replace(R.id.fragment_container, fragment1);
+                if (strLang == "en") {
+                    frag_spring_eng fragment1_1 = new frag_spring_eng();
+                    transaction.replace(R.id.fragment_container, fragment1_1 );
+                } else {
+                    frag_spring fragment1 = new frag_spring();
+                    transaction.replace(R.id.fragment_container, fragment1);
+                }
                 transaction.commit();
                 break;
             case 2:
                 // 두번 째 프래그먼트 호출
-                frag_summer fragment2 = new frag_summer();
-                transaction.replace(R.id.fragment_container, fragment2);
+                if (strLang == "en") {
+                    frag_summer_eng fragment2_1 = new frag_summer_eng();
+                    transaction.replace(R.id.fragment_container, fragment2_1 );
+                } else {
+                    frag_summer fragment2 = new frag_summer();
+                    transaction.replace(R.id.fragment_container, fragment2);
+                }
                 transaction.commit();
                 break;
             case 3:
                 // 세번 째 프래그먼트 호출
-                frag_fall fragment3 = new frag_fall();
-                transaction.replace(R.id.fragment_container, fragment3);
+                if (strLang == "en") {
+                    frag_fall_eng fragment3_1 = new frag_fall_eng();
+                    transaction.replace(R.id.fragment_container, fragment3_1);
+                } else {
+                    frag_fall fragment3 = new frag_fall();
+                    transaction.replace(R.id.fragment_container, fragment3);
+                }
                 transaction.commit();
                 break;
             case 4:
                 // 네번 째 프래그먼트 호출
-                frag_winter fragment4 = new frag_winter();
-                transaction.replace(R.id.fragment_container, fragment4);
+                if (strLang == "en") {
+                    frag_winter_eng fragment4_1 = new frag_winter_eng();
+                    transaction.replace(R.id.fragment_container, fragment4_1);
+                } else {
+                    frag_winter fragment4 = new frag_winter();
+                    transaction.replace(R.id.fragment_container, fragment4);
+                }
                 transaction.commit();
                 break;
         }
@@ -882,26 +898,25 @@ public class weathercou extends AppCompatActivity implements OnMapReadyCallback 
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        // 그룹 생성
-        listDataHeader.add("전체보기");
-        listDataHeader.add("계절코스");
-        listDataHeader.add("편의시설");
+        listDataHeader.add(getString(R.string.Viewall));
+        listDataHeader.add(getString(R.string.WeatherC));
+        listDataHeader.add(getString(R.string.Facilities));
 
         // 그룹 내 차일드 뷰 생성
         List<String> top250 = new ArrayList<String>();
-        top250.add("전체보기");
+        top250.add(getString(R.string.Viewall));
 
         List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("봄코스");
-        nowShowing.add("여름코스");
-        nowShowing.add("가을코스");
-        nowShowing.add("겨울코스");
+        nowShowing.add(getString(R.string.Spring));
+        nowShowing.add(getString(R.string.Summer));
+        nowShowing.add(getString(R.string.Fall));
+        nowShowing.add(getString(R.string.Winter));
 
         List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("화장실");
-        comingSoon.add("주차장");
-        comingSoon.add("가든카페");
-        comingSoon.add("가든샵");
+        comingSoon.add(getString(R.string.toilet));
+        comingSoon.add(getString(R.string.parkinglot));
+        comingSoon.add(getString(R.string.gardencafe));
+        comingSoon.add(getString(R.string.gardenshop));
 
         //데이터 적용.
         listDataChild.put(listDataHeader.get(0), top250);

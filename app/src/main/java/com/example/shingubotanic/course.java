@@ -3,7 +3,6 @@ package com.example.shingubotanic;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Display;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
@@ -15,14 +14,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.os.Bundle;
-
-import android.view.View;
-import android.widget.ExpandableListView;
-import android.widget.ImageView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.shingubotanic.gardenMarker.central;
@@ -51,7 +44,6 @@ import com.example.shingubotanic.gardenMarker.treeinspector;
 import com.example.shingubotanic.gardenMarker.vineyard;
 import com.example.shingubotanic.gardenMarker.vista;
 import com.example.shingubotanic.gardenMarker.wetlands;
-import com.google.android.gms.maps.model.Polyline;
 import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.CameraPosition;
 import com.naver.maps.map.MapView;
@@ -62,11 +54,11 @@ import com.naver.maps.map.overlay.Overlay;
 import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.overlay.PathOverlay;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 
 public class
 
@@ -420,64 +412,51 @@ course extends AppCompatActivity implements OnMapReadyCallback {
         // 차일드 뷰를 눌렀을 경우 이벤트 발생
         expListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
 
-
             @Override
             public boolean onChildClick(ExpandableListView parent, View v,
                                         int groupPosition, int childPosition, long id) {
                 delete_marker(); //모든 마커 지우기
                 path.setMap(null); //폴리라인 지우기
-                switch (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition)) {
-                    case "전체보기":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(0);
-                        break;
-                    case "어린이체험코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_1);
-                        insert_marker(1);
-                        insert_polyline(1);
-                        break;
-                    case "어르신추천코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_2);
-                        insert_marker(2);
-                        insert_polyline(2);
-                        break;
-                    case "단체관람코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_3);
-                        insert_marker(3);
-                        insert_polyline(3);
-                        break;
-                    case "커플코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_4);
-                        insert_marker(4);
-                        insert_polyline(4);
-                        break;
-                    case "산책로코스":
-                        frame.setVisibility(View.VISIBLE);
-                        FragmentView(Fragment_5);
-                        insert_marker(5);
-                        insert_polyline(5);
-                        break;
-                    case "화장실":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(11);
-                        break;
-                    case "주차장":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(12);
-                        break;
-                    case "가든카페":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(13);
-                        break;
-                    case "가든샵":
-                        frame.setVisibility(FrameLayout.GONE);
-                        insert_marker(14);
-                        break;
-
+                if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Viewall)) {
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(0);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Children)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_1);
+                    insert_marker(1);
+                    insert_polyline(1);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Senior)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_2);
+                    insert_marker(2);
+                    insert_polyline(2);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.grouptour)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_3);
+                    insert_marker(3);
+                    insert_polyline(3);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.Couple)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_4);
+                    insert_marker(4);
+                    insert_polyline(4);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.trail)){
+                    frame.setVisibility(View.VISIBLE);
+                    FragmentView(Fragment_5);
+                    insert_marker(5);
+                    insert_polyline(5);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.toilet)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(11);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.parkinglot)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(12);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.gardencafe)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(13);
+                } else if (listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) == getString(R.string.gardenshop)){
+                    frame.setVisibility(FrameLayout.GONE);
+                    insert_marker(14);
                 }
                 Toast.makeText(getApplicationContext(), listDataChild.get(listDataHeader.get(groupPosition)).get(childPosition) + "입니다", Toast.LENGTH_SHORT).show();
                 drawerLayout.closeDrawers();
@@ -507,35 +486,65 @@ course extends AppCompatActivity implements OnMapReadyCallback {
         //FragmentTransactiom를 이용해 프래그먼트를 사용합니다.
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
 
+        //다국어
+        Locale sysLocale = getResources().getConfiguration().locale;
+        String strLang = sysLocale.getLanguage();
+
         switch (fragment) {
             case 1:
                 // 첫번 째 프래그먼트 호출
-                frag_children fragment1 = new frag_children();
-                transaction.replace(R.id.fragment_container, fragment1);
+                if (strLang == "en") {
+                    frag_children_eng fragment1_1 = new frag_children_eng();
+                    transaction.replace(R.id.fragment_container, fragment1_1);
+                } else {
+                    frag_children fragment1 = new frag_children();
+                    transaction.replace(R.id.fragment_container, fragment1);
+                }
                 transaction.commit();
                 break;
             case 2:
                 // 두번 째 프래그먼트 호출
-                frag_old fragment2 = new frag_old();
-                transaction.replace(R.id.fragment_container, fragment2);
+                if (strLang == "en") {
+                    frag_old_eng fragment2_1 = new frag_old_eng();
+                    transaction.replace(R.id.fragment_container, fragment2_1);
+                } else {
+                    frag_old fragment2 = new frag_old();
+                    transaction.replace(R.id.fragment_container, fragment2);
+                }
                 transaction.commit();
                 break;
             case 3:
                 // 세번 째 프래그먼트 호출
-                frag_group fragment3 = new frag_group();
-                transaction.replace(R.id.fragment_container, fragment3);
+                if (strLang == "en") {
+                    frag_group_eng fragment3_1 = new frag_group_eng();
+                    transaction.replace(R.id.fragment_container, fragment3_1);
+                } else {
+                    frag_group fragment3 = new frag_group();
+                    transaction.replace(R.id.fragment_container, fragment3);
+                }
                 transaction.commit();
                 break;
             case 4:
                 // 네번 째 프래그먼트 호출
-                frag_couple fragment4 = new frag_couple();
-                transaction.replace(R.id.fragment_container, fragment4);
+                if (strLang == "en") {
+                    frag_couple_eng fragment4_1 = new frag_couple_eng();
+                    transaction.replace(R.id.fragment_container, fragment4_1);
+                } else {
+                    frag_couple fragment4 = new frag_couple();
+                    transaction.replace(R.id.fragment_container, fragment4);
+                }
+
                 transaction.commit();
                 break;
             case 5:
                 // 네번 째 프래그먼트 호출
-                frag_walk fragment5 = new frag_walk();
-                transaction.replace(R.id.fragment_container, fragment5);
+                if (strLang == "en") {
+                    frag_walk_eng fragment5_1 = new frag_walk_eng();
+                    transaction.replace(R.id.fragment_container, fragment5_1);
+                } else {
+                    frag_walk fragment5 = new frag_walk();
+                    transaction.replace(R.id.fragment_container, fragment5);
+                }
                 transaction.commit();
                 break;
         }
@@ -853,27 +862,27 @@ course extends AppCompatActivity implements OnMapReadyCallback {
         listDataHeader = new ArrayList<String>();
         listDataChild = new HashMap<String, List<String>>();
 
-        // 그룹 생성
-        listDataHeader.add("전체보기");
-        listDataHeader.add("추천코스");
-        listDataHeader.add("편의시설");
+        listDataHeader.add(getString(R.string.Viewall));
+        listDataHeader.add(getString(R.string.Recommended));
+        listDataHeader.add(getString(R.string.Facilities));
+
 
         // 그룹 내 차일드 뷰 생성
         List<String> top250 = new ArrayList<String>();
-        top250.add("전체보기");
+        top250.add(getString(R.string.Viewall));
 
         List<String> nowShowing = new ArrayList<String>();
-        nowShowing.add("어린이체험코스");
-        nowShowing.add("어르신추천코스");
-        nowShowing.add("단체관람코스");
-        nowShowing.add("커플코스");
-        nowShowing.add("산책로코스");
+        nowShowing.add(getString(R.string.Children));
+        nowShowing.add(getString(R.string.Senior));
+        nowShowing.add(getString(R.string.grouptour));
+        nowShowing.add(getString(R.string.Couple));
+        nowShowing.add(getString(R.string.trail));
 
         List<String> comingSoon = new ArrayList<String>();
-        comingSoon.add("화장실");
-        comingSoon.add("주차장");
-        comingSoon.add("가든카페");
-        comingSoon.add("가든샵");
+        comingSoon.add(getString(R.string.toilet));
+        comingSoon.add(getString(R.string.parkinglot));
+        comingSoon.add(getString(R.string.gardencafe));
+        comingSoon.add(getString(R.string.gardenshop));
 
         //데이터 적용.
         listDataChild.put(listDataHeader.get(0), top250);

@@ -17,7 +17,7 @@
     <string name="FiveSensesGarden">Five Senses Garden</string>
     <string name="forestpavilion">forest pavilion</string>
     <string name="AUTUMNBOTANIC">AUTUMN BOTANIC</string>
-    <string name="gardencafe">garden cafe</string>
+    <string name="gardencafe">Garden cafe</string>
     <string name="gardencenter">garden center</string>
     <string name="Grass">Grass Pum Jongwon</string>
     <string name="Feeinformation">Fee information</string>
@@ -93,7 +93,7 @@
     <string name="MetasequoiaRoad">Metasequoia Road</string>
     <string name="hydrangea">hydrangea</string>
     <string name="Observatory">Observatory</string>
-    <string name="parkinglot">parking lot</string>
+    <string name="parkinglot">Parking lot</string>
     <string name="peonygarden">peony garden</string>
     <string name="flowerpot">flower pot</string>
     <string name="autumnbotanicalgarden">autumn botanical garden</string>
@@ -102,7 +102,7 @@
     <string name="skygarden">sky garden</string>
     <string name="SilverSaewon">Silver Saewon</string>
     <string name="toadfountain">toad fountain</string>
-    <string name="toilet">toilet</string>
+    <string name="toilet">Toilet</string>
     <string name="traditionalgarden">traditional garden</string>
     <string name="arboretum">arboretum</string>
     <string name="vineyard">vineyard</string>
@@ -113,5 +113,18 @@
     <string name="Visitinginform">Visiting information</string>
     <string name="Feeinform">Fee information</string>
     <string name="annualmember">Annual membership</string>
+    <string name="Viewall">View all</string>
+    <string name="Recommended">Course</string>
+    <string name="Facilities">Facilities</string>
+    <string name="Children">Children</string>
+    <string name="Senior">Senior</string>
+    <string name="grouptour">Group tour</string>
+    <string name="Couple">Couple</string>
+    <string name="trail">Trail</string>
+    <string name="Spring">Spring</string>
+    <string name="Summer">Summer</string>
+    <string name="WeatherC">Course</string>
+    <string name="Fall">Fall</string>
+    <string name="Winter">Winter</string>
 
 </resources>

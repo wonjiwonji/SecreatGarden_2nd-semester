@@ -112,4 +112,17 @@
     <string name="Visitinginform">관람정보</string>
     <string name="Feeinform">요금안내</string>
     <string name="annualmember">연간회원</string>
+    <string name="Viewall">전체보기</string>
+    <string name="Recommended">추천코스</string>
+    <string name="Facilities">편의시설</string>
+    <string name="Children">어린이 체험 코스</string>
+    <string name="Senior">어르신추천코스</string>
+    <string name="grouptour">단체관람코스</string>
+    <string name="Couple">커플코스</string>
+    <string name="trail">산책로코스</string>
+    <string name="Spring">봄코스</string>
+    <string name="Summer">여름코스</string>
+    <string name="WeatherC">계절코스</string>
+    <string name="Fall">가을코스</string>
+    <string name="Winter">겨울코스</string>
 </resources>
