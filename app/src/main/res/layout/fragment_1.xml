@@ -21,7 +21,7 @@
         android:id="@+id/frag2text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="166dp"
         android:bufferType="spannable"
         android:lineSpacingExtra="5dp"
         android:text=" 2021.12.04.SAT - 2022.02.06.SUN"
